@@ -636,6 +636,15 @@
     }
 
     @media screen and (max-width:767px) {
+
+      .tick-point {
+        margin-bottom: 6px !important;
+
+        .tick-image {
+          width: 22px !important;
+        }
+      }
+
       .banner {
         display: none
       }
@@ -652,6 +661,51 @@
       .footer_column1 .subscribe_btn.text-center {
         display: block
       }
+
+      .banner_links .subscribe_btn,
+      .banner_links .gift_btn {
+        font-size: 14px
+      }
+
+      .banner .banner_text_content,
+      .mobile_banner .mob_banner_cnt {
+        font-size: 18px
+      }
+
+      .banner .banner_text_content p {
+        line-height: 26px
+      }
+
+      .top_bar_subscribe_text {
+        display: block
+      }
+
+      .top_bar_subscribe_text {
+        font-size: 16px
+      }
+
+      .hide-banner {
+        display: block
+      }
+
+      .top_subscribe_bar {
+        display: none
+      }
+
+      video-sec.desktop {
+        display: none;
+      }
+
+      .vdo-div .cus-vdo-mob {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+      }
+    }
+
+    .tp-caption {
+      z-index: 1;
+      white-space: nowrap
     }
 
     @media screen and (max-width:640px) {
@@ -702,6 +756,7 @@
     }
 
     @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+    @import url('https://fonts.googleapis.com/css?family=Exo+2:700,400&amp;subset=latin,cyrillic');
 
     @font-face {
       font-family: "Gotham";
@@ -759,44 +814,6 @@
       .top_bar_subscribe_text {
         display: block
       }
-    }
-
-    @media screen and (max-width:767px) {
-
-      .banner_links .subscribe_btn,
-      .banner_links .gift_btn {
-        font-size: 14px
-      }
-
-      .banner .banner_text_content,
-      .mobile_banner .mob_banner_cnt {
-        font-size: 18px
-      }
-
-      .banner .banner_text_content p {
-        line-height: 26px
-      }
-
-      .top_bar_subscribe_text {
-        display: block
-      }
-
-      .top_bar_subscribe_text {
-        font-size: 16px
-      }
-
-      .hide-banner {
-        display: block
-      }
-
-      .top_subscribe_bar {
-        display: none
-      }
-    }
-
-    .tp-caption {
-      z-index: 1;
-      white-space: nowrap
     }
 
     .tp-caption a {
@@ -915,8 +932,6 @@
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
     }
 
-    @import url(https://fonts.googleapis.com/css?family=Exo+2:700,400&amp;subset=latin,cyrillic);
-
     .navigation .nav_1 .pos-relat {
       position: relative;
     }
@@ -969,18 +984,6 @@
       height: 100px;
     }
 
-    @media screen and (max-width: 767px) {
-      .video-sec.desktop {
-        display: none;
-      }
-
-      .vdo-div .cus-vdo-mob {
-        width: 100%;
-        height: auto;
-        max-height: 500px;
-      }
-    }
-
     @media screen and (max-width: 500px) {
       .img-slide-sec {
         max-height: 442px;
@@ -997,6 +1000,23 @@
   </style>
 
   <style>
+    .tick-point {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+
+      p {
+        margin-bottom: 0px !important;
+      }
+
+      .tick-image {
+        padding-top: 2px;
+        height: auto;
+        width: 28px;
+      }
+    }
+
     .cj-color-main {
       background-color: #92C75D;
     }
@@ -1104,7 +1124,7 @@
             </span>
 
             <p style="color: #000;">And get your first month FREE.<br>
-              Just pay shipping.</p>
+              Just pay shipping</p>
 
           </div>
 
@@ -1115,7 +1135,7 @@
                 <span class="amt">FREE</span>
               </div>
               <div class="actual-amt exblod">
-                <span class="amt-head">up to 3 bag</span>
+                <span class="amt-head">up to 3 bags</span>
                 <span class="amt">$179.97</span>
               </div>
             </div>
@@ -1127,64 +1147,40 @@
               <span class="btn-txt">SUBSCRIBE</span>
             </a>
             <a href="javascript:;" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT THEM</span>
+              <span class="btn-txt">GIFT YOMZ</span>
             </a>
           </div>
 
           <div class="point-sec mb30 ">
-
             <div class="text mt-2 featur-listdone">
-              <div class="col d-flex align-items-center mb-1">
-                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
-                    class="img-fluid">
-                </div>
-                <div>
-                  <p>Choose How Many Bags</p>
-                </div>
+              <div class="tick-point">
+                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
+                <p>Choose how many bags</p>
               </div>
-              <div class="col d-flex align-items-center mb-1">
-                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
-                    class="img-fluid">
-                </div>
-                <div>
-                  <p>Choose YOMZ Original or YOMZ Sour</p>
-                </div>
+
+              <div class="tick-point">
+                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
+                <p>Pick YOMZ Original or Sour</p>
               </div>
-              <div class="col d-flex align-items-center mb-1">
-                <div class="icon-square flex-shrink-0 me-2">
-                  <img src="images/Tick-01.png" alt="checkYe-Img" class="img-fluid">
-                </div>
-                <div>
-                  <p>Exclusive Member’s Only FREE Bonuses</p>
-                </div>
+
+              <div class="tick-point">
+                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
+                <p>Protect against Hidden Hunger</p>
               </div>
-              <div class="col d-flex align-items-center mb-1">
-                <div class="icon-square flex-shrink-0 me-2">
-                  <img src="images/Tick-01.png" alt="checkYe-Img" class="img-fluid">
-                </div>
-                <div>
-                  <p>Try Risk-Free with Our 60-day Picky MOMZ Money Back Guarantee</p>
-                </div>
-              </div>
-              <div class="col d-flex align-items-center mb-1">
-                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
-                    class="img-fluid">
-                </div>
-                <div>
-                  <p>Join the #1 Rated Gummy Subscription Service</p>
-                </div>
+
+              <div class="tick-point">
+                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
+                <p>Try risk-free</p>
               </div>
             </div>
-
           </div>
 
           <div class="button-sec mb30">
-
             <a href="javascript:;" class="sbu-button subscribe-prdt">
               <span class="btn-txt">SUBSCRIBE</span>
             </a>
             <a href="javascript:;" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT THEM</span>
+              <span class="btn-txt">GIFT YOMZ</span>
             </a>
             <!-- </div> -->
             <!-- <div class="love-it">
@@ -1213,7 +1209,7 @@
             Tag
             <a href="" target="_blank">#YOMZ </a> on Instagram,
             <a href="" target="_blank">Youtube,</a> or
-            <a href="" target="_blank">Tiktok,</a> to join the fun
+            <a href="" target="_blank">Tiktok,</a> to join the fun!
           </p>
         </div>
         <div class="drop-slide">
@@ -1424,7 +1420,7 @@
               <span class="btn-txt rose-btn">SUBSCRIBE</span>
             </a>
             <a href="#" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT THEM</span>
+              <span class="btn-txt">GIFT YOMZ</span>
             </a>
           </div>
         </div>
