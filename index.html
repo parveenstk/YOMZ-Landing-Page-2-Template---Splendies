@@ -1152,26 +1152,8 @@
           </div>
 
           <div class="point-sec mb30 ">
-            <div class="text mt-2 featur-listdone">
-              <div class="tick-point">
-                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
-                <p>Choose how many bags</p>
-              </div>
-
-              <div class="tick-point">
-                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
-                <p>Pick YOMZ Original or Sour</p>
-              </div>
-
-              <div class="tick-point">
-                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
-                <p>Protect against Hidden Hunger</p>
-              </div>
-
-              <div class="tick-point">
-                <img src="images/Tick-01.png" alt="tick-img" class="tick-image">
-                <p>Try risk-free</p>
-              </div>
+            <div id="tick-points" class="text mt-2 featur-listdone">
+              <div id="point" class="tick-point"></div>
             </div>
           </div>
 
@@ -1558,5 +1540,29 @@
   <script src="js/owl.carousel1b13.js" defer></script>
 
 </body>
+
+<script>
+
+  // tick points functionality
+  const tickPoints = document.getElementById('tick-points');
+  const img = './images/Tick-01.png';
+  const text = [
+    "Choose how many bags",
+    "Pick YOMZ Original or Sour",
+    "Protect against Hidden Hunger",
+    "Try risk-free",
+  ];
+
+  const textHTML =
+    text.map(item => `
+        <div class="tick-point">
+          <img src="${img}" alt="tick-img" class="tick-image">
+          <p>${item}</p>
+        </div>
+      `)
+      .join('');
+
+  tickPoints.innerHTML = textHTML;
+</script>
 
 </html>
