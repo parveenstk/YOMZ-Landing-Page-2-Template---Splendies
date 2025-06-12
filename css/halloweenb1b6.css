@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;display=swap');
+@font-face {font-family: 'Northwell';src: url("http://s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-13/fonts/Northwell.woff?ts=1695886251&amp;host=my.cratejoy.com") format('truetype');font-weight: normal;font-style: normal;}
+
+.new-subscribe .announcement-bar.black {background-color: #222;} 
+.new-subscribe .top-content-sec .img-sec .top-img {text-align: center;}
+.new-subscribe .top-content-sec .img-sec .sell-out {
+    /*font-family: 'Dancing Script', cursive;*/
+    font-family: Northwell;
+    font-size: 55px;
+    color: #000;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.new-subscribe .top-content-sec .img-sec .halloween-txt {
+    font-weight: 600;
+    color: #6a6a6a;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-align: left;
+    padding: 30px 15px 0px;
+}
+
+.new-subscribe .test-outer {
+    padding: 15px;
+}
+.new-subscribe .test-outer .testi-slide {
+    text-align: center;
+}
+.new-subscribe .test-outer .owl-carousel .owl-item {
+    padding-top: 0px; 
+}
+
+.new-subscribe .test-outer .testi-slide .owl-nav {display: block;}
+.new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(58, 58, 58, 0.7);
+    padding: 15px 0px;
+    cursor: pointer;
+}
+.new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-right {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(58, 58, 58, 0.7);
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1800px) {
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-left{
+        left: 20%;
+    }
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-right {
+        right: 20%;
+    }
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1799px) {
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-left{
+        left: 16%;
+    }
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-right {
+        right: 16%;
+    }
+
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-left{
+        left: 12%;
+    }
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-right {
+        right: 12%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-left{
+        left: 6%;
+    }
+    .new-subscribe .test-outer .testi-slide .owl-nav .glyphicon-menu-right {
+        right: 6%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .new-subscribe .top-content-sec .img-sec .sell-out {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .new-subscribe .top-content-sec .sub-container {
+        margin-bottom: 15px;
+    }
+    .new-subscribe .top-content-sec .img-sec .halloween-txt {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .new-subscribe .top-content-sec .img-sec .sell-out {
+        font-size: 45px;
+    }
+    .new-subscribe .top-content-sec .img-sec .halloween-txt {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .new-subscribe .top-content-sec .img-sec .sell-out {
+        font-size: 35px;
+    }
+}

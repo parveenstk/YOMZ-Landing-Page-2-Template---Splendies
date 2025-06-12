@@ -1,0 +1,1566 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-control" content="public">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
+  <title> YOMZ</title>
+  <style type="text/css">
+    html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0
+    }
+
+    article {
+      display: block
+    }
+
+    a {
+      background-color: transparent
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0
+    }
+
+    img {
+      border: 0
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    html {
+      font-size: 10px
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #333333;
+      background-color: #ffffff
+    }
+
+    a {
+      color: #337ab7;
+      text-decoration: none
+    }
+
+    img {
+      vertical-align: middle
+    }
+
+    h1 {
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.1;
+      color: inherit
+    }
+
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 10px
+    }
+
+    h1 {
+      font-size: 36px
+    }
+
+    p {
+      margin: 0 0 10px
+    }
+
+    .text-right {
+      text-align: right
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 10px
+    }
+
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px
+    }
+
+    @media (min-width:768px) {
+      .container {
+        width: 750px
+      }
+    }
+
+    @media (min-width:992px) {
+      .container {
+        width: 970px
+      }
+    }
+
+    @media (min-width:1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+
+    .row {
+      margin-left: -15px;
+      margin-right: -15px
+    }
+
+    .col-md-2,
+    .col-xs-3,
+    .col-sm-4,
+    .col-md-5,
+    .col-xs-6,
+    .col-md-12 {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px
+    }
+
+    .col-xs-3,
+    .col-xs-6 {
+      float: left
+    }
+
+    .col-xs-6 {
+      width: 50%
+    }
+
+    .col-xs-3 {
+      width: 25%
+    }
+
+    @media (min-width:768px) {
+      .col-sm-4 {
+        float: left
+      }
+
+      .col-sm-4 {
+        width: 33.33333333%
+      }
+    }
+
+    @media (min-width:992px) {
+
+      .col-md-2,
+      .col-md-5,
+      .col-md-12 {
+        float: left
+      }
+
+      .col-md-12 {
+        width: 100%
+      }
+
+      .col-md-5 {
+        width: 41.66666667%
+      }
+
+      .col-md-2 {
+        width: 16.66666667%
+      }
+    }
+
+    .container:before,
+    .container:after,
+    .row:before,
+    .row:after {
+      content: " ";
+      display: table
+    }
+
+    .container:after,
+    .row:after {
+      clear: both
+    }
+
+    @-ms-viewport {
+      width: device-width
+    }
+
+    body {
+      font-size: 14px;
+      color: #333333;
+      background-color: #FFFFFF
+    }
+
+    .logo img {
+      display: inline
+    }
+
+    @media (min-width:1200px) {
+      .container {
+        width: 1030px
+      }
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column
+    }
+
+    body {
+      font-size: 16px;
+      background-color: #fff;
+      margin: 0;
+      font-family: 'Muli', sans-serif;
+      color: #4c4c4c;
+      font-weight: 300
+    }
+
+    h1 {
+      font-family: 'FuturaStd-Light';
+      font-size: 36px;
+      font-weight: 500;
+      margin: 0 0 12px;
+      line-height: 1em;
+      color: #ff5d7b;
+    }
+
+    p {
+      margin: 0 0 12px
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    .top_subscribe_bar {
+      background-color: #f8e1e6;
+      padding: 5px
+    }
+
+    .top_bar_subscribe_text {
+      display: inline-block;
+      color: #ef506e;
+      margin: 0;
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 14px;
+      font-weight: 400
+    }
+
+    .top_bar_subscribe_btn {
+      border: 1px solid #ef506e;
+      color: #fff;
+      display: inline-block;
+      font-size: 14px;
+      padding: 5px 20px;
+      vertical-align: middle;
+      font-weight: 400;
+      background-color: #ff5d7b
+    }
+
+    .navigation {
+      padding: 8px 0;
+      border-bottom: 1px solid #ff5d7b
+    }
+
+    .login_cart>a {
+      color: #909090;
+      display: inline-block;
+      font-size: 16px;
+      padding: 8px 20px;
+      font-weight: 400
+    }
+
+    .login_cart .cart {
+      padding: 8px 20px 8px 25px;
+      background-image: url("../../d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-2/images/cart-icon8af6.png?ts=1543656589&amp;host=");
+      background-repeat: no-repeat;
+      background-position: left center
+    }
+
+    .mobile_nave .login_cart a.login {
+      background-image: url("http://d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-2/images/user.svg?ts=1543656593&amp;host=");
+      background-repeat: no-repeat;
+      background-position: right 5px;
+      background-size: 20px;
+      padding-right: 28px;
+      padding-top: 4px;
+      font-family: FuturaStdMedium;
+      color: #3a4046;
+      white-space: nowrap
+    }
+
+    .number_of_items {
+      color: #f9d7dd
+    }
+
+    .navigation ul {
+      margin: 0
+    }
+
+    .navigation ul li {
+      display: inline-block;
+      list-style: outside none none
+    }
+
+    .navigation ul li a {
+      color: #909090;
+      font-size: 14px;
+      padding: 10px 20px;
+      display: block;
+      font-weight: 300 !important
+    }
+
+    .navigation ul li .subscribe_active {
+      background-color: #ff5d7b;
+      color: #fff
+    }
+
+    .nav_1 {
+      padding-top: 60px
+    }
+
+    .navigation ul li+li {
+      margin-left: 5px
+    }
+
+    .nav_2 {
+      padding-top: 25px;
+      text-align: right
+    }
+
+    .subscribe_btn>a {
+      background-color: #ff5d7b;
+      color: #fff;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 10px 30px
+    }
+
+    .lgdark_clr {
+      color: #010101
+    }
+
+    .link_btn {
+      display: inline-block;
+      margin: 0 5px
+    }
+
+    .banner {
+      position: relative
+    }
+
+    .banner_links .subscribe_btn,
+    .banner_links .gift_btn {
+      border: 1px solid #ff5d7b !important;
+      color: #ff5d7b;
+      display: inline-block;
+      padding: 15px 40px !important;
+      font-weight: 400
+    }
+
+    .subscribe_active {
+      background-color: #ff5d7b;
+      color: #fff !important
+    }
+
+    .home-baner_text_box1 .banner-text {
+      margin-left: 20px !important
+    }
+
+    .banner_head {
+      margin-left: 5px !important
+    }
+
+    .banner_text_content p {
+      margin-left: 5px !important;
+      line-height: 21px
+    }
+
+    .banner_head h1 {
+      font-weight: 500px
+    }
+
+    .scrool_down_navigation {
+      top: -130px;
+      position: fixed;
+      width: 100%
+    }
+
+    .scrool_down_navigation .nav_1 {
+      padding-top: 27px
+    }
+
+    .scrool_down_navigation .login_cart>a {
+      font-size: 13px;
+      padding: 5px 20px
+    }
+
+    .scrool_down_navigation .nav_2 {
+      padding-top: 0;
+      text-align: right
+    }
+
+    .scrool_down_navigation .scroll_down_logo {
+      padding-top: 10px
+    }
+
+    .scrool_down_navigation ul li a {
+      font-size: 13px
+    }
+
+    #mob_menu {
+      position: fixed;
+      background-color: #ff5d7b;
+      height: 100%;
+      z-index: 999999;
+      width: 280px;
+      color: #fff;
+      top: 0;
+      opacity: 1;
+      left: -280px
+    }
+
+    #mob_menu .close_btn a {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500
+    }
+
+    #mob_menu ul,
+    #mob_menu ul li {
+      margin: 0px;
+      padding: 2px 0px;
+      list-style: none
+    }
+
+    #mob_menu ul li {
+      display: block;
+      border-bottom: 1px solid #fff;
+    }
+
+    #mob_menu ul li a {
+      display: block;
+      font-size: 17px;
+      color: #010101;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 4px 15px
+    }
+
+    .mobile_nave {
+      display: none;
+      padding: 10px 0
+    }
+
+    .close_btn {
+      text-align: right
+    }
+
+    .response {
+      padding: 10px 0 0;
+      color: #909090;
+      font-size: 13px
+    }
+
+    .footer_column1 .subscribe_btn.text-center {
+      display: none
+    }
+
+    .mobile_nave .mob_icon {
+      margin-top: 22px
+    }
+
+    .mobile_nave .mob_icon a {
+      color: #ef506e;
+      font-size: 13px;
+      padding: 4px 12px;
+      font-weight: 400;
+      display: inline-block
+    }
+
+    .mobile_nave .login_cart {
+      margin-top: 22px;
+      margin-left: -15px
+    }
+
+    .mobile_banner {
+      display: none;
+      text-align: center
+    }
+
+    .mobile_banner .mob_banner_cnt {
+      padding: 25px 15px
+    }
+
+    .navigation ul li a {
+      position: relative
+    }
+
+    .navigation ul li a span.new {
+      color: #ff9133;
+      font-size: 12px;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: -8px;
+      width: 100%
+    }
+
+    .navigation .logo {
+      text-align: center
+    }
+
+    .navigation ul li+li {
+      margin-left: 23px
+    }
+
+    .navigation .nav_2 ul li+li {
+      margin-left: 18px
+    }
+
+    .navigation .nav_1 {
+      text-align: right
+    }
+
+    .navigation .nav_2 {
+      text-align: left
+    }
+
+    .mobile_banner .mob_banner_cnt .banner_links {
+      margin-bottom: 25px
+    }
+
+    @media screen and (min-width:1320px) and (max-width:1440px) {
+      .navigation .nav_2 ul li+li {
+        margin-left: 15px
+      }
+
+      .navigation ul li+li {
+        margin-left: 23px
+      }
+    }
+
+    @media screen and (min-width:1260px) and (max-width:1320px) {
+      .navigation ul li+li {
+        margin-left: 13px
+      }
+
+      .navigation .nav_2 ul li+li {
+        margin-left: 5px
+      }
+    }
+
+    @media screen and (min-width:1200px) and (max-width:1260px) {
+      .navigation .nav_2 ul li+li {
+        margin-left: 10px
+      }
+
+      .navigation ul li+li {
+        margin-left: 20px
+      }
+    }
+
+    @media screen and (min-width:992px) and (max-width:1020px) {
+      .navigation .nav_2 ul li+li {
+        margin-left: 4px
+      }
+    }
+
+    @media screen and (min-width:992px) and (max-width:1200px) {
+      .navigation .nav_2 ul li+li {
+        margin-left: 18px
+      }
+
+      .navigation ul li+li {
+        margin-left: 10px
+      }
+
+      .navigation ul li a {
+        padding: 10px 12px
+      }
+
+      .navigation ul li a {
+        font-size: 13px
+      }
+
+      .login_cart>a {
+        font-size: 13px
+      }
+    }
+
+    @media screen and (max-width:991px) {
+      .navigation {
+        padding: 15px 0;
+        display: none
+      }
+
+      .mobile_nave {
+        display: block
+      }
+
+      .top_bar_subscribe_text {
+        display: none
+      }
+    }
+
+    @media screen and (max-width:767px) {
+      .banner {
+        display: none
+      }
+
+      .mobile_banner {
+        display: block
+      }
+
+      .banner_text_content p {
+        line-height: normal !important;
+        font-size: 6px !important
+      }
+
+      .footer_column1 .subscribe_btn.text-center {
+        display: block
+      }
+    }
+
+    @media screen and (max-width:640px) {
+      .mobile_banner .mob_banner_cnt h1 {
+        font-size: 18px
+      }
+
+      .mobile_banner .mob_banner_cnt {
+        font-size: 14px
+      }
+    }
+
+    @media screen and (max-width:479px) {
+      .link_btn+.link_btn {
+        margin-top: 10px
+      }
+
+      .login_cart>a {
+        padding: 8px 10px
+      }
+
+      .banner_links .subscribe_btn,
+      .banner_links .gift_btn {
+        padding: 8px 20px !important
+      }
+
+      .banner_links .subscribe_btn,
+      .banner_links .gift_btn {
+        font-size: 13px !important;
+        width: 47%
+      }
+    }
+
+    @media screen and (max-width:420px) {
+      .mobile_nave .mob_icon {
+        margin-top: 5vw
+      }
+
+      .mobile_nave .login_cart {
+        margin-top: 5vw
+      }
+    }
+
+    @media screen and (max-width:379px) {
+      .login_cart>a {
+        padding: 8px 2px
+      }
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+
+    @font-face {
+      font-family: "Gotham";
+      src: url(http://s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-2/fonts/gotham-light-webfont.woff?ts=1543656524&amp;host=) format('truetype');
+      font-weight: normal;
+      font-style: normal
+    }
+
+    @font-face {
+      font-family: "sharpsansno";
+      src: url(http://s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-2/fonts/sharpsansno1-bold.woff?ts=1543656530&amp;host=) format('truetype');
+      font-weight: 500;
+      font-style: normal
+    }
+
+    .banner h1,
+    .mobile_banner .mob_banner_cnt h1 {
+      font-family: "sharpsansno"
+    }
+
+    .banner h1 {
+      font-size: 40px;
+    }
+
+    .banner .banner-text {
+      text-align: center
+    }
+
+    .banner .banner_text_content,
+    .mobile_banner .mob_banner_cnt {
+      font-family: Cabin-Regular;
+      font-size: 20px
+    }
+
+    .banner .banner_text_content p {
+      line-height: 30px
+    }
+
+    .banner_links .subscribe_btn,
+    .banner_links .gift_btn {
+      font-family: Gotham;
+      font-size: 18px
+    }
+
+    .banner .banner_text_content {
+      margin: 20px 0px;
+      margin-top: 0px
+    }
+
+    .hide-banner {
+      display: block
+    }
+
+    @media screen and (max-width:991px) {
+      .top_bar_subscribe_text {
+        display: block
+      }
+    }
+
+    @media screen and (max-width:767px) {
+
+      .banner_links .subscribe_btn,
+      .banner_links .gift_btn {
+        font-size: 14px
+      }
+
+      .banner .banner_text_content,
+      .mobile_banner .mob_banner_cnt {
+        font-size: 18px
+      }
+
+      .banner .banner_text_content p {
+        line-height: 26px
+      }
+
+      .top_bar_subscribe_text {
+        display: block
+      }
+
+      .top_bar_subscribe_text {
+        font-size: 16px
+      }
+
+      .hide-banner {
+        display: block
+      }
+
+      .top_subscribe_bar {
+        display: none
+      }
+    }
+
+    .tp-caption {
+      z-index: 1;
+      white-space: nowrap
+    }
+
+    .tp-caption a {
+      color: #ff7302;
+      text-shadow: none
+    }
+
+    .tp-bannertimer {
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      z-index: 200;
+      top: 0px
+    }
+
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder {
+      font-family: helvetica, arial, sans-serif !important
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Muli Light Italic'), local('Muli-LightItalic'), url(https://fonts.gstatic.com/s/muli/v12/7Au9p_0qiz-afTf-hCDGwmQIAFg.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Muli Light Italic'), local('Muli-LightItalic'), url(https://fonts.gstatic.com/s/muli/v12/7Au9p_0qiz-afTf-hCDGw2QIAFg.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Muli Light Italic'), local('Muli-LightItalic'), url(https://fonts.gstatic.com/s/muli/v12/7Au9p_0qiz-afTf-hCDGzWQI.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Muli Italic'), local('Muli-Italic'), url(https://fonts.gstatic.com/s/muli/v12/7Au-p_0qiz-afTf2IALT8kU.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Muli Italic'), local('Muli-Italic'), url(https://fonts.gstatic.com/s/muli/v12/7Au-p_0qiz-afTf2IQLT8kU.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Muli Italic'), local('Muli-Italic'), url(https://fonts.gstatic.com/s/muli/v12/7Au-p_0qiz-afTf2LwLT.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Muli Light'), local('Muli-Light'), url(https://fonts.gstatic.com/s/muli/v12/7Au_p_0qiz-adZnkOCr2z3wM.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Muli Light'), local('Muli-Light'), url(https://fonts.gstatic.com/s/muli/v12/7Au_p_0qiz-adZnkOCv2z3wM.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Muli Light'), local('Muli-Light'), url(https://fonts.gstatic.com/s/muli/v12/7Au_p_0qiz-adZnkOCX2zw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v12/7Auwp_0qiz-afT3GLRrX.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v12/7Auwp_0qiz-afTzGLRrX.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v12/7Auwp_0qiz-afTLGLQ.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Exo+2:700,400&amp;subset=latin,cyrillic);
+
+    .navigation .nav_1 .pos-relat {
+      position: relative;
+    }
+
+    .navigation .nav_1 ul li .over-new {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: -11px;
+      font-size: 12px;
+      color: #ff5501;
+      font-weight: 500;
+    }
+
+    .announcement-bar .js-conveyor-1 ul {
+      opacity: 0
+    }
+
+    .announcement-bar {
+      height: 23px;
+    }
+
+    .new-subscribe .logo-sec img {
+      width: 245px;
+    }
+
+    .home-baner_text_box1.tp-caption {
+      position: absolute;
+      top: 130px;
+      right: 5%;
+    }
+
+    .banner_links .gift_btn.white-btn {
+      background-color: #fff;
+      border-color: #fff !important;
+    }
+
+    .video-sec .vdo-div .cus-vdo {
+      width: 450px;
+      height: 500px;
+    }
+
+    .img-slide-sec {
+      max-height: 762px;
+      overflow: hidden;
+    }
+
+    .lottery-pge .logo-sec .logo {
+      width: 245px;
+      height: 100px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .video-sec.desktop {
+        display: none;
+      }
+
+      .vdo-div .cus-vdo-mob {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .img-slide-sec {
+        max-height: 442px;
+        overflow: hidden;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .img-slide-sec {
+        max-height: 345px;
+        overflow: hidden;
+      }
+    }
+  </style>
+
+  <style>
+    .cj-color-main {
+      background-color: #92C75D;
+    }
+
+    .cratejoy-loading-icon {
+      color: #92C75D;
+    }
+
+    input[type="radio"]+label.cj-btn {
+      border: 1px solid #92C75D;
+      color: #92C75D;
+    }
+
+    input[type="radio"]:checked+label.cj-btn,
+    #skip_button.skipped {
+      background-color: #92C75D;
+      color: #FFFFFF;
+      border-color: #92C75D;
+    }
+
+    input[type="radio"]:checked+label.cj-btn.term h4,
+    input[type="radio"]:checked+label.cj-btn.term h5 {
+      color: #FFFFFF;
+    }
+
+    #skip_button {
+      border: 1px solid #92C75D;
+      color: #92C75D;
+    }
+
+    #skip_button.skipped.hover {
+      color: #92C75D;
+      background-color: #FFFFFF;
+    }
+  </style>
+
+  <link href="css/stylec266.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/sliderea81.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="js/jquery-1.11.3.min6ed3.js"></script>
+  <script src="js/sitemain2adc.js"></script>
+
+</head>
+
+<body class="">
+
+  <div class="new-subscribe">
+
+    <div class="announcement-bar mobile">
+      <!-- <p class="announcement-message" >
+                you're just a few moments away from great undies!
+            </p> -->
+      <div class="js-conveyor-1">
+        <ul class="ann-scrool">
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="logo-sec mobile">
+
+      <div class="cols3 logo">
+        <a href="#">
+          <img src="images/logo.png" alt="logo" class="sub-logo" />
+        </a>
+      </div>
+      <!-- <div class="cols3 login">
+
+        <a href="#" data-barley="nav_login11" data-barley-editor="link" class="login-acnt">Log In</a>
+
+      </div> -->
+    </div>
+    <div class="top-content-sec mobile">
+      <div class="sub-container">
+        <div class="img-sec">
+          <div class="img-slide-sec">
+
+            <div class="each-slide">
+              <img src="images/1.jpg" alt="top-image" />
+            </div>
+            <div class="each-slide">
+              <img src="images/2.jpg" alt="top-image" />
+            </div>
+            <div class="each-slide">
+              <img src="images/3.jpg" alt="top-image" />
+            </div>
+            <div class="each-slide">
+              <img src="images/4.jpg" alt="top-image" />
+            </div>
+
+          </div>
+
+        </div>
+        <div class="content-sec">
+          <div class="heading-sec">
+            <!-- <p class="bfcm-mob">Black Friday Cyber Monday Special</p> -->
+            <span class="head-lnk subscribe-prdt">
+              <h4 style="color: #000;">Subscribe to</h4>
+              <h3 style="color: #1eb9f0; font-family: 'century_gothic_paneuropeanXBd' !important;">YOMZ</h3>
+            </span>
+
+            <p style="color: #000;">And get your first month FREE.<br>
+              Just pay shipping.</p>
+
+          </div>
+
+          <div class="price-sec">
+            <div class="price-amt mb15">
+              <div class="ofr-amt subscribe-prdt exblod">
+                <span class="amt-head">up to 3 bags</span>
+                <span class="amt">FREE</span>
+              </div>
+              <div class="actual-amt exblod">
+                <span class="amt-head">up to 3 bag</span>
+                <span class="amt">$179.97</span>
+              </div>
+            </div>
+            <div class="price-info mb20">The 1st month</div>
+          </div>
+
+          <div class="button-sec mb15">
+            <a href="javascript:;" class="sbu-button subscribe-prdt">
+              <span class="btn-txt">SUBSCRIBE</span>
+            </a>
+            <a href="javascript:;" class="sbu-button gift-prdt">
+              <span class="btn-txt">GIFT THEM</span>
+            </a>
+          </div>
+
+          <div class="point-sec mb30 ">
+
+            <div class="text mt-2 featur-listdone">
+              <div class="col d-flex align-items-center mb-1">
+                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
+                    class="img-fluid">
+                </div>
+                <div>
+                  <p>Choose How Many Bags</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center mb-1">
+                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
+                    class="img-fluid">
+                </div>
+                <div>
+                  <p>Choose YOMZ Original or YOMZ Sour</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center mb-1">
+                <div class="icon-square flex-shrink-0 me-2">
+                  <img src="images/Tick-01.png" alt="checkYe-Img" class="img-fluid">
+                </div>
+                <div>
+                  <p>Exclusive Member’s Only FREE Bonuses</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center mb-1">
+                <div class="icon-square flex-shrink-0 me-2">
+                  <img src="images/Tick-01.png" alt="checkYe-Img" class="img-fluid">
+                </div>
+                <div>
+                  <p>Try Risk-Free with Our 60-day Picky MOMZ Money Back Guarantee</p>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center mb-1">
+                <div class="icon-square flex-shrink-0 me-2"><img src="images/Tick-01.png" alt="checkYe-Img"
+                    class="img-fluid">
+                </div>
+                <div>
+                  <p>Join the #1 Rated Gummy Subscription Service</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="button-sec mb30">
+
+            <a href="javascript:;" class="sbu-button subscribe-prdt">
+              <span class="btn-txt">SUBSCRIBE</span>
+            </a>
+            <a href="javascript:;" class="sbu-button gift-prdt">
+              <span class="btn-txt">GIFT THEM</span>
+            </a>
+            <!-- </div> -->
+            <!-- <div class="love-it">
+                        You’ll love it!
+                    </div> -->
+          </div>
+          <div class="disclimer">
+            YOMZ is a family-friendly monthly subscription that helps your family fight Hidden Hunger each month. You’ll
+            get a delicious, nutritious snack delivered to your doorstep every month, fast and convenient. This special
+            FREE first month offer is valid only for new members starting a new month-to-month YOMZ subscription plan.
+            If you’re an existing member who wants to reactivate your subscription, please log into your account here so
+            you won’t be billed the difference for an existing subscription and to avoid receiving duplicate items or
+            charges. Cancel anytime.
+
+          </div>
+        </div>
+      </div>
+
+      <!----------------  new section   ------------------------>
+      <div class="past-drops mb50">
+        <div class="container">
+          <h1 class="text-center">Check Out What<br>
+            Families Like Yours<br>
+            Are Saying about YOMZ</h1>
+          <p class="tagBox">
+            Tag
+            <a href="" target="_blank">#YOMZ </a> on Instagram,
+            <a href="" target="_blank">Youtube,</a> or
+            <a href="" target="_blank">Tiktok,</a> to join the fun
+          </p>
+        </div>
+        <div class="drop-slide">
+          <div class="ech-drop">
+            <img src="images/sl/2.jpg" alt="top-image" />
+          </div>
+
+          <div class="ech-drop">
+            <img src="images/sl/11.jpg" alt="top-image" />
+          </div>
+
+          <div class="ech-drop">
+            <img src="images/sl/2.jpg" alt="top-image" />
+          </div>
+
+          <div class="ech-drop">
+            <img src="images/sl/3.jpg" alt="top-image" />
+          </div>
+
+          <div class="ech-drop">
+            <img src="images/sl/4.jpg" alt="top-image" />
+          </div>
+
+          <div class="ech-drop">
+            <img src="images/sl/5.jpg" alt="top-image" />
+          </div>
+          <div class="ech-drop">
+            <img src="images/sl/bn-1.jpg" alt="top-image" />
+          </div>
+          <div class="ech-drop">
+            <img src="images/sl/bn-2.jpg" alt="top-image" />
+          </div>
+          <div class="ech-drop">
+            <img src="images/sl/bn-3.jpg" alt="top-image" />
+          </div>
+
+        </div>
+      </div>
+
+      <div class="testimonial mob text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="testimonials tetsimonial_slider">
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "I cannot say enough good things about YOMZ. Truly tasty, the whole fam loves them. And I swear
+                    we’ve all got more energy and less moodiness."
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-1.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Samantha P. Glendale, AZ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "I love YOMZ because they’re nutritious and have only 1g of sugar. My kids love YOMZ because they
+                    taste great. Plus, they’re easy to pop in a bag or coat pocket. Thank you, YOMZ!
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-2.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Piper G. San Diego, CA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "I love everything about YOMZ - taste, nutrition, and Nastya’s the founder! I don’t know if my girls
+                    like them because of Nastya or the flavor lol! Maybe both… and my 60-something mom loves them too!."
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-3.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Pam K. Coral Gables, FL
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "YOMZ has genuinely changed my family’s snack game. If you’re looking for a snack that tastes good
+                    AND makes you feel good, I can't recommend YOMZ enough!"
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-4.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Jessi M. Baton Rouge, LA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    " I was a previous green powder mix girl. After subscribing to YOMZ the past few weeks, I’m now Team
+                    YOMZ. And my picky eater 3yo is too! Can’t believe they’re good for you. "
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-5.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Molly B. Charlotte, NC
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "I love YOMZ Sour because I like the tartness. My hubby and 4yo son prefer Original. Either way,
+                    YOMZ is delicious and I feel better knowing my family is plugging our nutrition gaps."
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-6.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Lacey B. Canton, OH
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "I had never heard about Hidden Hunger until I came across a YOMZ ad on IG. It explained a lot of
+                    things, especially in my kids. Ever since we started YOMZ a few weeks ago, both my kids have had
+                    better focus on chores and homework."
+
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-7.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Allyson T. ­ Oxford, MS
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial_box">
+                  <p class="testi_quote">
+                    "As a picky mom obsessed with nutrition, I was skeptical at first. I wanted to try them, but it took
+                    a while to pull the trigger. It was their Picky Momz Guarantee that finally pushed me over the line.
+                    And boy am I glad I finally tried YOMZ! Definitely recommend to all my fellow Picky Moms out there!"
+
+                  </p>
+                  <div class="author_details">
+                    <div class="author_image">
+                      <img src="images/face-8.jpg" alt="image" />
+                    </div>
+                    <div class="author_name barley_hide_outline">
+                      <p>
+                        Sheila B. Chicago, IL
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------>
+    </div>
+
+    <div class="middle-content-sec">
+      <div class="icon-div">
+        <img src="images/gap.jpg" alt="" class="img-fluid">
+
+      </div>
+      <div id="imgDiv">
+        <div class="middle-img-sce">
+        </div>
+        <div class="button-row">
+          <div class="msg-sec mb20">
+            Ready to try YOMZ?
+          </div>
+          <div class="btn-sec">
+            <a href="#" class="sbu-button subscribe-prdt">
+              <span class="btn-txt rose-btn">SUBSCRIBE</span>
+            </a>
+            <a href="#" class="sbu-button gift-prdt">
+              <span class="btn-txt">GIFT THEM</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <link href="css/subscribe-new981f.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/halloweenb1b6.css" rel="stylesheet" type="text/css" media="all" />
+
+  <script type="text/javascript" src="js/jquery.jConveyorTicker.minaaf5.js" defer></script>
+  <script type="text/javascript" src="js/homec03b.js"></script>
+  <script type="text/javascript" src="js/subscribe-new32ea.js" defer></script>
+  <script type="text/javascript" src="js/halloweenaa23.js" defer></script>
+
+  <div class="fooetr">
+    <div class="socil_icons_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="footer_logo text-left"> <a href="" data-barley="footerlogo_link" data-barley-editor="link"><img
+                  src="images/logo.png" style="width:190px;" alt="logo"></a> </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="social_icons text-right">
+              <div class="social_icon_box"> <a href="" target="_blank" data-barley="facebook_icon"
+                  data-barley-editor="link"><img src="images/fb-icon.svg" style="width:41px;" alt="facebook" /> </a>
+              </div>
+              <div class="social_icon_box"> <a href="" target="_blank" data-barley="instagram_icon"
+                  data-barley-editor="link"><img src="images/instgram.svg" style="width:41px;" alt="instagram" /> </a>
+              </div>
+              <div class="social_icon_box"> <a href="" target="_blank" data-barley="youtube_icon"
+                  data-barley-editor="link"><img src="images/youtube.svg" style="width:41px;" alt="youtube" /></a>
+              </div>
+              <div class="social_icon_box"> <a href="" target="_blank" data-barley="twitter_icon"
+                  data-barley-editor="link"><img src="images/twitter.svg" style="width:41px;" alt="twitter" /></a>
+              </div>
+
+              <div class="social_icon_box">
+                <a href="" target="_blank" data-barley="tiktok_icon" data-barley-editor="link">
+                  <img src="images/tiktok-icon.svg" style="width:41px;" alt="tiktok" />
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="seprator"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-8">
+            <div class="footer_column left">
+              <div class="footer_nav_head">
+                <p data-barley="explore_head" data-barley-editor="simple">EXPLORE</p>
+              </div>
+              <div class="footer_nav_list">
+                <ul>
+                  <li><a href="#">How It Works</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">YOMZ Rewards</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="footer_column left">
+              <div class="footer_nav_head">
+                <p data-barley="" data-barley-editor="">COMPANY</p>
+              </div>
+              <div class="footer_nav_list">
+                <ul>
+                  <li><a href="#">Ambassadors</a></li>
+                  <li><a href="#">#YOMZ</a></li>
+                  <li><a href="#">Founder</a></li>
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Consent Preferences</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="footer_column left">
+              <div class="footer_nav_head">
+                <p data-barley="customservice_head" data-barley-editor="simple">CUSTOMER SERVICE</p>
+              </div>
+              <div class="footer_nav_list">
+                <ul>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="footer_column1 ">
+              <div class="news_letter">
+                <div class="footer_nav_head">
+                  <p data-barley="newsletter_head" data-barley-editor="simple">BE THE FIRST TO KNOW</p>
+                </div>
+
+                <div class="klaviyo-form-VmhrbQ"></div>
+
+              </div>
+              <div class="subscribe_btn text-center">
+                <a data-barley-editor="link" data-barley="splendies_footer_subscribe_btn" href="subscribe">Subscribe</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p data-barley="copyright" data-barley-editor="simple">© 2024 Splendies. All Rights Reserved. <a
+                href="#">Terms and Conditions</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/owl.carousel1b13.js" defer></script>
+
+</body>
+
+</html>
