@@ -1538,31 +1538,30 @@
   </div>
 
   <script src="js/owl.carousel1b13.js" defer></script>
+  <script>
 
-</body>
+    // tick points functionality
+    const tickPoints = document.getElementById('tick-points');
+    const img = './images/Tick-01.png';
+    const text = [
+      "Choose how many bags",
+      "Pick YOMZ Original or Sour",
+      "Protect against Hidden Hunger",
+      "Try risk-free",
+    ];
 
-<script>
-
-  // tick points functionality
-  const tickPoints = document.getElementById('tick-points');
-  const img = './images/Tick-01.png';
-  const text = [
-    "Choose how many bags",
-    "Pick YOMZ Original or Sour",
-    "Protect against Hidden Hunger",
-    "Try risk-free",
-  ];
-
-  const textHTML =
-    text.map(text => `
+    const textHTML =
+      text.map(text => `
         <div class="tick-point">
           <img src="${img}" alt="tick-img" class="tick-image">
           <p>${text}</p>
         </div>
       `)
-      .join('');
+        .join('');
 
-  tickPoints.innerHTML = textHTML;
-</script>
+    tickPoints.innerHTML = textHTML;
+  </script>
+
+</body>
 
 </html>
