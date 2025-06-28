@@ -59,6 +59,10 @@
     src: url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.eot?ts=1630391088&host=my.cratejoy.com?#iefix") format('embedded-opentype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.woff?ts=1630391092&host=my.cratejoy.com") format('woff'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.ttf?ts=1630391094&host=my.cratejoy.com") format('truetype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.svg?ts=1630391086&host=my.cratejoy.com#glyphicons_halflingsregular") format('svg');
 }
 
+.cursor {
+    cursor: pointer !important;
+}
+
 .show {
     display: block !important;
 }
