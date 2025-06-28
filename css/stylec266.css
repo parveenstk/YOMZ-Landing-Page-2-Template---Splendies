@@ -1528,12 +1528,26 @@ ul {
 }
 
 .subscribe_btn>a {
-	background-color: #FFEB00;
+	background-color: #1EB9F0;
 	color: #000;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 400;
 	padding: 10px 30px;
+	color: #fff;
+	font-family: 'century_gothic_paneuropeanXBd';
+	background-color: #ffffff;
+	color: #1EB9F0;
+	font-weight: 600;
+	font-size: 17px;
+	border: 1px solid #1EB9F0;
+	border-radius: 25px;
+	padding: 12px 40px;
+	display: block;
+	transform: translate(-2px, -2px);
+	transition: all linear .2s !important;
+	text-decoration: none !important;
+	text-transform: uppercase;
 }
 
 .bow_icon {
@@ -1639,8 +1653,8 @@ ul {
 	margin: 0 5px;
 }
 
-.fooetr {
-	background-color: #000;
+.footer {
+	background-color: #ffeef1;
 	padding: 24px 0 20px;
 	border-top: 1px solid #fff;
 }
@@ -1662,9 +1676,7 @@ ul {
 	margin-left: 25px;
 }
 
-.social_icon_box img {
-	filter: grayscale(100%);
-}
+
 
 .seprator {
 	border-bottom: 1px solid #f9d7dd;
@@ -1690,7 +1702,7 @@ ul {
 }
 
 .footer_nav_head>p {
-	color: #fff;
+	color: #E6193C;
 	font-size: 13px;
 	font-weight: 400;
 }
@@ -1729,9 +1741,9 @@ ul {
 }
 
 .copyright p {
-	color: #fff;
+	color: #e6193c;
 	font-size: 13px;
-	text-align: left;
+	text-align: center;
 }
 
 .user_data_submit>input:hover {
@@ -3754,6 +3766,10 @@ label {
 
 	.footer_column1 .subscribe_btn.text-center {
 		display: block;
+		background-color: #1EB9F0;
+		border-radius: 25px;
+		display: inline-block;
+		text-decoration: none;
 	}
 
 	.footer_column1 .news_letter {

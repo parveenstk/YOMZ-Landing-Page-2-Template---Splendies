@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checkout - YOMZ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+    <header class="d-none d-sm-none d-lg-block">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-2 col-3">
+                    <div class="header-logo">
+                        <img src="images/logo.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-9 text-end text-right">
+                    <div class="login-chackout">
+                        <p class="d-flex align-items-center  gap-2"> <img src="images/checkout/shopping-cart.png" alt=""
+                                class="img-fluid"> <span>(2) Cart</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="mobile-header pt-3 d-sm-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mx-auto">
+                    <img src="images/logo.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidebaar-cart d-sm-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="cart-estim-total-label">Estimated Total</div>
+                <div class="estimate d-flex justify-content-between">
+                    <div class="cart-estim-total-amount">
+                        <span class="dollar-symb">$</span>
+                        <span class="mobCartAmount">16.99</span>
+                        <span class="usd-text">USD</span>
+                    </div>
+                    <div class="cart-side">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                                class="fas fa-shopping-cart"></i> <span class="count-value">1</span> </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="coupan-code">
+                    <form class="row g-0">
+
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="inputPassword2"
+                                placeholder="Coupon or Gift Code">
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-primary mb-2">Apply</button>
+                        </div>
+                        <span>coupon codes may only be used one time per account and address</span>
+                    </form>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+    </div>
+
+
+
+    <div class="checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 order-2 order-md-1">
+                    <div class="order-summary d-none d-sm-none d-lg-block">
+                        <div class="products-image-title">
+                            <img src="images/checkout/bag-3.png" class="img-fluid">
+                            <h3>Order Summary</h3>
+                        </div>
+                        <div class="pricemassage">
+                            <p>All prices shown in US dollars</p>
+                            <p>Pre-paid plans are paid in full.</p>
+                        </div>
+                        <div class="products-details-price">
+                            <div class="pro-box">
+                                <span class="details-close-icon">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </span>
+                                <span class="products-ds">
+                                    <h4>YOMZ</h4>
+                                    <p>The 1st month</p>
+                                    <p>3 BAGS FOR</p>
+                                </span>
+                                <span class="products-tag-price">
+                                    $129.58
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="subtotal mt-3">
+                                <p class="mb-2 d-flex justify-content-between">
+                                    <span>Estimated Shipping: </span>
+                                    <span>$00.00</span>
+                                </p>
+                                <p class="mb-0 d-flex justify-content-between">
+                                    <span>Estimated Tax:</span>
+                                    <span>$00.00</span>
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="mb-0 d-flex total-price exblod justify-content-between">
+                                <span>Total</span>
+                                <span>$129.58</span>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="d-none d-sm-none d-lg-block">
+
+                    <div class="coupan-code d-none d-sm-none d-lg-block">
+                        <form class="row g-0">
+
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="inputPassword2"
+                                    placeholder="Coupon or Gift Code">
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" class="btn btn-primary mb-2">Apply</button>
+                            </div>
+                            <span>coupon codes may only be used one time per account and address</span>
+                        </form>
+                    </div>
+
+
+
+
+                    <div class="item-add cart-addon d-none d-sm-none d-lg-block">
+                        <h4>YOMZ MEMBERS ALSO ADDED THIS EXCLUSIVE ITEM NOT AVAILABLE IN THIS SUBSCRIPTION OFFER</h4>
+                        <p>Ships separately</p>
+
+                        <div class="cart-box-bottom">
+                            <div class="items">
+                                <div class="text-center items-image">
+                                    <img src="images/checkout/bag-3.png">
+                                </div>
+                                <div class="items-price">
+                                    <div class="prdt-name">YOMZ SOUR <span>(for fans of tart & tangy)</span></div>
+                                    <div class="prdt-price">$47.99</div>
+                                </div>
+                            </div>
+                            <div class="text-center items-btn">
+                                <button type="submit" class="btn btn-primary">ADD</button>
+                            </div>
+                        </div>
+                        <div class="cart-box-bottom">
+                            <div class="items">
+                                <div class="text-center items-image">
+                                    <img src="images/checkout/bag-3.png">
+                                </div>
+                                <div class="items-price">
+                                    <div class="prdt-name">YOMZ SOUR <span>(for fans of tart & tangy)</span></div>
+                                    <div class="prdt-price">$47.99</div>
+                                </div>
+                            </div>
+                            <div class="text-center items-btn">
+                                <button type="submit" class="btn btn-primary">ADD</button>
+                            </div>
+                        </div>
+                        <div class="cart-box-bottom cart-box-bottom-1">
+                            <div class="items">
+                                <div class="text-center items-image">
+                                    <img src="images/checkout/bag-3.png">
+                                </div>
+                                <div class="items-price">
+                                    <div class="prdt-name">YOMZ SOUR <span>(for fans of tart & tangy)</span></div>
+                                    <div class="prdt-price">$47.99</div>
+                                </div>
+                            </div>
+                            <div class="text-center items-btn">
+                                <button type="submit" class="btn btn-primary">ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7  order-1 order-md-2">
+                    <div class="right-sideinforamtion">
+                        <div class="yomz-form">
+                            <div class="heading">
+                                <h3>Create New YOMZ Account (required)</h3>
+                                <p>To make changes to an existing account, please login to your account.</p>
+                            </div>
+
+                            <div class="inner-form-filed">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Shipping Address</h3>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="First Name">
+                                            <label for="floatingInput">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="test" class="form-control" id="floatingInput"
+                                                placeholder="Last Name">
+                                            <label for="floatingInput">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="Street Address">
+                                            <label for="floatingInput">Street Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating mb-3">
+                                            <input type="test" class="form-control" id="floatingInput"
+                                                placeholder="Apt/Unit">
+                                            <label for="floatingInput">Apt/Unit</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="City">
+                                            <label for="floatingInput">City</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="floatingSelect"
+                                                aria-label="Floating label select example">
+                                                <option selected>Select a state</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District Of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                                            <label for="floatingSelect">Select a state/province</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating mb-3">
+                                            <input type="test" class="form-control" id="floatingInput"
+                                                placeholder="Postal Code">
+                                            <label for="floatingInput">Postal Code</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingInput"
+                                                placeholder="Street Address">
+                                            <label for="floatingInput">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="billing-infomarion">
+                                    <h3>Billing Information</h3>
+                                    <p>Plans automatically renew.<br>You can cancel anytime. <img
+                                            src="images/checkout/qus-icons.svg" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="By clicking on 'Checkout', you confirm that you accept our Terms of Service & that 
+                                    your subscription will automatically renew based on the subscription billing period.
+                                    Your credit card will automatically be charged the subscription fee until you cancel your subscription. 
+                                    You can cancel your subscription anytime by contacting us at info@yomz.com">
+                                    </p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <input class="form-control form-control-lg" type="number"
+                                            placeholder="1234 1234 1234 1234" aria-label=".form-control-lg example">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <input class="form-control form-control-lg" type="number" placeholder="CVC"
+                                            aria-label=".form-control-lg example">
+                                    </div>
+                                    <div class="col-md-8 mb-3">
+                                        <input class="form-control form-control-lg" type="number" placeholder="MM / YY"
+                                            aria-label=".form-control-lg example">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <input class="form-control form-control-lg" type="number"
+                                            placeholder="Postal Code" aria-label=".form-control-lg example">
+                                    </div>
+                                    <div class="col-md-8 mb-3">
+                                        <select class="form-select form-select-lg" aria-label="Default select example">
+                                            <option selected>Select a state</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="DC">District Of Columbia</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="divider" style="margin-bottom: 25px">
+                                            <span>OR </span>
+                                            <span class="divider"></span>
+                                        </p>
+                                    </div>
+                                    <div dir="ltr" trbidi="on">
+                                        <div class="mb-5">
+                                            <a data-paypal-button="true" href="#">
+                                                <img src="images/checkout/checkout-logo-medium.png"
+                                                    alt="Check out with PayPal">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                              <!-- Mobile -->
+                            <div class="item-add cart-addon d-sm-block d-lg-none">
+                                <h4>YOMZ MEMBERS ALSO ADDED THIS EXCLUSIVE ITEM NOT AVAILABLE IN THIS SUBSCRIPTION OFFER
+                                </h4>
+                                <p>Ships separately</p>
+
+                                <div class="cart-box-bottom">
+                                    <div class="items">
+                                        <div class="text-center items-image">
+                                            <img src="images/checkout/bag-3.png">
+                                        </div>
+                                        <div class="items-price">
+                                            <div class="prdt-name">YOMZ SOUR <span>(for fans of tart &amp; tangy)</span>
+                                            </div>
+                                            <div class="prdt-price">$47.99</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center items-btn">
+                                        <button type="submit" class="btn btn-primary">ADD</button>
+                                    </div>
+                                </div>
+                                <div class="cart-box-bottom">
+                                    <div class="items">
+                                        <div class="text-center items-image">
+                                            <img src="images/checkout/bag-3.png">
+                                        </div>
+                                        <div class="items-price">
+                                            <div class="prdt-name">YOMZ SOUR <span>(for fans of tart &amp; tangy)</span>
+                                            </div>
+                                            <div class="prdt-price">$47.99</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center items-btn">
+                                        <button type="submit" class="btn btn-primary">ADD</button>
+                                    </div>
+                                </div>
+                                <div class="cart-box-bottom cart-box-bottom-1">
+                                    <div class="items">
+                                        <div class="text-center items-image">
+                                            <img src="images/checkout/bag-3.png">
+                                        </div>
+                                        <div class="items-price">
+                                            <div class="prdt-name">YOMZ SOUR <span>(for fans of tart &amp; tangy)</span>
+                                            </div>
+                                            <div class="prdt-price">$47.99</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center items-btn">
+                                        <button type="submit" class="btn btn-primary">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile -->
+                            <div class="team-condition">
+                                <div class="row">
+
+                                    <p>By clicking “CHECKOUT” I acknowledge that I am starting a New YOMZ subscription.
+                                        If I simply want to update my billing information on an existing subscription, I
+                                        can do so by logging into my account <a href="javascript:void(0);"> here​.</a>
+                                    </p>
+                                    <p>I am accepting YOMZ automatic renewal terms and I have read and accept YOMZ <a
+                                            href="javascript:void(0);">Terms of Service.</a> My account will be charged
+                                        the applicable subscription fee until I
+                                        cancel my subscription. I understand coupon codes may only be used once per
+                                        person, email, shipping address. If I have already placed a previous order using
+                                        any coupon code, the balance due for this order will be processed upon shipment.
+                                        Prepaid subscriptions are non­refundable. I understand cancelling will disable
+                                        the auto renewal but I will still receive all remaining packages.</p>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            I Agree to <a href="javascript:void(0);">Terms and Conditions.</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                          
+
+                            <div class="row">
+                                <div class="offer-salecment">
+                                    <ul>
+                                        <li><img src="images/checkout/discount.svg"> <strong>$129.58</strong> Off</li>
+                                        <li><img src="images/checkout/free-shipping.svg"> <strong>FREE</strong> Shipping
+                                        </li>
+                                        <li><img src="images/checkout/gift.svg"> <strong>FREE</strong> Gift</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 submit-btn">
+                                    <button type="submit" class="btn btn-primary">TRY YOMZ NOW</button>
+                                </div>
+                            </div>
+
+                            <div class="info-text">
+                                <p>Your purchase directly helps children and families in need of help in their fight
+                                    against
+                                    Hidden Hunger.</p>
+
+                                <p><strong>90 Day Picky Momz Happiness Guarantee</strong><br>
+                                    Refill ships in 30 Days. Change or cancel easily. Free shipping on 1st purchase.</p>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <div class="socil_icons_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="footer_logo text-left"> <a href="" data-barley="footerlogo_link"
+                                data-barley-editor="link"><img src="images/logo.png" style="width:190px;"
+                                    alt="logo"></a> </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="social_icons text-right">
+                            <div class="social_icon_box"> <a href="" target="_blank" data-barley="facebook_icon"
+                                    data-barley-editor="link"><img src="images/fb-icon.svg" style="width:41px;"
+                                        alt="facebook"> </a>
+                            </div>
+                            <div class="social_icon_box"> <a href="" target="_blank" data-barley="instagram_icon"
+                                    data-barley-editor="link"><img src="images/instgram.svg" style="width:41px;"
+                                        alt="instagram"> </a>
+                            </div>
+                            <div class="social_icon_box"> <a href="" target="_blank" data-barley="youtube_icon"
+                                    data-barley-editor="link"><img src="images/youtube.svg" style="width:41px;"
+                                        alt="youtube"></a>
+                            </div>
+                            <div class="social_icon_box"> <a href="" target="_blank" data-barley="twitter_icon"
+                                    data-barley-editor="link"><img src="images/twitter.svg" style="width:41px;"
+                                        alt="twitter"></a>
+                            </div>
+
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="tiktok_icon" data-barley-editor="link">
+                                    <img src="images/tiktok-icon.svg" style="width:41px;" alt="tiktok">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="seprator"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="explore_head" data-barley-editor="simple">EXPLORE</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">How It Works</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Reviews</a></li>
+                                    <li><a href="#">YOMZ Rewards</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="" data-barley-editor="">COMPANY</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">Ambassadors</a></li>
+                                    <li><a href="#">#YOMZ</a></li>
+                                    <li><a href="#">Founder</a></li>
+                                    <li><a href="#">Mission</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Accessibility</a></li>
+                                    <li><a href="#">Consent Preferences</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="customservice_head" data-barley-editor="simple">CUSTOMER SERVICE</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="footer_column1 ">
+                            <div class="news_letter">
+                                <div class="footer_nav_head">
+                                    <p data-barley="newsletter_head" data-barley-editor="simple">BE THE FIRST TO KNOW
+                                    </p>
+                                </div>
+
+                                <div class="klaviyo-form-VmhrbQ"></div>
+
+                            </div>
+                            <div class="subscribe_btn text-center">
+                                <a data-barley-editor="link" data-barley="splendies_footer_subscribe_btn"
+                                    href="subscribe">Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p data-barley="copyright" data-barley-editor="simple">© 2024 YOMZ. All Rights Reserved. <a
+                                href="#">Terms and Conditions</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--sidebaar cart -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="order-summary">
+                <div class="products-image-title">
+                    <h3>Order Summary</h3>
+                </div>
+                <div class="pricemassage">
+                    <p>All prices shown in US dollars</p>
+                    <p>Pre-paid plans are paid in full.</p>
+                </div>
+                <div class="products-details-price">
+                    <div class="pro-box">
+                        <span class="products-cart-image">
+                            <img src="images/checkout/bag-3.png" class="img-fluid">
+                        </span>
+                        <span class="products-ds">
+                            <h4>YOMZ</h4>
+                            <p>The 1st month</p>
+                            <p>3 BAGS FOR</p>
+                        </span>
+
+                        <span class="details-close-icon">
+                            <a href=""><i class="fas fa-times-circle"></i></a>
+                        </span>
+                    </div>
+                    <div class="pro-box">
+                        <span class="products-cart-image">
+                            <img src="images/checkout/bag-3.png" class="img-fluid">
+                        </span>
+                        <span class="products-ds">
+                            <h4>YOMZ</h4>
+                            <p>The 1st month</p>
+                            <p>3 BAGS FOR</p>
+                        </span>
+
+                        <span class="details-close-icon">
+                            <a href=""><i class="fas fa-times-circle"></i></a>
+                        </span>
+                    </div>
+                    <div class="pro-box pro-box-1">
+                        <span class="products-cart-image">
+                            <img src="images/checkout/bag-3.png" class="img-fluid">
+                        </span>
+                        <span class="products-ds">
+                            <h4>YOMZ</h4>
+                            <p>The 1st month</p>
+                            <p>3 BAGS FOR</p>
+                        </span>
+
+                        <span class="details-close-icon">
+                            <a href=""><i class="fas fa-times-circle"></i></a>
+                        </span>
+                    </div>
+
+
+                    <hr>
+                    <div class="subtotal mt-3">
+                        <p class="mb-2 d-flex justify-content-between">
+                            <span>Estimated Shipping: </span>
+                            <span>$00.00</span>
+                        </p>
+                        <p class="mb-0 d-flex justify-content-between">
+                            <span>Estimated Tax:</span>
+                            <span>$00.00</span>
+                        </p>
+                    </div>
+                    <hr>
+                    <p class="mb-0 d-flex total-price exblod justify-content-between">
+                        <span>Total</span>
+                        <span>$129.58</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sidebaar cart -->
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+@font-face {
+    font-family: "Super Caramel";
+    src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanRg';
+    src: url('../font/centurygothicpaneuropeanregular-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanregular-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanregular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanLt';
+    src: url('../font/centurygothicpaneuropeanlight-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanlight-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url('../font/centurygothicpaneuropeanextrabold-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanextrabold-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanextrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropean_Rg';
+    src: url('../font/centurygothicpaneuropeansemibold-webfont.woff2') format('woff2'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.woff') format('woff'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.exblod {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+h1,
+h2 {
+    font-family: "Super Caramel" !important;
+}
+
+body {
+    font-family: 'century_gothic_paneuropean_Rg' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1030px;
+}
+
+.checkout .container {
+    max-width: 1030px;
+}
+
+.checkout {
+    padding: 60px 0;
+}
+
+.login-chackout img {
+    height: 35px;
+}
+
+.login-chackout span {
+    color: #555555;
+    font-size: 16px;
+}
+
+.login-chackout p {
+    margin-bottom: 0px;
+}
+
+header {
+    padding: 15px 0;
+    border-bottom: 1px solid #1EB9F0;
+}
+
+.checkout .container {
+    max-width: 1030px;
+}
+
+.pro-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.products-image-title h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.pricemassage {
+    margin-bottom: 30px;
+}
+
+.pricemassage p {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.coupan-code {
+    margin-bottom: 30px;
+    margin-top: 30px !important;
+}
+
+.item-add.cart-addon h4 {
+    font-size: 19px;
+}
+
+.total-price {
+    margin-bottom: 40px !important;
+}
+
+span.products-ds {
+    width: 100%;
+}
+
+span.products-ds p {
+    margin-bottom: 0px;
+}
+
+.products-tag-price {
+    font-size: 24px;
+}
+
+.products-ds h4 {
+    font-family: 'Century Gothic';
+}
+
+span.details-close-icon a {
+    color: #E6193C;
+}
+
+.subtotal {
+    text-transform: capitalize;
+}
+
+.subtotal {
+    text-transform: capitalize;
+}
+
+.total-price {
+    font-size: 38px;
+}
+
+.coupan-code .form-control {
+    border-radius: 0px;
+    height: 50px;
+    font-family: 'century_gothic_paneuropeanLt';
+}
+
+.coupan-code [type=submit] {
+    border-radius: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: #1EB9F0;
+    border: none
+}
+
+.coupan-code span {
+    font-family: 'century_gothic_paneuropeanLt';
+    font-size: 12px;
+}
+
+.cart-addon .cart-box-bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+.cart-box-bottom .items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.items-btn .btn {
+    width: 100%;
+    padding: 6px 20px;
+    min-width: unset;
+    color: #fff !important;
+    border-radius: 0px;
+    height: 44px;
+    border: none;
+    width: 100%;
+    background-color: #1EB9F0;
+    font-size: 14px
+}
+
+.prdt-name span {
+    display: block;
+    font-size: 12px;
+}
+
+.prdt-name {
+    line-height: normal;
+    font-size: 18px;
+}
+
+.items-image img {
+    width: 80px;
+}
+
+.prdt-price {
+    font-size: 23px;
+    margin-top: 5px;
+}
+
+p.divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p.divider span.divider {
+    width: 100%;
+    flex-shrink: 1;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 5px;
+    margin-top: 6px;
+    margin-right: 0px;
+}
+
+.yomz-form .heading {
+    margin-bottom: 30px;
+}
+
+.yomz-form .heading h3 {
+    font-size: 24px;
+}
+
+.yomz-form .heading p {
+    font-size: 16px;
+}
+
+.inner-form-filed h3 {
+    margin-top: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inner-form-filed p {
+    font-size: 16px;
+}
+
+.billing-infomarion h3 {
+    margin-bottom: 5px !important;
+}
+
+.billing-infomarion p {
+    margin-bottom: 20px !important;
+}
+
+.inner-form-filed input,
+.inner-form-filed input::placeholder {
+    font-size: 16px;
+    font-family: 'century_gothic_paneuropean_Rg';
+}
+
+.inner-form-filed .form-floating {
+    font-size: 16px;
+    font-family: 'century_gothic_paneuropean_Rg';
+    color: #757474;
+}
+
+.inner-form-filed input[type="text"],
+.inner-form-filed input,
+.inner-form-filed select {
+    height: 60px;
+    border-radius: 3px !important;
+    font-size: 16px;
+    font-family: 'century_gothic_paneuropean_Rg';
+    color: #757474;
+}
+
+.right-sideinforamtion {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.team-condition p {
+    font-size: 13px;
+    font-family: 'century_gothic_paneuropeanLt';
+    color: #4c4c4c;
+}
+
+.team-condition .form-check {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    color: #4c4c4c;
+}
+
+.submit-btn [type=submit] {
+    text-transform: uppercase;
+    padding: 6px 30px;
+    color: #fff !important;
+    border-radius: 0px;
+    height: 50px;
+    border: none;
+
+    background-color: #1EB9F0;
+}
+
+.team-condition p a {
+    color: #ca2a3d;
+}
+
+.offer-salecment ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.offer-salecment {
+    margin-bottom: 20px;
+}
+
+.offer-salecment img {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    margin-right: 5px;
+}
+
+.offer-salecment strong {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+.offer-salecment li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.info-text {
+    margin-top: 20px;
+}
+
+.info-text p {
+    font-size: 14px;
+}
+
+.info-text strong {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+/* Footer */
+
+.footer .container {
+    max-width: 1000px;
+}
+
+.footer {
+    background-color: #ffeef1;
+    padding: 24px 0 20px;
+    border-top: 1px solid #fff;
+}
+
+.footer_logo>a {
+    display: block;
+}
+
+.social_icons {
+    padding-top: 15px;
+}
+
+.social_icon_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social_icon_box+.social_icon_box {
+    margin-left: 25px;
+}
+
+.seprator {
+    border-bottom: 1px solid #f9d7dd;
+    padding-top: 8px;
+}
+
+.footer_navigation {
+    padding: 30px 10px 24px;
+}
+
+.footer_column {
+    text-align: left;
+    width: 33.333%;
+}
+
+.left {
+    float: left;
+}
+
+.footer_nav_head>p {
+    color: #E6193C;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer_nav_list ul li {
+    list-style: outside none none;
+}
+
+.footer_nav_list a {
+    color: #909090;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.copyright p {
+    color: #e6193c;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.copyright a {
+    color: #909090;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+/******************************************* all section media *********************************/
+@media screen and (max-width: 767px) {
+
+    .dollar-symb {
+        font-size: 17px;
+        vertical-align: 2px;
+        margin-right: -7px;
+        font-weight: 400;
+    }
+
+    .cart-estim-total-amount {
+        font-size: 37px;
+        font-family: 'century_gothic_paneuropeanXBd';
+    }
+
+    .usd-text {
+        font-size: 12px;
+        margin-left: -6px;
+        font-weight: 400;
+        vertical-align: 0px;
+    }
+
+    .cart-estim-total-label {
+        margin-bottom: -5px;
+        font-size: 14px;
+    }
+
+    .cart-side .btn {
+        background: none;
+        border: none;
+        padding: 12px 12px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.46);
+        border-radius: 4px;
+    }
+
+    .cart-side .btn .fas {
+        color: #000;
+    }
+
+    span.count-value {
+        background-color: #1EB9F0;
+        padding: 5px;
+        border-radius: 4px;
+        padding: 2px 6px 3px 6px;
+        margin-left: 4px;
+        font-family: 'century_gothic_paneuropeanXBd';
+    }
+
+    .coupan-code {
+        margin-bottom: 10px;
+        margin-top: 15px !important;
+    }
+
+    .coupan-code span {
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .coupan-code .form-control {
+        border-radius: 0px;
+        height: 45px;
+        font-family: 'century_gothic_paneuropeanLt';
+        font-size: 14px;
+    }
+
+    .coupan-code [type=submit] {
+        height: 45px;
+    }
+
+    .checkout {
+        padding: 10px 0;
+    }
+
+    .sidebaar-cart {
+        padding-top: 20px;
+    }
+
+    .right-sideinforamtion {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .team-condition .form-check {
+        padding-left: 30px;
+        margin-left: 0px;
+    }
+
+    .yomz-form .heading h3 {
+        font-size: 22px;
+    }
+
+    .yomz-form .heading p {
+        font-size: 14px;
+    }
+
+    .inner-form-filed h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .billing-infomarion p {
+        margin-bottom: 15px !important;
+        line-height: normal;
+        font-size: 14px;
+    }
+
+    span.products-cart-image {
+        width: 125px;
+    }
+
+    .products-image-title h3 {
+        font-size: 26px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .products-ds h4 {
+        font-family: 'Century Gothic';
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+
+    span.products-ds p {
+        font-size: 13px;
+    }
+
+    .pricemassage {
+        margin-bottom: 20px;
+    }
+
+    .pro-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 15px 0px;
+        border-bottom: 1px solid #dcdada;
+    }
+
+    .offcanvas-header {
+        padding: 0px;
+    }
+
+    .pricemassage p {
+        margin-bottom: 0px;
+        text-align: left;
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    .offcanvas .btn-close {
+        position: relative;
+        right: 20px;
+        top: 20px;
+        border: 2px solid #858484;
+        border-radius: 20px;
+        padding: 9px;
+        font-size: 10px;
+        opacity: 1;
+    }
+
+    .pro-box-1 {
+        border-bottom: 0px solid #dcdada;
+    }
+
+    .offcanvas {
+        width: 93% !important;
+    }
+
+    .total-price {
+        font-size: 29px;
+    }
+    .subtotal {
+    font-size: 15px;
+}
+
+.team-condition {
+    padding-top: 20px;
+}
+
+.cart-box-bottom-1{    border-bottom: 0px solid #e5e5e5 !important;}
+
+.items-btn .btn{    padding: 2px 14px; height: 40px;}
+
+.team-condition p{    margin-bottom: 5px;}
+
+.footer_logo.text-left {
+    text-align: center;
+}
+.subscribe_btn>a {
+    background-color: #1EB9F0;
+    color: #000;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 30px;
+    color: #fff;
+    font-family: 'century_gothic_paneuropeanXBd';
+    background-color: #ffffff;
+    color: #1EB9F0;
+    font-weight: 600;
+    font-size: 17px;
+    border: 1px solid #1EB9F0;
+    border-radius: 25px;
+    padding: 12px 40px;
+    display: block;
+    transform: translate(-2px, -2px);
+    transition: all linear .2s !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+    .footer_column1 .subscribe_btn.text-center {
+        display: block;
+        background-color: #1EB9F0;
+        border-radius: 25px;
+        display: inline-block;
+        text-decoration: none;
+    }
+        .footer_column1 .news_letter {
+        display: none;
+    }
+
+    .footer_column1 {
+    text-align: center;
+    margin-top: 20px;
+}
+}
+
+/******************************************* all section media *********************************/

@@ -638,14 +638,18 @@
     @media screen and (max-width:767px) {
 
       .tick-point {
-        margin-bottom: 6px !important;
+        margin-bottom: 4px !important;
 
         .tick-image {
-          width: 22px !important;
+          width: 23px !important;
+        }
+
+        p {
+          font-size: 20px;
         }
       }
 
-      .banner {
+      .tick-point .banner {
         display: none
       }
 
@@ -1003,7 +1007,7 @@
     .tick-point {
       display: flex;
       gap: 10px;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 10px;
 
       p {
@@ -1070,13 +1074,13 @@
             </p> -->
       <div class="js-conveyor-1">
         <ul class="ann-scrool">
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
-          <li>Limited-time introductory offer: Try up to 3 bags FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
+          <li>LIMITED-TIME INTRODUCTORY OFFER: TRY 3 BAGS FREE</li>
         </ul>
       </div>
     </div>
@@ -1096,8 +1100,8 @@
     </div>
     <div class="top-content-sec mobile">
       <div class="sub-container">
-        <div class="img-sec">
-          <div class="img-slide-sec">
+        <div class="img-sec mainslider">
+          <div class="img-slide-sec ">
 
             <div class="each-slide">
               <img src="images/1.jpg" alt="top-image" />
@@ -1120,7 +1124,7 @@
             <!-- <p class="bfcm-mob">Black Friday Cyber Monday Special</p> -->
             <span class="head-lnk subscribe-prdt">
               <h4 style="color: #000;">Subscribe to</h4>
-              <h3 style="color: #1eb9f0; font-family: 'century_gothic_paneuropeanXBd' !important;">YOMZ</h3>
+              <h3 style="color: #1eb9f0;" class="mainproducttext">YOMZ</h3>
             </span>
 
             <p style="color: #000;">And get your first month FREE.<br>
@@ -1131,24 +1135,22 @@
           <div class="price-sec">
             <div class="price-amt mb15">
               <div class="ofr-amt subscribe-prdt exblod">
-                <span class="amt-head">up to 3 bags</span>
+                <span class="amt-head">3 BAGS FOR</span>
                 <span class="amt">FREE</span>
               </div>
               <div class="actual-amt exblod">
-                <span class="amt-head">up to 3 bags</span>
-                <span class="amt">$179.97</span>
+                <span class="amt-head">3 BAGS FOR</span>
+                <span class="amt">$239.97</span>
               </div>
             </div>
             <div class="price-info mb20">The 1st month</div>
           </div>
 
           <div class="button-sec mb15">
-            <a href="javascript:;" class="sbu-button subscribe-prdt">
+            <a href="" class="sbu-button subscribe-prdt subscribe-button">
               <span class="btn-txt">SUBSCRIBE</span>
             </a>
-            <a href="javascript:;" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT YOMZ</span>
-            </a>
+
           </div>
 
           <div class="point-sec mb30 ">
@@ -1158,28 +1160,85 @@
           </div>
 
           <div class="button-sec mb30">
-            <a href="javascript:;" class="sbu-button subscribe-prdt">
+            <a href="" class="sbu-button subscribe-prdt subscribe-button">
               <span class="btn-txt">SUBSCRIBE</span>
             </a>
-            <a href="javascript:;" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT YOMZ</span>
-            </a>
+
             <!-- </div> -->
             <!-- <div class="love-it">
                         You’ll love it!
                     </div> -->
           </div>
           <div class="disclimer">
-            YOMZ is a family-friendly monthly subscription that helps your family fight Hidden Hunger each month. You’ll
-            get a delicious, nutritious snack delivered to your doorstep every month, fast and convenient. This special
-            FREE first month offer is valid only for new members starting a new month-to-month YOMZ subscription plan.
-            If you’re an existing member who wants to reactivate your subscription, please log into your account here so
-            you won’t be billed the difference for an existing subscription and to avoid receiving duplicate items or
-            charges. Cancel anytime.
+            <p>YOMZ is a family-friendly monthly subscription that helps your family fight Hidden Hunger. Every month,
+              you’ll get a delicious, nutritious snack shipped to your doorstep, fast and convenient. One bag per family
+              member will deliver mouthwatering nutrition every day for 28 days.
+            </p>
+            <p>This special FREE first month offer is valid <strong class="exblod">only</strong> for new members
+              starting a new month-to-month YOMZ
+              subscription plan. If you’re an existing member who wants to reactivate your subscription, please log into
+              your account here so you won’t be billed the difference for an existing subscription and to avoid
+              receiving duplicate items or charges.
+            </p>
+            <p>And it's all risk-free with our 90-Day Picky Momz 100% Happiness Guarantee.
+            </p>
+
+
 
           </div>
         </div>
       </div>
+
+
+
+
+
+      <div class="offeringyomz">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 mx-auto text-center">
+              <h3>Why Are We Offering<br>YOMZ for Free?</h3>
+
+              <p>YOMZ was founded by Nastya, the
+                <span class="mobile-block-line">star of YouTube’s biggest kid series</span>
+                <span class="mobile-block-line">Like Nastya. You see, Nastya used to</span>
+                <span class="mobile-block-line">suffer from Hidden Hunger. She was</span>
+                <span class="mobile-block-line">eating a healthy diet, yet she had</span>
+                <span class="mobile-block-line"><strong class="exblod">unexplained</strong> energy crashes, tummy</span>
+                <span class="mobile-block-line">troubles, mood swings, fatigue, lack</span>
+                <span class="mobile-block-line">of focus, and more. In short, she just</span>
+                didn't feel right.
+              </p>
+
+              <p class="mt-2">When she found nothing that helped,
+                <span class="mobile-block-line"><strong class="exblod">especially</strong> nothing that tasted
+                  great,</span>
+                <span class="mobile-block-line">Nastya partnered with an award-</span>
+                <span class="mobile-block-line">winning <strong class="exblod">nutritionist</strong> to create
+                  YOMZ.</span>
+                <span class="mobile-block-line">And now she’s on a mission to end</span>
+                <span class="mobile-block-line">Hidden Hunger for <u>100 million people.</u></span>
+                <span class="mobile-block-line">That’s why we're making you this</span>
+                <span class="mobile-block-line">exclusive FREE, new members only offer.</span>
+                <span class="mobile-block-line">Plus, your purchase today directly helps</span>
+                <span class="mobile-block-line">children and families <strong class="exblod">in need</strong> of help
+                  to</span>
+                fight Hidden Hunger.
+              </p>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
 
       <!----------------  new section   ------------------------>
       <div class="past-drops mb50">
@@ -1386,27 +1445,83 @@
     </div>
 
     <div class="middle-content-sec">
-      <div class="icon-div">
-        <img src="images/gap.jpg" alt="" class="img-fluid">
 
-      </div>
-      <div id="imgDiv">
-        <div class="middle-img-sce">
-        </div>
-        <div class="button-row">
-          <div class="msg-sec mb20">
-            Ready to try YOMZ?
-          </div>
-          <div class="btn-sec">
-            <a href="#" class="sbu-button subscribe-prdt">
-              <span class="btn-txt rose-btn">SUBSCRIBE</span>
-            </a>
-            <a href="#" class="sbu-button gift-prdt">
-              <span class="btn-txt">GIFT YOMZ</span>
-            </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+
+            <img src="images/gap.jpg" alt="" class="img-fluid">
+
+
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+      <!-- subscribe -->
+      <div class="subscribe-section">
+        <div class="container">
+
+          <div class="subscribe-btn">
+            <div class="row text-center">
+              <p>Ready to try YOMZ?</p>
+              <div class="btn-sec">
+                <a href="" class="sbu-button subscribe-prdt subscribe-button">
+                  <span class="btn-txt rose-btn">SUBSCRIBE</span>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="subscribe-bags">
+            <div id="packs" class="row justify-content-between hide">
+              <div class="col-md-4 mb-4">
+                <div class="bags">
+                  <img src="images/bag-3.png" class="img-fluid">
+                  <div class="bag-box">
+                    <h4 class="bag-title">3 People Set</h4>
+                    <span class="bag-conts">(3 bags)</span>
+                    <p class="bag-price">$129.58 per month</p>
+                    <span class="bag-month">Get your first month for FREE</span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="bags">
+                  <img src="images/bag-1.png" class="img-fluid">
+                  <div class="bag-box">
+                    <h4 class="bag-title">1 Person</h4>
+                    <span class="bag-conts">(1 bag)</span>
+                    <p class="bag-price">$47.99</p>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- subscribe -->
+
+
+
+
+
+
+
+
+
 
     </div>
 
@@ -1420,7 +1535,7 @@
   <script type="text/javascript" src="js/subscribe-new32ea.js" defer></script>
   <script type="text/javascript" src="js/halloweenaa23.js" defer></script>
 
-  <div class="fooetr">
+  <div class="footer">
     <div class="socil_icons_bar">
       <div class="container">
         <div class="row">
@@ -1517,7 +1632,7 @@
                 <div class="klaviyo-form-VmhrbQ"></div>
 
               </div>
-              <div class="subscribe_btn text-center">
+              <div class="subscribe_btn text-center sbu-button subscribe-prdt subscribe-button">
                 <a data-barley-editor="link" data-barley="splendies_footer_subscribe_btn" href="subscribe">Subscribe</a>
               </div>
             </div>
@@ -1529,8 +1644,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p data-barley="copyright" data-barley-editor="simple">© 2024 Splendies. All Rights Reserved. <a
-                href="#">Terms and Conditions</a></p>
+            <p data-barley="copyright" data-barley-editor="simple">© 2024 YOMZ. All Rights Reserved. <a href="#">Terms
+                and Conditions</a></p>
           </div>
         </div>
       </div>
@@ -1547,7 +1662,7 @@
       "Choose how many bags",
       "Pick YOMZ Original or Sour",
       "Protect against Hidden Hunger",
-      "Try risk-free",
+      "Try risk-free with our Picky Momz Happiness Guarantee",
     ];
 
     const textHTML =
@@ -1562,6 +1677,22 @@
     tickPoints.innerHTML = textHTML;
   </script>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector(".sbu-button");
+      const bagsSection = document.querySelector(".subscribe-bags");
+
+      btn.addEventListener("click", function (e) {
+        e.preventDefault(); // prevent link behavior
+        bagsSection.style.display = "block";
+        // Optional: scroll to section
+        bagsSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+  <script src="./js/buttons.js"></script>
 </body>
+
 
 </html>

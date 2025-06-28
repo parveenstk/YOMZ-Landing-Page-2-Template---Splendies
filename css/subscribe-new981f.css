@@ -54,31 +54,45 @@
 }
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.eot?ts=1630391088&host=my.cratejoy.com");
-  src: url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.eot?ts=1630391088&host=my.cratejoy.com?#iefix") format('embedded-opentype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.woff?ts=1630391092&host=my.cratejoy.com") format('woff'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.ttf?ts=1630391094&host=my.cratejoy.com") format('truetype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.svg?ts=1630391086&host=my.cratejoy.com#glyphicons_halflingsregular") format('svg');
+    font-family: 'Glyphicons Halflings';
+    src: url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.eot?ts=1630391088&host=my.cratejoy.com");
+    src: url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.eot?ts=1630391088&host=my.cratejoy.com?#iefix") format('embedded-opentype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.woff?ts=1630391092&host=my.cratejoy.com") format('woff'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.ttf?ts=1630391094&host=my.cratejoy.com") format('truetype'), url("//d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-3/fonts/glyphicons-halflings-regular.svg?ts=1630391086&host=my.cratejoy.com#glyphicons_halflingsregular") format('svg');
 }
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.mainproducttext {
+    font-family: "Super Caramel"
+}
+
 .glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    max-width: 1000px;;
+    max-width: 1000px;
 }
 
 .glyphicon-menu-left:before {
-  content: "\e257";
+    content: "\e257";
 }
+
 .glyphicon-menu-right:before {
-  content: "\e258";
+    content: "\e258";
 }
 
 .exblod {
@@ -148,7 +162,7 @@ body {
 }
 
 .new-subscribe .sbu-button {
-    background-color: #16022a;
+    background-color: #1EB9F0;
     border-radius: 25px;
     display: inline-block;
     text-decoration: none;
@@ -156,11 +170,11 @@ body {
 
 .new-subscribe .btn-txt {
     font-family: 'century_gothic_paneuropeanXBd';
-    background-color: #865bb1;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1EB9F0;
     font-weight: 600;
     font-size: 17px;
-    border: 1px solid #694191;
+    border: 1px solid #1EB9F0;
     border-radius: 25px;
     padding: 12px 40px;
     display: block;
@@ -168,6 +182,107 @@ body {
     transition: all linear .2s !important;
     text-decoration: none !important;
 }
+
+/****************************** Offering YOMZ  *****************************/
+
+.offeringyomz {
+    padding: 50px 0;
+    background: #eeeeee;
+    margin-bottom: 50px;
+}
+
+.offeringyomz h3 {
+    font-family: "Super Caramel";
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+.offeringyomz p {
+    margin-bottom: 0px;
+}
+
+/****************************** Offering YOMZ  *****************************/
+
+/****************************** Subscribe *****************************/
+
+/* .subscribe-bags {
+  display: none;
+} */
+
+.subscribe-section .container {
+    max-width: 900px;
+}
+
+.subscribe-section {
+    padding: 80px 0;
+}
+
+.bags {
+    text-align: center;
+}
+
+.bags h4 {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #1eb9f0;
+}
+
+p.bag-price {
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    line-height: 17px;
+}
+
+.bags {
+    border: 1px solid #1eb9f0;
+    border-radius: 10px;
+    padding: 0px 0px 0px;
+    transition: all 0.2s;
+    overflow: hidden;
+    background: #d5f4ff;
+}
+
+.bags img {
+    padding: 20px;
+}
+
+.bag-conts,
+.bag-month {
+    font-size: 14px;
+}
+
+.bag-box {
+    background: #fff;
+    color: #000;
+    padding: 10px 20px 20px;
+    height: 150px;
+    transition: all 0.2s;
+
+}
+
+.subscribe-bags {
+    padding: 50px 0 0px;
+}
+
+.bags:hover {
+    background: #fff !important;
+
+}
+
+.bags:hover .bag-box {
+    background-color: #1eb9f0;
+    transition: all 0.2s;
+    color: #fff;
+}
+
+.bags:hover .bag-box h4 {
+    color: #fff;
+}
+
+/****************************** Subscribe  *****************************/
 
 .new-subscribe .sbu-button:hover>.btn-txt {
     transform: translate(-5px, -4px);
@@ -188,7 +303,6 @@ body {
     text-transform: uppercase;
     color: #fff;
 }
-
 
 .new-subscribe .announcement-bar .js-conveyor-1 ul li+li {
     margin-left: 10px;
@@ -390,19 +504,16 @@ body {
 .new-subscribe .top-content-sec .heading-sec h4 {
     color: #000;
     font-size: 60px;
-    font-weight: 500;
 }
 
 .new-subscribe .top-content-sec .heading-sec h3 {
     color: #E6193C;
     font-size: 70px;
-    font-weight: 900;
 }
 
 .new-subscribe .top-content-sec .heading-sec p {
     color: #000;
     font-size: 12px;
-    font-weight: 400;
 }
 
 .new-subscribe .top-content-sec .point-sec {
@@ -413,8 +524,6 @@ body {
     display: flex;
     align-items: center;
 }
-
-
 
 .new-subscribe .top-content-sec .points+.points {
     margin-top: 35px;
@@ -430,7 +539,6 @@ body {
 }
 
 .new-subscribe .top-content-sec .points .point-info {
-    font-weight: 700;
     color: #000;
     font-size: 20px;
     text-transform: uppercase;
@@ -465,7 +573,6 @@ body {
     transform: rotate(-19deg);
     top: -20px;
     left: -23px;
-    font-weight: 700;
     font-size: 15px;
 }
 
@@ -492,14 +599,13 @@ body {
 .new-subscribe .top-content-sec .price-sec .ofr-amt .amt-head {
     display: block;
     font-size: 12px;
-    font-weight: 500;
     text-transform: uppercase;
 }
 
 .new-subscribe .top-content-sec .price-sec .ofr-amt .amt {
     display: block;
     font-size: 46px;
-    font-weight: 800;
+
 }
 
 .new-subscribe .top-content-sec .price-sec .actual-amt {
@@ -516,7 +622,7 @@ body {
 .new-subscribe .top-content-sec .price-sec .actual-amt .amt-head {
     display: block;
     font-size: 12px;
-    font-weight: 500;
+
     text-transform: uppercase;
 }
 
@@ -524,20 +630,20 @@ body {
     text-decoration: line-through;
     display: block;
     font-size: 46px;
-    font-weight: 800;
 }
 
 .new-subscribe .top-content-sec .price-sec .actual-amt.user .amt {
     text-decoration: none;
 }
 
-.button-sec a{text-decoration: none;}
+.button-sec a {
+    text-decoration: none;
+}
 
 .new-subscribe .top-content-sec .price-sec .price-info {
     text-align: center;
     color: #000;
     text-transform: uppercase;
-    font-weight: 500;
     font-size: 12px;
     max-width: 340px;
 }
@@ -575,14 +681,10 @@ body {
     margin-left: 40px;
     font-size: 12px;
     color: #E6193C;
-    font-weight: 800;
 }
 
 .new-subscribe .top-content-sec .disclimer {
-    font-weight: 500;
-    font-size: 11px;
     color: #000;
-    line-height: 18px;
     padding-right: 15px;
 }
 
@@ -642,21 +744,17 @@ body {
 
 .new-subscribe .middle-content-sec .button-row .msg-sec {
     font-size: 16px;
-    font-weight: 500;
     color: #000;
     text-transform: uppercase;
 }
 
 .new-subscribe .middle-content-sec .button-row .splen {
-    font-weight: 900;
     color: #E6193C;
 }
 
 .new-subscribe .middle-content-sec .button-row .btn-sec a+a {
     margin-left: 40px;
 }
-
-
 
 .new-subscribe .middle-content-sec #imgDiv {
     display: block;
@@ -729,14 +827,12 @@ body {
 }
 
 .new-subscribe .footer-sec .fot-cntnt-sec .footer-head {
-    font-weight: 500;
     font-size: 15px;
     color: #000;
     margin-bottom: 5px;
 }
 
 .new-subscribe .footer-sec .fot-cntnt-sec .first-bold {
-    font-weight: 700;
     color: #E6193C;
 }
 
@@ -750,7 +846,6 @@ body {
     color: #fff;
     background-color: #e94a6a;
     font-size: 11px;
-    font-weight: 700;
 }
 
 .new-subscribe .footer-sec .fot-cntnt-sec .social-icons {
@@ -763,14 +858,12 @@ body {
 
 .new-subscribe .footer-sec .fot-cntnt-sec .flo-us {
     font-size: 15px;
-    font-weight: 500;
     text-transform: uppercase;
     color: #000;
     margin-bottom: 15px;
 }
 
 .new-subscribe .footer-sec .fot-cntnt-sec .flo-us .bld-us {
-    font-weight: 700;
     color: #E6193C;
 }
 
@@ -781,12 +874,9 @@ body {
 .new-subscribe .footer-sec .fot-cntnt-sec .web-lnk a {
     font-size: 12px;
     color: #000;
-    font-weight: 700;
 }
 
-.new-subscribe .plan_Box .percent-off .off-stripe {
-    font-weight: 500;
-}
+.new-subscribe .plan_Box .percent-off .off-stripe {}
 
 .new-subscribe .instagramFeed {
     background-color: #f8e1e6;
@@ -806,7 +896,7 @@ body {
 }
 
 .new-subscribe .past-drops h1 {
-    font-size: 50px;
+    font-size: 5rem;
     margin-bottom: 10px;
 }
 
@@ -972,13 +1062,11 @@ body {
 
 @media screen and (min-width: 400px) and (max-width: 767px) {
 
+    .new-subscribe .past-drops h1 {
+        font-size: calc(7.5vw - 0px) !important;
+        line-height: calc(0.8em + 1vw) !important;
+    }
 
-
-  
-
-
-    .new-subscribe .past-drops h1{        font-size: calc(7.5vw - 0px) !important;
-        line-height: calc(0.8em + 1vw) !important;}
     .new-subscribe .logo-sec .cols3.mob_icon {
         width: 25%;
     }
@@ -994,28 +1082,89 @@ body {
 
 @media screen and (max-width: 767px) {
 
+    .mobile-block-line {
+        display: block;
+    }
+
+    .bag-conts,
+    .bag-month {
+        font-size: 15px;
+    }
+
+    p.bag-price {
+        font-size: 22px !important;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        line-height: 17px;
+    }
+
+    .bags h4 {
+        font-size: 32px;
+    }
+
+    .new-subscribe .top-content-sec .img-sec .img-slide-sec .each-slide {
+
+        width: calc(100% - 100px);
+    }
+
+    .bag-box {
+        height: auto;
+    }
+
+    .subscribe-bags {
+        padding: 40px 0 0px;
+    }
+
+    .subscribe-section {
+        padding: 30px 0 0px;
+    }
+
+    .offeringyomz {
+        padding: 20px 0;
+        background: #eeeeee;
+        margin-bottom: 20px;
+    }
+
+    .offeringyomz h3 {
+        text-align: center;
+        font-size: calc(7.5vw - 0px) !important;
+        line-height: calc(1em + 1vw) !important;
+        margin-bottom: 5px;
+        ;
+    }
+
+    .offeringyomz p {
+        font-size: 20px;
+        color: #000;
+        line-height: normal;
+    }
+
     .past-drops.mb50 {
-    margin-bottom: 0px;
-}
+        margin-bottom: 0px;
+    }
 
-    .new-subscribe .top-content-sec .point-sec
- {
-    padding: 10px 0px 0px;
-    margin-bottom: 20px;
-}
+    .new-subscribe .top-content-sec .point-sec {
+        padding: 10px 0px 0px;
+        margin-bottom: 20px;
+    }
 
-    .new-subscribe .top-content-sec .disclimer{
+    .new-subscribe .top-content-sec .disclimer {
         text-align: center;
     }
 
-      .new-subscribe .past-drops h1{ font-size: calc(7.5vw - 0px) !important;
-        line-height: calc(0.8em + 1vw) !important;}
-.point-sec p {
-    line-height: normal;
-}
-        .new-subscribe .top-content-sec .points+.points {
-    margin-top: 0px;
-}
+    .new-subscribe .past-drops h1 {
+        font-size: calc(7.5vw - 0px) !important;
+        line-height: calc(0.8em + 1vw) !important;
+    }
+
+    .point-sec p {
+        line-height: normal;
+    }
+
+    .new-subscribe .top-content-sec .points+.points {
+        margin-top: 0px;
+    }
+
     .new-subscribe .logo-sec {
         padding-bottom: 0px;
     }
@@ -1058,12 +1207,14 @@ body {
     }
 
     .new-subscribe .top-content-sec .heading-sec h4 {
-        font-size: 30px;
-                margin-bottom: 0px;
+        font-size: calc(10.5vw - 0px) !important;
+        line-height: calc(0.8em + 1vw) !important;
+        margin-bottom: 0px;
     }
 
     .new-subscribe .top-content-sec .heading-sec h3 {
-                font-size: 57px;
+        font-size: calc(31.5vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
         margin-bottom: 0px;
     }
 
@@ -1111,6 +1262,24 @@ body {
 
     .new-subscribe .top-content-sec .disclimer {
         margin-left: 0px;
+        font-size: 20px;
+        line-height: normal;
+        padding-right: 0px;
+    }
+
+    .new-subscribe .middle-content-sec {
+        padding: 10px 0px 30px;
+        position: relative;
+    }
+
+    .testimonial_box p {
+        font-size: 18px;
+    }
+
+    .author_image {
+        display: inline-block;
+        padding: 0 0px;
+        width: 70px;
     }
 
     .new-subscribe p.subscription_price.pink_clr.mob {
@@ -1167,8 +1336,10 @@ body {
 
     .new-subscribe .top-content-sec .price-sec .price-info {
         margin: 0 auto;
-        padding-top: 7px;
+        padding-top: 15px;
         text-transform: unset;
+        margin-bottom: 6px;
+        font-size: 20px;
     }
 
     .new-subscribe .top-content-sec .heading-sec .head-lnk {
@@ -1242,10 +1413,10 @@ body {
 @media screen and (max-width: 767px) {
 
     .new-subscribe .top-content-sec .heading-sec p {
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-}
+        color: #000;
+        font-size: calc(6.2vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
+    }
 
     .new-subscribe .top-content-sec .points {
         margin-left: 18%;
@@ -1374,7 +1545,7 @@ body {
     }
 
     .new-subscribe .top-content-sec .price-sec .price-amt {
-                max-width: 90%;
+        max-width: 100%;
         margin: 0px auto;
     }
 
@@ -1384,10 +1555,15 @@ body {
 
     .new-subscribe .top-content-sec .price-sec .ofr-amt .amt {
         font-size: 30px;
+        font-size: calc(12vw - 0px) !important;
+        line-height: calc(1em + 1vw) !important;
     }
 
     .new-subscribe .top-content-sec .price-sec .actual-amt .amt {
         font-size: 30px;
+        font-size: calc(12vw - 0px) !important;
+        line-height: calc(1em + 1vw) !important;
+        letter-spacing: -2px;
     }
 
     .new-subscribe .top-content-sec .price-sec .actual-amt {
@@ -1397,4 +1573,88 @@ body {
     .new-subscribe .top-content-sec .points {
         margin-left: 0%;
     }
+}
+
+@media screen and (max-width: 418px) {
+
+    .offeringyomz p {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 19px !important;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .offeringyomz p {
+        font-size: 17.5px;
+    }
+
+    p {
+        font-size: 17.5px !important;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .offeringyomz p {
+        font-size: 16.5px;
+    }
+
+    p {
+        font-size: 16.5px !important;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .offeringyomz p {
+        font-size: 15.5px;
+    }
+
+    p {
+        font-size: 16.5px !important;
+    }
+
+}
+
+@media screen and (max-width: 330px) {
+
+    .offeringyomz p {
+        font-size: 14.5px;
+    }
+
+    p {
+        font-size: 14.5px !important;
+    }
+
+}
+
+@media screen and (max-width: 315px) {
+
+    .offeringyomz p {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px !important;
+    }
+
+}
+
+@media screen and (max-width: 301px) {
+
+    .offeringyomz p {
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 13px !important;
+    }
+
 }
