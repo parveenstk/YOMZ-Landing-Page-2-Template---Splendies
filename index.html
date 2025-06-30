@@ -1456,7 +1456,7 @@
 
               <!-- 3 People Set -->
               <div class="col-md-4 mb-4">
-                <div class="bags cursor pack-bags">
+                <div id="3-people" class="bags cursor pack-bags">
                   <img src="images/bag-3.png" class="img-fluid">
                   <div class="bag-box">
                     <h4 class="bag-title">3 People Set</h4>
@@ -1469,7 +1469,7 @@
 
               <!-- 1 Person -->
               <div class="col-md-4">
-                <div class="bags cursor pack-bags">
+                <div id="1-person" class="bags cursor pack-bags">
                   <img src="images/bag-1.png" class="img-fluid">
                   <div class="bag-box">
                     <h4 class="bag-title">1 Person</h4>
@@ -1616,23 +1616,9 @@
   </div>
 
   <!-- import scripts -->
-  <script src="js/owl.carousel1b13.js" defer></script>
-  <script src="./js/index.js"></script>
-  <script src="./js/indexUtils.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const btn = document.querySelector(".sbu-button");
-      const bagsSection = document.querySelector(".subscribe-bags");
-
-      btn.addEventListener("click", function (e) {
-        e.preventDefault(); // prevent link behavior
-        bagsSection.style.display = "block";
-        // Optional: scroll to section
-        bagsSection.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  </script>
+  <script src="./js/owl.carousel1b13.js" defer></script>
+  <script src="./js/newJs/index.js"></script>
+  <script src="./js/newJs/indexUtils.js"></script>
 </body>
 
 </html>

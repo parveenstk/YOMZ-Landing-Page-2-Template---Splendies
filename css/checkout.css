@@ -53,6 +53,10 @@
 
 }
 
+.cursor {
+    cursor: pointer !important;
+}
+
 .exblod {
     font-family: 'century_gothic_paneuropeanXBd';
 }
@@ -634,45 +638,55 @@ p.divider span.divider {
     .total-price {
         font-size: 29px;
     }
+
     .subtotal {
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
 
-.team-condition {
-    padding-top: 20px;
-}
+    .team-condition {
+        padding-top: 20px;
+    }
 
-.cart-box-bottom-1{    border-bottom: 0px solid #e5e5e5 !important;}
+    .cart-box-bottom-1 {
+        border-bottom: 0px solid #e5e5e5 !important;
+    }
 
-.items-btn .btn{    padding: 2px 14px; height: 40px;}
+    .items-btn .btn {
+        padding: 2px 14px;
+        height: 40px;
+    }
 
-.team-condition p{    margin-bottom: 5px;}
+    .team-condition p {
+        margin-bottom: 5px;
+    }
 
-.footer_logo.text-left {
-    text-align: center;
-}
-.subscribe_btn>a {
-    background-color: #1EB9F0;
-    color: #000;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 10px 30px;
-    color: #fff;
-    font-family: 'century_gothic_paneuropeanXBd';
-    background-color: #ffffff;
-    color: #1EB9F0;
-    font-weight: 600;
-    font-size: 17px;
-    border: 1px solid #1EB9F0;
-    border-radius: 25px;
-    padding: 12px 40px;
-    display: block;
-    transform: translate(-2px, -2px);
-    transition: all linear .2s !important;
-    text-decoration: none !important;
-    text-transform: uppercase;
-}
+    .footer_logo.text-left {
+        text-align: center;
+    }
+
+    .subscribe_btn>a {
+        background-color: #1EB9F0;
+        color: #000;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px 30px;
+        color: #fff;
+        font-family: 'century_gothic_paneuropeanXBd';
+        background-color: #ffffff;
+        color: #1EB9F0;
+        font-weight: 600;
+        font-size: 17px;
+        border: 1px solid #1EB9F0;
+        border-radius: 25px;
+        padding: 12px 40px;
+        display: block;
+        transform: translate(-2px, -2px);
+        transition: all linear .2s !important;
+        text-decoration: none !important;
+        text-transform: uppercase;
+    }
+
     .footer_column1 .subscribe_btn.text-center {
         display: block;
         background-color: #1EB9F0;
@@ -680,14 +694,15 @@ p.divider span.divider {
         display: inline-block;
         text-decoration: none;
     }
-        .footer_column1 .news_letter {
+
+    .footer_column1 .news_letter {
         display: none;
     }
 
     .footer_column1 {
-    text-align: center;
-    margin-top: 20px;
-}
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
 /******************************************* all section media *********************************/

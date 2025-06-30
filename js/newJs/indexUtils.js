@@ -1,3 +1,16 @@
+// // subscribe buttons
+// document.addEventListener("DOMContentLoaded", function () {
+//     const btn = document.querySelector(".sbu-button");
+//     const bagsSection = document.querySelector(".subscribe-bags");
+
+//     btn.addEventListener("click", function (e) {
+//         e.preventDefault(); // prevent link behavior
+//         bagsSection.style.display = "block";
+//         // Optional: scroll to section
+//         bagsSection.scrollIntoView({ behavior: "smooth" });
+//     });
+// });
+
 // onClick subscrribe button 
 const packs = document.getElementById('packs');
 const subsBtn = document.querySelectorAll('.subscribe-button');
