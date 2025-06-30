@@ -6,14 +6,18 @@ const packageParam = urlParams.get('package'); // renamed from `package`
 // Elements to dynamically update
 const packImage = document.getElementById('pack-image');
 const cartPrice = document.getElementById('total-cart-price');
+const cartPriceMobile = document.querySelector('.mobCartAmount');
+console.log("cartPriceMobile:", cartPriceMobile);
 
 // Updating "Package image dynamically"
 if (packageParam === '3-people') {
     packImage.src = './images/checkout/bag-3.png';
     cartPrice.innerText = "$ 129.58";
+    cartPriceMobile.innerText = 129.58;
 } else if (packageParam === '1-person') {
     packImage.src = './images/checkout/bag-1.png';
     cartPrice.innerText = "$ 47.99";
+    cartPriceMobile.innerText = 47.99;
 }
 
 // Packs data to update dynamically
