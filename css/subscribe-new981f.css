@@ -1,10 +1,10 @@
-@font-face {
+/* @font-face {
     font-family: "Super Caramel";
     src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'Century Gothic';
@@ -879,8 +879,6 @@ p.bag-price {
     font-size: 12px;
     color: #000;
 }
-
-.new-subscribe .plan_Box .percent-off .off-stripe {}
 
 .new-subscribe .instagramFeed {
     background-color: #f8e1e6;
