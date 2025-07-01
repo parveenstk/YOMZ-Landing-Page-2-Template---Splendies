@@ -179,8 +179,8 @@ const updateTotal = () => {
     const cartPriceMobile = document.querySelector('.mobCartAmount');
     const totalPrice = cartData.reduce((total, product) => total += Number(product.price), 0);
     cartPrice.innerText = `$${+totalPrice}`;
-    cartPriceMobile.innerText = `${+totalPrice}`;
-    cartTotalMobile.innerText = `$${+totalPrice}`;
+    cartPriceMobile.innerText = `${(+totalPrice).toFixed(2)}`;
+    cartTotalMobile.innerText = `$${(+totalPrice).toFixed(2)}`;
 }
 
 // updateAdditional products

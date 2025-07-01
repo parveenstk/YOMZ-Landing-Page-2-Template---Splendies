@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "YOMZ Original",
                     description: "1 Person (1 bag)",
                     price: 47.99,
-                    image: '../../images/checkout/bag-1.png'
+                    image: './images/checkout/bag-1.png'
                 },
 
                 "3-people": {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "YOMZ Original",
                     description: "3 People Set (3 bags)",
                     price: 129.58,
-                    image: '../../images/checkout/bag-3.png'
+                    image: './images/checkout/bag-3.png'
                 },
             };
 
