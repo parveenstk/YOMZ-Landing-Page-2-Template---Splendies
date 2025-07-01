@@ -178,7 +178,7 @@ const updateTotal = () => {
     const cartTotalMobile = document.getElementById('mobile-total-cartPrice');
     const cartPriceMobile = document.querySelector('.mobCartAmount');
     const totalPrice = cartData.reduce((total, product) => total += Number(product.price), 0);
-    cartPrice.innerText = `$${+totalPrice}`;
+    cartPrice.innerText = `$${(+totalPrice).toFixed(2)}`;
     cartPriceMobile.innerText = `${(+totalPrice).toFixed(2)}`;
     cartTotalMobile.innerText = `$${(+totalPrice).toFixed(2)}`;
 }
@@ -196,7 +196,7 @@ const updateCart = (addProduct) => {
     if (existingProduct) return;
     const updatedCartData = [...oldCartData, addProduct];
     localStorage.setItem('cartData', JSON.stringify(updatedCartData));
-}
+};
 
 const removeProduct = (id) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
