@@ -159,7 +159,6 @@ if (selectedPack) {
 
     // Mobile Elements
     const packImageMobile = document.getElementById('mobile-pack-image');
-    const cartCount = document.querySelector('.count-value');
 
     // Update "Package image dynamically"
     packImage.src = selectedPack.image;
@@ -209,6 +208,8 @@ const removeProduct = (id) => {
     updateCartList();
     updateAdditionalHTML();
     updateTotal();
+    cartIcon();
+
 };
 
 // To add a new product in the cart
@@ -218,6 +219,8 @@ const addProduct = (id) => {
     updateCartList();
     updateAdditionalHTML();
     updateTotal();
+    cartIcon();
+
 };
 
 // Event listener for closing the product box when clicking on the close icon
@@ -227,3 +230,13 @@ document.addEventListener('click', (e) => {
         if (box) box.remove();  // Remove the product card when close button is clicked
     }
 });
+
+const cartIcon = () => {
+    const latestCart = JSON.parse(localStorage.getItem('cartData'));
+    const cartCount = document.querySelector('.count-value');
+    // console.log('latestCart:', latestCart.length);
+    // console.log('cartCount length:', cartCount.innerText);
+    cartCount.innerText = latestCart.length;
+};
+
+cartIcon();
