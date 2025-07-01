@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Save selectedPack to localStorage
                 const selectedPack = selectedPacks[productId];
-                localStorage.setItem('selectedPack', JSON.stringify(selectedPack));
+                localStorage.setItem('cartData', JSON.stringify([selectedPack]));
+                localStorage.setItem('selectedPack', JSON.stringify(productId));
                 console.log("Selected Pack saved:", selectedPack);
 
                 window.location.href = `http://127.0.0.1:5500/checkout.html`;
