@@ -1,64 +1,68 @@
-// Get query string from URL
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const packageParam = urlParams.get('package'); // renamed from `package`
+// Get the selected pack from localStorage
+const selectedPack = JSON.parse(localStorage.getItem('selectedPack'));
 
-// Elements to dynamically update
-const packImage = document.getElementById('pack-image');
-const cartPrice = document.getElementById('total-cart-price');
-const cartPriceMobile = document.querySelector('.mobCartAmount');
-console.log("cartPriceMobile:", cartPriceMobile);
+// Check if the selected pack exists in localStorage
+if (selectedPack) {
+    console.log("Retrieved selected pack:", selectedPack);
 
-// Updating "Package image dynamically"
-if (packageParam === '3-people') {
-    packImage.src = './images/checkout/bag-3.png';
-    cartPrice.innerText = "$ 129.58";
-    cartPriceMobile.innerText = 129.58;
-} else if (packageParam === '1-person') {
-    packImage.src = './images/checkout/bag-1.png';
-    cartPrice.innerText = "$ 47.99";
-    cartPriceMobile.innerText = 47.99;
-}
+    // Elements to dynamically update - Desktop
+    const packImage = document.getElementById('pack-image');
+    const cartPrice = document.getElementById('total-cart-price');
 
-// Packs data to update dynamically
-const packs = {
-    '1-person': {
-        title: "YOMZ Original",
-        description: "1 Person (1 bag)",
-        price: 47.99
-    },
-    '3-people': {
-        title: "YOMZ Original",
-        description: "3 People Set (3 bags)",
-        price: 129.58
-    },
+    // Mobile Elements
+    const packImageMobile = document.getElementById('mobile-pack-image');
+    const cartTotalMobile = document.getElementById('mobile-total-cartPrice');
+    const cartPriceMobile = document.querySelector('.mobCartAmount');
+
+    // Update "Package image dynamically"
+    packImage.src = selectedPack.image;
+    packImageMobile.src = selectedPack.image;
+    cartPrice.innerText = `$${selectedPack.price}`;
+    cartPriceMobile.innerText = selectedPack.price;
+    cartTotalMobile.innerText = `$${selectedPack.price}`;
+
+    // Update Product - Desktop (Image, title, description & price)
+    const updatedProductHTML = `
+        <div class="pro-box">
+            <span class="details-close-icon product-cross">
+                <i style="color: #e5183c;" class="fas fa-times-circle cursor"></i>
+            </span>
+            <span class="products-ds">
+                <h4>${selectedPack.title}</h4>
+                <p>${selectedPack.description}</p>
+            </span>
+            <span class="products-tag-price">$${selectedPack.price}</span>
+        </div>
+    `;
+
+    // Update Product - Mobile (Image, title, description & price)
+    const updatedProductHTML2 = `
+                        <div class="pro-box">
+                            <span class="products-cart-image">
+                                <img id="mobile-pack-image" src=${selectedPack.image} class="img-fluid">
+                            </span>
+                            <span class="products-ds">
+                                <h4>${selectedPack.title}</h4>
+                                <p>${selectedPack.description}</p>
+                            </span>
+
+                            <span class="details-close-icon">
+                                 <i style="color: #e5183c;" class="fas fa-times-circle cursor"></i>
+                            </span>
+                        </div>
+    `;
+
+    // Updating - Desktop Cart Details
+    const existedProd = document.getElementById('exited-product');
+    existedProd && (existedProd.innerHTML = updatedProductHTML);
+
+    // Updating - Mobile Cart Details
+    const existedProd2 = document.getElementById('exited-product-mobile');
+    existedProd2 && (existedProd2.innerHTML = updatedProductHTML2);
+
+} else {
+    console.log("No selected pack found in localStorage.");
 };
-
-// Update Product (Image, title, description & price)
-const updatedPack = (packKey) => {
-    const product = packs[packKey];
-
-    if (product) {
-        const updatedProductHTML = `
-            <div class="pro-box">
-                <span class="details-close-icon product-cross"><i style="color: #e5183c;" class="fas fa-times-circle cursor"></i></span>
-                <span class="products-ds">
-                    <h4>${product.title}</h4>
-                    <p>${product.description}</p>
-                </span>
-                <span class="products-tag-price">$${product.price}</span>
-            </div>
-        `;
-
-        const existedProd = document.getElementById('exited-product');
-        if (existedProd) {
-            existedProd.innerHTML = updatedProductHTML;
-        };
-    };
-};
-
-// udpatding the all details
-updatedPack(packageParam);
 
 const hideProduct = () => {
     document.addEventListener('DOMContentLoaded', () => {
