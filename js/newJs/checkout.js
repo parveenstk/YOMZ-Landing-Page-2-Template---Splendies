@@ -240,3 +240,24 @@ const cartIcon = () => {
 };
 
 cartIcon();
+
+// Form inputs 
+const email = document.getElementById('email-address');
+const password = document.getElementById('password');
+
+// Shipping Address
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const streetAddress = document.getElementById('street-address');
+const aptUnit = document.getElementById('apt-unit');
+const city = document.getElementById('city');
+// const  = document.getElementById(''); // Select a State
+const shippingPostalCode = document.getElementById('postal-code');
+const phoneNumber = document.getElementById('phone-number');
+
+// Card Details
+const cardNumber = document.getElementById('credit-card-number');
+const cardCVC = document.getElementById('card-cvc');
+const cardExpiry = document.getElementById('card-expiry');
+const billingPostal = document.getElementById('billing-postal-code');
+const billingState = document.getElementById('billing-state');

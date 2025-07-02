@@ -236,9 +236,9 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-floating mb-3">
-                                            <input type="email" class="form-control" id="email" autocomplete="email"
+                                            <input type="email" class="form-control" id="email-address"
                                                 placeholder="name@example.com">
-                                            <label for="email">Email Address</label>
+                                            <label for="email-address">Email Address</label>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -385,28 +385,28 @@
 
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
-                                        <input class="form-control form-control-lg" type="number"
+                                        <input class="form-control form-control-lg" id="credit-card-number" autocomplete="credit-card-number" type="text"
                                             placeholder="1234 1234 1234 1234" aria-label=".form-control-lg example">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
-                                        <input class="form-control form-control-lg" type="number" placeholder="CVC"
+                                        <input class="form-control form-control-lg" id="card-cvc" autocomplete="card-cvc" type="number" placeholder="CVC"
                                             aria-label=".form-control-lg example">
                                     </div>
                                     <div class="col-md-8 mb-3">
-                                        <input class="form-control form-control-lg" type="number" placeholder="MM / YY"
+                                        <input class="form-control form-control-lg" id="card-expiry" autocomplete="card-expiry" type="number" placeholder="MM / YY"
                                             aria-label=".form-control-lg example">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
-                                        <input class="form-control form-control-lg" type="number"
+                                        <input class="form-control form-control-lg" id="billing-postal-code" type="number"
                                             placeholder="Postal Code" aria-label=".form-control-lg example">
                                     </div>
                                     <div class="col-md-8 mb-3">
-                                        <select class="form-select form-select-lg" aria-label="Default select example">
+                                        <select class="form-select form-select-lg" aria-label="Default select example" name="billing-states">
                                             <option selected>Select a state</option>
                                             <option value="AL">Alabama</option>
                                             <option value="AK">Alaska</option>
