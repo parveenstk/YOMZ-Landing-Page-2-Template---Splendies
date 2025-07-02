@@ -242,7 +242,7 @@
                                                 <!-- Email Address Input -->
                                                 <input type="email" class="form-control" id="email-address"
                                                     placeholder="Email address" maxlength="50" autocomplete="email"
-                                                    title="Please provide a email address.">
+                                                    title="Please provide a email address." required>
                                                 <label for="email-address">Email Address</label>
                                             </div>
                                         </div>
@@ -251,7 +251,8 @@
                                             <div class="form-floating mb-3">
                                                 <!-- Password -->
                                                 <input type="password" class="form-control" id="password"
-                                                    placeholder="name@example.com" title="Enter Your Secure Password" maxlength="30">
+                                                    placeholder="name@example.com" title="Enter Your Secure Password"
+                                                    maxlength="30" required>
                                                 <label for="password">Password</label>
                                             </div>
                                         </div>
@@ -265,7 +266,7 @@
                                                 <!-- First Name -->
                                                 <input type="text" class="form-control" id="first-name"
                                                     autocomplete="first-name" placeholder="First Name" maxlength="30"
-                                                    title="Please enter your first name.">
+                                                    title="Please enter your first name." required>
                                                 <label for="first-name">First Name</label>
                                             </div>
                                         </div>
@@ -274,7 +275,7 @@
                                                 <!-- Last Name -->
                                                 <input type="text" class="form-control" id="last-name"
                                                     placeholder="Last Name" maxlength="30"
-                                                    title="Please enter your last name.">
+                                                    title="Please enter your last name." required>
                                                 <label for="last-name">Last Name</label>
                                             </div>
                                         </div>
@@ -286,7 +287,7 @@
                                                 <!-- Street Address -->
                                                 <input type="text" class="form-control" id="street-address"
                                                     autocomplete="street-address" placeholder="Street Address"
-                                                    title="Please enter your street address." maxlength="50" >
+                                                    title="Please enter your street address." maxlength="50" required>
                                                 <label for="street-address">Street Address</label>
                                             </div>
                                         </div>
@@ -294,8 +295,9 @@
                                             <div class="form-floating mb-3">
                                                 <!-- Apt / Unit -->
                                                 <input type="text" class="form-control" id="apt-unit"
-                                                    placeholder="Apt/Unit" maxlength="50"
-                                                    title="Enter your apartment or unit number (if applicable).">
+                                                    placeholder="Apt/Unit"
+                                                    title="Enter your apartment or unit number (if applicable)."
+                                                    maxlength="50" required>
                                                 <label for="apt-unit">Apt/Unit</label>
                                             </div>
                                         </div>
@@ -307,7 +309,7 @@
                                                 <!-- City -->
                                                 <input type="text" class="form-control" id="city" placeholder="City"
                                                     maxlength="50"
-                                                    title="Please enter the city where you want to ship.">
+                                                    title="Please enter the city where you want to ship." required>
                                                 <label for="city">City</label>
                                             </div>
                                         </div>
@@ -377,7 +379,7 @@
                                                 <!-- Postal Code -->
                                                 <input type="text" class="form-control" id="postal-code"
                                                     autocomplete="postal-code" placeholder="Postal Code" maxlength="8"
-                                                    title="Please enter your postal code.">
+                                                    title="Please enter your postal code." required>
                                                 <label for="postal-code">Postal Code</label>
                                             </div>
                                         </div>
@@ -389,7 +391,7 @@
                                                 <!-- Phone Number -->
                                                 <input type="text" class="form-control" id="phone-number"
                                                     placeholder="Phone Number" maxlength="16" autocomplete="tel"
-                                                    title="Please enter your phone number (e.g., +1 234-567-8900).">
+                                                    title="Please enter your phone number (e.g., +1 234-567-8900)." required>
                                                 <label for="phone-number">Phone Number</label>
                                             </div>
                                         </div>
@@ -412,7 +414,8 @@
                                             <input class="form-control form-control-lg" id="credit-card-number"
                                                 autocomplete="credit-card-number" type="text"
                                                 placeholder="1234 1234 1234 1234" aria-label=".form-control-lg example"
-                                                title="Enter your 16-digit credit card number (e.g., 1234 1234 1234 1234)." maxlength="19">
+                                                title="Enter your 16-digit credit card number (e.g., 1234 1234 1234 1234)."
+                                                maxlength="19">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -443,7 +446,8 @@
                                         <div class="col-md-8 mb-3">
                                             <!-- Billing States -->
                                             <select class="form-select form-select-lg"
-                                                aria-label="Default select example" id="billing-states" name="billing-states">
+                                                aria-label="Default select example" id="billing-states"
+                                                name="billing-states">
                                                 <option selected>Select a state</option>
                                                 <option value="AL">Alabama</option>
                                                 <option value="AK">Alaska</option>
