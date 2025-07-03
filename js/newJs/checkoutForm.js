@@ -112,9 +112,10 @@ addInputListener(cardExpiry, /\D/g, function (value) {
     let month = input.slice(0, 2);
     let year = input.slice(2, 4);
 
-    // Step 4: Get current year and max year (current year + 8)
+    // Step 4: Get current year and max year (current year + 10)
     const currentYear = new Date().getFullYear();
-    const maxYear = (currentYear + 8).toString().slice(-2); // max allowed year (current year + 8)
+    const currentYearLastTwoDigits = currentYear.toString().slice(-2);  // Get last two digits of the current year
+    const maxYear = (currentYear + 10).toString().slice(-2); // max allowed year (current year + 10)
 
     // Step 5: Validate the month (must be between 01 and 12)
     if (month.length === 2) {
@@ -123,15 +124,21 @@ addInputListener(cardExpiry, /\D/g, function (value) {
         if (numericMonth > 12) month = '12';
     }
 
-    // Step 6: Validate the year (must be no greater than the max allowed year)
-    if (year.length === 2 && parseInt(year, 10) > parseInt(maxYear, 10)) {
-        year = maxYear;
+    // Step 6: Validate the year
+    // If the year is less than the current year, set it to the current year.
+    // Also, ensure the year is no greater than the max allowed year.
+    if (year.length === 2) {
+        if (parseInt(year, 10) < parseInt(currentYearLastTwoDigits, 10)) {
+            year = currentYearLastTwoDigits;  // Prevent entering a year less than current year
+        } else if (parseInt(year, 10) > parseInt(maxYear, 10)) {
+            year = maxYear; // Prevent entering a year beyond max year
+        }
     }
 
     // Step 7: Format the value as MM/YY or just MM if still typing
     if (input.length > 2) {
         return `${month}/${year}`;
     } else {
-        return month; // only show month if it's not fully entered yet
+        return month; // Only show month if it's not fully entered yet
     }
 });
