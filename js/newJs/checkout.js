@@ -200,7 +200,6 @@ const updateCart = (addProduct) => {
 const removeProduct = (id) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
     console.log("oldCartData:", oldCartData);
-    console.log(`Product removed from cart - ${id}`);
     updatedToaster('removed');
 
     const updatedCartData = oldCartData.filter(p => p.id !== id);
