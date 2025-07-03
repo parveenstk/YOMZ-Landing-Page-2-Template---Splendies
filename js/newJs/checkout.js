@@ -200,6 +200,8 @@ const updateCart = (addProduct) => {
 const removeProduct = (id) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
     console.log("oldCartData:", oldCartData);
+    console.log(`Product removed from cart - ${id}`);
+    updatedToaster('removed');
 
     const updatedCartData = oldCartData.filter(p => p.id !== id);
     localStorage.setItem('cartData', JSON.stringify(updatedCartData));
@@ -216,11 +218,11 @@ const removeProduct = (id) => {
 const addProduct = (id) => {
     const selectedProduct = additionalProducts.find(product => product.id === id);
     updateCart(selectedProduct);
+    updatedToaster('added');
     updateCartList();
     updateAdditionalHTML();
     updateTotal();
     cartIcon();
-
 };
 
 // Event listener for closing the product box when clicking on the close icon
@@ -240,3 +242,49 @@ const cartIcon = () => {
 };
 
 cartIcon();
+
+// Toaster elements
+const toaster = document.getElementById('toaster');
+const toasterIcon = document.getElementById('toaster-icon');
+const toasterText = document.getElementById('toaster-text');
+const toasterCross = document.getElementById('toaster-cross');
+
+// Function to updated toaster dynamically
+const updatedToaster = (type) => {
+    toaster.classList.remove('hide');
+    toaster.style.border = toasterContent[type].border;
+    toaster.style.backgroundColor = toasterContent[type].backGround;
+    toasterText.style.color = toasterContent[type].textColor;
+    toasterIcon.src = toasterContent[type].iconPath;
+    toasterText.innerText = toasterContent[type].textContent;
+
+    setTimeout(() => {
+        autoHide()
+    }, 2000);
+};
+
+// Toaster Message
+const toasterContent = {
+    added: {
+        iconPath: './images/checkout/check-tick.svg',
+        textContent: 'Item added in cart.',
+        textColor: '#31ab46',
+        backGround: '#e5ffe8',
+        border: '2px solid #31ab46',
+        crossIcon: './images/checkout/cross.svg'
+    },
+
+    removed: {
+        iconPath: './images/checkout/cross-circle.svg',
+        textContent: 'Item removed form cart.',
+        textColor: '#d24349',
+        backGround: '#fde1e4',
+        border: '2px solid #d24349',
+        crossIcon: './images/checkout/cross.svg'
+    }
+};
+
+// Hide toaster
+const autoHide = () => {
+    toaster.classList.add('hide');
+};

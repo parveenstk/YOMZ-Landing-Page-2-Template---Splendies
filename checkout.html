@@ -14,6 +14,16 @@
 
 <body>
 
+    <!-- Toaster Message -->
+    <div id="toaster" class="toaster hide">
+        <img id="toaster-icon" class="toaster-icon" src="" alt="toaster-icon" width="40px">
+        <div class="toaster-content">
+            <p id="toaster-text" class="toaster-text"></p>
+            <img id="toaster-cross" class="toaster-cross" src="./images/checkout/cross.svg" alt="toaster-cross"
+                width="40px" onclick="autoHide()">
+        </div>
+    </div>
+
     <header class="d-none d-sm-none d-lg-block">
         <div class="container">
             <div class="row justify-content-between align-items-center">
@@ -308,8 +318,8 @@
                                             <div class="form-floating mb-3">
                                                 <!-- City -->
                                                 <input type="text" class="form-control" id="city" placeholder="City"
-                                                    maxlength="50"
-                                                    title="Please enter the city where you want to ship." required>
+                                                    maxlength="50" title="Please enter the city where you want to ship."
+                                                    required>
                                                 <label for="city">City</label>
                                             </div>
                                         </div>
@@ -391,7 +401,8 @@
                                                 <!-- Phone Number -->
                                                 <input type="text" class="form-control" id="phone-number"
                                                     placeholder="Phone Number" maxlength="16" autocomplete="tel"
-                                                    title="Please enter your phone number (e.g., +1 234-567-8900)." required>
+                                                    title="Please enter your phone number (e.g., +1 234-567-8900)."
+                                                    required>
                                                 <label for="phone-number">Phone Number</label>
                                             </div>
                                         </div>

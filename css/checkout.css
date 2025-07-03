@@ -57,12 +57,63 @@
     font-family: 'century_gothicregular';
     src: url('../font/centurygothic-webfont.eot');
     src: url('../font/centurygothic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/centurygothic-webfont.woff2') format('woff2'),
-         url('../font/centurygothic-webfont.woff') format('woff'),
-         url('../font/centurygothic-webfont.ttf') format('truetype');
+        url('../font/centurygothic-webfont.woff2') format('woff2'),
+        url('../font/centurygothic-webfont.woff') format('woff'),
+        url('../font/centurygothic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
+}
+
+.hide {
+    display: none !important;
+}
+
+.toaster {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d24349;
+    background-color: #fde1e4;
+    width: 350px;
+    height: 65px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 5px;
+    padding: 5px 7px;
+    z-index: 10000;
+
+    animation: slideIn 0.8s ease-out;
+    /* Applying the animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at the normal position */
+    }
+}
+
+.toaster-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toaster-text {
+    padding-left: 6px;
+    margin-bottom: 0px !important;
+    color: #d24349;
+}
+
+.toaster-cross {
+    cursor: pointer;
 }
 
 .cursor {
@@ -481,6 +532,11 @@ p.divider span.divider {
 /******************************************* all section media *********************************/
 @media screen and (max-width: 767px) {
 
+    .toaster {
+        top: 18px;
+        right: 12px;
+    }
+
     .dollar-symb {
         font-size: 17px;
         vertical-align: 2px;
@@ -613,7 +669,7 @@ p.divider span.divider {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        padding: 12px 0px;    
+        padding: 12px 0px;
     }
 
     .offcanvas-header {
