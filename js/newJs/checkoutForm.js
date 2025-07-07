@@ -59,7 +59,7 @@ form.addEventListener('submit', function (e) {
 });
 
 // Clear form inputs after submission
-function clearFormInputs() {
+const clearFormInputs = () => {
     email.value = '';
     password.value = '';
     firstName.value = '';
@@ -142,4 +142,3 @@ addInputListener(cardExpiry, /\D/g, function (value) {
         return month; // Only show month if it's not fully entered yet
     }
 });
-
