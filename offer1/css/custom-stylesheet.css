@@ -1,0 +1,1069 @@
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanRg';
+    src: url('../font/centurygothicpaneuropeanregular-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanregular-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanregular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanLt';
+    src: url('../font/centurygothicpaneuropeanlight-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanlight-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url('../font/centurygothicpaneuropeanextrabold-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanextrabold-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanextrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropean_Rg';
+    src: url('../font/centurygothicpaneuropeansemibold-webfont.woff2') format('woff2'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.woff') format('woff'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.exblod {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+body {
+    background: #ffeef1;
+    font-family: 'Century Gothic';
+}
+
+#timer-box {
+    #timer-display {
+        text-align: center !important;
+        font-size: 38px !important;
+        color: #e6193c !important;
+        font-weight: 700 !important;
+
+        #timer-text {
+            color: black !important;
+            font-size: 18px;
+            display: block;
+        }
+    }
+}
+
+.dsblockline {
+    display: block;
+}
+
+.thankyou-page .container {
+    max-width: 1120px;
+}
+
+.thankyou-page {
+    margin: 20px 0;
+}
+
+.thank-data {
+    background: #fff;
+    padding: 48px 120px;
+    box-shadow: 0px 2px 10px #e2e2e2;
+    border-radius: 10px;
+    /* border: 1px solid #ccc; */
+}
+
+.top-data h1 {
+    font-size: 48px;
+    color: #bf9b41;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: normal;
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+.top-data p {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.ds-block {
+    display: block;
+}
+
+.top-data {
+    margin-bottom: 50px;
+}
+
+.top-data2 {
+    margin-bottom: 20px !important;
+}
+
+.share-icon {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.share-icon h3 {
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.share-icon ul {
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.share-icon li {
+    display: inline-block;
+}
+
+.share-icon li i {
+    background: #dbb661;
+    font-size: 23px;
+    padding: 15px;
+    border-radius: 130px;
+    width: 55px;
+    color: #fff;
+}
+
+.share-icon li i:hover {
+    background: #bf9b41;
+}
+
+.share-icon li a {
+    display: flex;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.enjoy h3 {
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.enjoy p {
+    text-align: center;
+    font-size: 18px;
+    color: #444444;
+    font-weight: 500;
+}
+
+.enjoy .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+    width: 30%;
+    margin: 0px auto;
+}
+
+.enjoy label {
+    background: #ffffff;
+    width: 100%;
+    display: block;
+    border: 1px solid #c6a24a;
+    min-height: 60px;
+    display: flex;
+    border-radius: 8px;
+    line-height: normal;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+    cursor: pointer;
+    text-align: center;
+    /* text-transform: capitalize; */
+}
+
+.enjoy input[type="radio"],
+.enjoy input[type="checkbox"] {
+    display: none;
+}
+
+.enjoy input[type="radio"]:checked+label,
+.enjoy input[type="checkbox"]:checked+label {
+    background: #c6a24a !important;
+    color: #fff;
+}
+
+.enjoy .submit {
+    background: #ad8c39 !important;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 30px;
+    
+    display: block;
+}
+
+.enjoy .submit:hover {
+    background: #c6a24a !important;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer .ssl img {
+    width: 31%;
+    margin-bottom: 10px;
+}
+
+.manage-footersec p {
+    margin-bottom: 0px;
+    color: #444444;
+}
+
+.manage-footersec p {
+    font-size: 12px;
+    color: #444444;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #444444;
+    margin-bottom: 0px;
+}
+
+.headinfbg {
+    background: #d92730;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    width: 60%;
+    margin: 7px auto;
+}
+
+.realtop-headinf {
+    font-size: 42px !important;
+    color: #000 !important;
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+
+.offer-images img {
+    width: 80%;
+    margin: 0px auto;
+    display: block;
+}
+
+h4.thsnlh4 {
+    text-align: center;
+    margin-top: 0px;
+    line-height: normal;
+}
+
+a.tagroow {
+    text-align: center;
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.website-image {
+    display: block !important;
+}
+
+.mobile-image {
+    display: none !important;
+}
+
+.first-data .color-1 {
+    color: #FFBD03;
+}
+
+.first-data .color-2 {
+    color: #D85B35;
+}
+
+.first-data h1 {
+    margin-bottom: 0px;
+    font-size: 36px;
+}
+
+.first-data h3 {
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
+}
+
+.first-data2 h3 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thankyou-page .first-data2 p {
+    font-weight: 700 !important;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.thankyou-page .first-data2 p.normal-para {
+    font-weight: 400 !important;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.ds-bloc-eadin {
+    display: block;
+}
+
+.first-data {
+    margin-bottom: 40px;
+}
+
+.first-data2 {
+    margin-bottom: 40px;
+}
+
+.offerbtn-2 a {
+    background: #2BBFDF;
+    color: #fff;
+    padding: 20px 25px;
+    
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+}
+
+.offerbtn-2 a:hover {
+    background: #2BBFCE !important;
+}
+
+.products-image img {
+    width: 60%;
+    margin: 0px auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.offerpop .modal-content {
+    width: 730px;
+    background: #fff;
+    border: 3px dashed #E6193C;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.offerpop .modal-body {
+    padding: 40px 40px 45px;
+}
+
+.offerpop h4 {
+    height: auto;
+    text-align: center;
+    font-size: 26px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.offerpop p {
+    font-size: 16px;
+    text-align: center;
+    color: #222;
+    font-weight: 700;
+}
+
+.othanks {
+    text-decoration: underline;
+    color: #333;
+}
+
+.font-weight-bold {
+    font-style: initial !important;
+}
+
+/*NewDownsell-style*/
+.yellow-text {
+    color: #FFEB00;
+    background: #E6193C;
+    font-weight: 700;
+    display: inline-block;
+    padding: 8px;
+    font-size: 49px;
+    margin-bottom: 10px !important;
+}
+
+.mideel-text {
+    font-size: 32px;
+}
+
+.linebrack {
+    display: block;
+}
+
+.min-text {
+    font-size: 22px;
+    
+}
+
+.color-red {
+    color: #E6193C;
+}
+
+.managecheckoutbtn{
+    background-color: #1EB9F0;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.managecheckoutbtn .btn-txt {
+    font-family: 'century_gothic_paneuropeanXBd';
+    background-color: #ffffff;
+    color: #1EB9F0;
+    font-size: 24px;
+    border: 1px solid #1EB9F0;
+    border-radius: 50px;
+    padding: 12px 40px;
+    display: block;
+    transform: translate(-4px, -4px);
+    transition: all linear .2s !important;
+    text-decoration: none !important;
+}
+
+.managecheckoutbtn:hover>.btn-txt {
+    transform: translate(-7px, -6px);
+}
+/*NewDownsell-style*/
+
+@media screen and (max-width: 1024px) {
+
+    .thank-data {
+        background: #fff;
+        padding: 45px 20px;
+        box-shadow: 0px 2px 10px #ccc;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .offerpop .modal-content {
+        width: 1150px !important;
+        background: #fff;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .thank-data{padding: 10px 5px !important;}
+
+    .managecheckoutbtn .btn-txt{font-size: calc(5.2vw - 0px) !important;     padding: 12px 10px;}
+
+        .managecheckoutbtn {
+        text-align: center;
+        display: block;
+        width: 98%;
+        margin: 0px auto;
+    }
+
+    .othanks {
+    font-size: 8px;
+}
+
+    .manage-footersec p {
+        line-height: normal;
+    }
+
+    .products-image img {
+        padding-top: 0px;
+    }
+
+    .top-data {
+        margin-bottom: 10px;
+    }
+
+    .top-data2 {
+        margin-bottom: 5px !important;
+    }
+
+    .offerpop .modal-body {
+               padding: 20px 5px 15px;
+    }
+
+    .offerpop h4 {
+        height: auto;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .offerpop p {
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        font-weight: 700;
+    }
+
+    .mideel-text {
+        font-size: 25px !important;
+    }
+
+    .min-text {
+        font-size: 16px !important;
+    }
+
+    .first-data h3 {
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .first-data {
+        margin-bottom: 5px;
+    }
+
+    .first-data h1 {
+        margin-bottom: 0px !important;
+    }
+
+    .first-data2 h3 {
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .thankyou-page .first-data2 p {
+        font-weight: 700 !important;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .first-data h3 {
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .first-data2 {
+        margin-bottom: 5px;
+    }
+
+    .offerbtn-2 a {
+
+        color: #fff;
+        padding: 12px 7px;
+        
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+    }
+
+    .website-image {
+        display: none !important;
+    }
+
+    .mobile-image {
+        display: block !important;
+    }
+
+    .manage-footersec img {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    .realtop-headinf {
+        font-size: 20px !important;
+        color: #000 !important;
+        margin-top: 5px;
+        margin-bottom: 0px !important;
+    }
+
+    h4.thsnlh4 {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: calc(4.5vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
+
+    }
+
+    .offer-images img {
+        width: 100%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    a.tagroow {
+        text-align: center;
+        display: block;
+        color: #000;
+        font-size: calc(3.2vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
+        font-weight: 500;
+
+    }
+
+    .headinfbg {
+        /* background: #FAFF04;
+        color: #F21010; */
+        font-size: 24px;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100%;
+        margin: 7px auto;
+    }
+
+    .thank-data {
+        background: #fff;
+        padding: 20px 20px;
+        box-shadow: 0px 2px 10px #ccc;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .logo.text-center.mb-4 {
+        margin-bottom: 5px !important;
+    }
+
+    .thankyou-page {
+        margin: 6px 0;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .top-data h1 {
+        font-size: 28px;
+        color: #bf9b41;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: normal;
+    }
+
+    .top-data p {
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+
+    .share-icon li i {
+        background: #dbb661;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 130px;
+        width: 46px;
+        color: #fff;
+    }
+
+    .enjoy h3 {
+        color: #000;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .enjoy p {
+        text-align: center;
+        font-size: 14px;
+        color: #444444;
+        font-weight: 500;
+    }
+
+    .enjoy .px-5 {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+
+    .enjoy .col-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .enjoy label {
+        background: #ffffff;
+        width: 100%;
+        display: block;
+        border: 1px solid #c6a24a;
+        min-height: 55px;
+        display: flex;
+        border-radius: 8px;
+        line-height: normal;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        
+        cursor: pointer;
+        text-align: center;
+        /* text-transform: capitalize; */
+        font-size: 14px;
+    }
+
+    .enjoy .submit {
+        background: #ad8c39 !important;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 14px 30px;
+        
+        display: block;
+    }
+
+    footer .d-flex {
+        display: block !important;
+    }
+
+    footer .ssl img {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .manage-footersec .me-3 {
+        margin-right: 0rem !important;
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: #444444;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    footer {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .share-icon {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    h3 .normal-custom-text {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+    }
+
+    h4.text-wait {
+        font-size: 26px;
+    }
+
+    #repon-heading .repon-heading {
+        font-size: calc(7vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
+    }
+
+    .enjoy .flavore {
+        padding: 0px 15px !important;
+    }
+}
+
+@media screen and (max-width: 620px) {
+ .managecheckoutbtn .btn-txt{font-size: calc(5.7vw - 0px) !important;     padding: 12px 10px;}
+
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-blue {
+    color: #008 !important;
+}
+
+.text-red {
+    color: #EE0A0A !important;
+}
+
+.text-skyblue {
+    color: #0BA7F2 !important;
+}
+
+.enjoy .submit {
+    background: #2BBFDF !important;
+}
+
+.enjoy .submit:hover {
+    background: #2BBFCE !important;
+}
+
+input[name="other_flavor"]::placeholder {
+    text-align: center;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+@media screen and (max-width: 544px) {
+    .headinfbg {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .headinfbg {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    .realtop-headinf {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    .realtop-headinf {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    .headinfbg {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 461px) {
+    .realtop-headinf {
+        font-size: 17px !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .headinfbg {
+        font-size: 16px;
+    }
+
+    .realtop-headinf {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .top-data h1 {
+        font-size: 26px !important;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .top-data h1 {
+        font-size: 26px !important;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .headinfbg {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .top-data h1.realtop-headinf {
+        font-size: 15px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .downsell1 h4 {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .top-data h1 {
+        font-size: 24px !important;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 14px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .headinfbg {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .downsell1 h4 {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .top-data h1 {
+        font-size: 22px !important;
+    }
+
+    h3 .normal-custom-text {
+        font-size: 18px !important;
+    }
+
+    .headinfbg {
+        font-size: 14px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 13px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .downsell1 h4 {
+        font-size: 13px !important;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .headinfbg {
+        font-size: 13px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 348px) {
+    .top-data h1 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    h3 .normal-custom-text {
+        font-size: 17px !important;
+    }
+
+    .headinfbg {
+        font-size: 12px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .top-data h1 {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .thank-data {
+        padding: 20px 5px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+
+    h4.mideel-text {
+        font-size: 23px !important;
+    }
+
+    .min-text {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 382px) {
+
+    .yellow-text {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    h4.mideel-text {
+        font-size: 22px !important;
+    }
+
+    .min-text {
+        font-size: 13px !important;
+    }
+
+}
+
+@media screen and (max-width: 349px) {
+
+    h4.mideel-text {
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width: 337px) {
+    h4.mideel-text {
+        font-size: 20px !important;
+    }
+
+    #repon-heading .repon-heading {
+        font-size: calc(6.5vw - 0px) !important;
+        line-height: calc(0.9em + 1vw) !important;
+    }
+
+}
