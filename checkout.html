@@ -253,6 +253,7 @@
                                                     placeholder="Email address" maxlength="50" autocomplete="email"
                                                     title="Please provide a email address.">
                                                 <label for="email-address">Email Address</label>
+                                                <span class="error-message" id="email-address_error"></span>
                                             </div>
                                         </div>
 
@@ -263,6 +264,7 @@
                                                     placeholder="name@example.com" title="Enter Your Secure Password"
                                                     maxlength="30">
                                                 <label for="password">Password</label>
+                                                <span class="error-message" id="password_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -277,6 +279,7 @@
                                                     autocomplete="first-name" placeholder="First Name" maxlength="30"
                                                     title="Please enter your first name.">
                                                 <label for="first-name">First Name</label>
+                                                <span class="error-message" id="first-name_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -286,6 +289,7 @@
                                                     placeholder="Last Name" maxlength="30"
                                                     title="Please enter your last name.">
                                                 <label for="last-name">Last Name</label>
+                                                <span class="error-message" id="last-name_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -298,6 +302,7 @@
                                                     autocomplete="street-address" placeholder="Street Address"
                                                     title="Please enter your street address." maxlength="50">
                                                 <label for="street-address">Street Address</label>
+                                                <span class="error-message" id="street-address_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -308,6 +313,7 @@
                                                     title="Enter your apartment or unit number (if applicable)."
                                                     maxlength="50">
                                                 <label for="apt-unit">Apt/Unit</label>
+                                                <span class="error-message" id="apt-unit_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -320,6 +326,7 @@
                                                     maxlength="50"
                                                     title="Please enter the city where you want to ship.">
                                                 <label for="city">City</label>
+                                                <span class="error-message" id="city_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
@@ -327,7 +334,7 @@
                                                 <!-- Shipping States -->
                                                 <select class="form-select" id="shipping-states"
                                                     aria-label="Floating label select example">
-                                                    <option selected>Select a state</option>
+                                                    <option selected value="">Select a state</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
                                                     <option value="AZ">Arizona</option>
@@ -381,6 +388,7 @@
                                                     <option value="WY">Wyoming</option>
                                                 </select>
                                                 <label for="shipping-states">Select a state/province</label>
+                                                <span class="error-message" id="shipping-states_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -390,6 +398,7 @@
                                                     autocomplete="postal-code" placeholder="Postal Code" maxlength="8"
                                                     title="Please enter your postal code.">
                                                 <label for="postal-code">Postal Code</label>
+                                                <span class="error-message" id="postal-code_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -402,6 +411,7 @@
                                                     placeholder="Phone Number" maxlength="16" autocomplete="tel"
                                                     title="Please enter your phone number (e.g., +1 234-567-8900).">
                                                 <label for="phone-number">Phone Number</label>
+                                                <span class="error-message" id="phone-number_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -425,6 +435,7 @@
                                                 placeholder="1234 1234 1234 1234" aria-label=".form-control-lg example"
                                                 title="Enter your 16-digit credit card number (e.g., 1234 1234 1234 1234)."
                                                 maxlength="19">
+                                            <span class="error-message" id="credit-card-number_error"></span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -434,6 +445,7 @@
                                                 autocomplete="card-cvc" type="text" placeholder="CVC"
                                                 aria-label=".form-control-lg example" maxlength="4"
                                                 title="Enter the 3-4 digit CVC code from the back of your card.">
+                                            <span class="error-message" id="card-cvc_error"></span>
                                         </div>
                                         <div class="col-md-8 mb-3">
                                             <!-- Card Expiry -->
@@ -441,6 +453,7 @@
                                                 autocomplete="card-expiry" type="text" placeholder="MM / YY"
                                                 aria-label=".form-control-lg example"
                                                 title="Enter the expiration date of your card (MM / YY).">
+                                            <span class="error-message" id="card-expiry_error"></span>
                                         </div>
                                     </div>
 
@@ -451,13 +464,14 @@
                                                 type="text" placeholder="Postal Code"
                                                 aria-label=".form-control-lg example"
                                                 title="Enter your billing postal code." maxlength="8">
+                                            <span class="error-message" id="billing-postal-code_error"></span>
                                         </div>
                                         <div class="col-md-8 mb-3">
                                             <!-- Billing States -->
                                             <select class="form-select form-select-lg"
                                                 aria-label="Default select example" id="billing-states"
                                                 name="billing-states">
-                                                <option selected>Select a state</option>
+                                                <option selected value="">Select a state</option>
                                                 <option value="AL">Alabama</option>
                                                 <option value="AK">Alaska</option>
                                                 <option value="AZ">Arizona</option>
@@ -510,6 +524,7 @@
                                                 <option value="WI">Wisconsin</option>
                                                 <option value="WY">Wyoming</option>
                                             </select>
+                                            <span class="error-message" id="billing-states_error"></span>
                                         </div>
                                     </div>
 

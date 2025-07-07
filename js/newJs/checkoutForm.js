@@ -1,107 +1,119 @@
-// Form inputs 
-const email = document.getElementById('email-address');
-const password = document.getElementById('password');
+// form elements
+const formElements = {
+    email: document.getElementById('email-address'),
+    email_error: document.getElementById('email-address_error'),
+    password: document.getElementById('password'),
+    password_error: document.getElementById('password_error'),
 
-// Shipping Address
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const streetAddress = document.getElementById('street-address');
-const aptUnit = document.getElementById('apt-unit');
-const city = document.getElementById('city');
-const shippingStates = document.getElementById('shipping-states');
-const shippingPostalCode = document.getElementById('postal-code');
-const phoneNumber = document.getElementById('phone-number');
+    firstName: document.getElementById('first-name'),
+    firstName_error: document.getElementById('first-name_error'),
+    lastName: document.getElementById('last-name'),
+    lastName_error: document.getElementById('last-name_error'),
+    streetAddress: document.getElementById('street-address'),
+    streetAddress_error: document.getElementById('street-address_error'),
+    aptUnit: document.getElementById('apt-unit'),
+    aptUnit_error: document.getElementById('apt-unit_error'),
+    city: document.getElementById('city'),
+    city_error: document.getElementById('city_error'),
+    shippingStates: document.getElementById('shipping-states'),
+    shippingStates_error: document.getElementById('shipping-states_error'),
+    postalCode: document.getElementById('postal-code'),
+    postalCode_error: document.getElementById('postal-code_error'),
+    phoneNumber: document.getElementById('phone-number'),
+    phoneNumber_error: document.getElementById('phone-number_error'),
 
-// Card Details
-const cardNumber = document.getElementById('credit-card-number');
-const cardCVC = document.getElementById('card-cvc');
-const cardExpiry = document.getElementById('card-expiry');
-const billingPostal = document.getElementById('billing-postal-code');
-const billingStates = document.getElementById('billing-states');
+    cardNumber: document.getElementById('credit-card-number'),
+    cardNumber_error: document.getElementById('credit-card-number_error'),
+    cardCVC: document.getElementById('card-cvc'),
+    cardCVC_error: document.getElementById('card-cvc_error'),
+    cardExpiry: document.getElementById('card-expiry'),
+    cardExpiry_error: document.getElementById('card-expiry_error'),
+    billingPostal: document.getElementById('billing-postal-code'),
+    billingPostal_error: document.getElementById('billing-postal-code_error'),
+    billingStates: document.getElementById('billing-states'),
+    billingStates_error: document.getElementById('billing-states_error'),
+};
 
 // Handle form submission
 const form = document.getElementById('checkout-form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Prepare data object for logging and storage
     const formData = {
-        "email": email.value.trim(),
-        "password": password.value.trim(),
-        "Shipping Address": {
-            "firstName": firstName.value.trim(),
-            "lastName": lastName.value.trim(),
-            "streetAddress": streetAddress.value.trim(),
-            "aptUnit": aptUnit.value.trim(),
-            "city": city.value.trim(),
-            "shippingStates": shippingStates.value.trim(),
-            "shippingPostalCode": shippingPostalCode.value.trim(),
-            "phoneNumber": phoneNumber.value.trim(),
-        },
-        "Billing Address": {
-            "cardNumber": cardNumber.value.trim(),
-            "cardCVC": cardCVC.value.trim(),
-            "cardExpiry": cardExpiry.value.trim(),
-            "billingPostal": billingPostal.value.trim(),
-            "billingStates": billingStates.value.trim(),
-        }
+        email: formElements.email.value.trim(),
+        password: formElements.password.value.trim(),
+        firstName: formElements.firstName.value.trim(),
+        lastName: formElements.lastName.value.trim(),
+        streetAddress: formElements.streetAddress.value.trim(),
+        aptUnit: formElements.aptUnit.value.trim(),
+        city: formElements.city.value.trim(),
+        shippingStates: formElements.shippingStates.value.trim(),
+        postalCode: formElements.postalCode.value.trim(),
+        phoneNumber: formElements.phoneNumber.value.trim(),
+        cardNumber: formElements.cardNumber.value.trim(),
+        cardCVC: formElements.cardCVC.value.trim(),
+        cardExpiry: formElements.cardExpiry.value.trim(),
+        billingPostal: formElements.billingPostal.value.trim(),
+        billingStates: formElements.billingStates.value.trim(),
     };
 
-    // Log form data to console
+    const isValid = checkValidation(formData);
+    if (!isValid) {
+        console.log("Form not submitted. Validation failed.");
+        return; // Stop further processing
+    } else {
+        window.location.href = './offer1.html'
+    }
+
+    // Proceed if form is valid
     console.log("Form Submitted:", formData);
-
-    // Store form data in localStorage (stringify the object)
     localStorage.setItem('Form Data', JSON.stringify(formData));
-
-    // Clear form inputs after submission
     clearFormInputs();
     console.log("Form submitted and data saved in localStorage.");
 });
 
 // Clear form inputs after submission
 const clearFormInputs = () => {
-    email.value = '';
-    password.value = '';
-    firstName.value = '';
-    lastName.value = '';
-    streetAddress.value = '';
-    aptUnit.value = '';
-    city.value = '';
-    shippingPostalCode.value = '';
-    phoneNumber.value = '';
-    cardNumber.value = '';
-    cardCVC.value = '';
-    cardExpiry.value = '';
-    billingPostal.value = '';
-    billingStates.value = '';
-}
+    formElements.email.value = '';
+    formElements.password.value = '';
+    formElements.firstName.value = '';
+    formElements.lastName.value = '';
+    formElements.streetAddress.value = '';
+    formElements.aptUnit.value = '';
+    formElements.city.value = '';
+    formElements.postalCode.value = '';
+    formElements.phoneNumber.value = '';
+    formElements.cardNumber.value = '';
+    formElements.cardCVC.value = '';
+    formElements.cardExpiry.value = '';
+    formElements.billingPostal.value = '';
+};
 
 // Utility function to add an event listener for input sanitization
 const addInputListener = (element, regex, sanitizeFn = null) => {
+    if (!element) return; // Prevent error if element is not found
     element.addEventListener('input', function () {
         this.value = sanitizeFn ? sanitizeFn(this.value) : this.value.replace(regex, '');
     });
 };
 
-// Shipping Address
-addInputListener(firstName, /[0-9]/g);  // No numbers in first name
-addInputListener(lastName, /[0-9]/g);   // No numbers in last name
-addInputListener(streetAddress, /[^a-zA-Z0-9\s,.\/-]/g); // Allow alphanumeric, spaces, commas, periods, slashes, and hyphens
-addInputListener(aptUnit, /[^a-zA-Z0-9\s#\-\//]/g); // Allow alphanumeric, space, and specific characters
-addInputListener(city, /[0-9]/g);  // No numbers in city
-addInputListener(shippingPostalCode, /\D/g);  // Only numbers for postal code
-addInputListener(phoneNumber, /[^0-9+()\-\s]/g);  // Only valid phone characters
+// Shipping Address Sanitization Rules
+addInputListener(formElements.firstName, /[0-9]/g);  // No numbers in first name
+addInputListener(formElements.lastName, /[0-9]/g);   // No numbers in last name
+addInputListener(formElements.streetAddress, /[^a-zA-Z0-9\s,.\-\/]/g); // Alphanumeric, spaces, commas, periods, hyphens, slashes
+addInputListener(formElements.aptUnit, /[^a-zA-Z0-9\s#\-\/]/g); // Alphanumeric, space, #, -, /
+addInputListener(formElements.city, /[0-9]/g);  // No numbers in city
+addInputListener(formElements.postalCode, /\D/g);  // Only numbers for postal code
+addInputListener(formElements.phoneNumber, /[^0-9+()\-\s]/g);  // Valid phone characters
 
 // Billing Information
-addInputListener(cardNumber, /\D/g, function (value) {
+addInputListener(formElements.cardNumber, /\D/g, function (value) {
     const cleanedValue = value.replace(/\D/g, ''); // Step 1: Remove all non-digit characters
     const formattedValue = cleanedValue.replace(/(.{4})(?=.)/g, '$1 ').trim(); // Step 2: Format the card number into groups of 4 digits ( Insert a space after every 4 digits )
     return formattedValue; // Step 3: Return the formatted value
 });
-
-addInputListener(cardCVC, /[a-zA-Z]/g);  // Only numbers for CVC
-
-addInputListener(cardExpiry, /\D/g, function (value) {
+addInputListener(formElements.cardCVC, /[a-zA-Z]/g);  // Only numbers for CVC
+addInputListener(formElements.cardExpiry, /\D/g, function (value) {
     // Step 1: Remove all non-digit characters
     const cleanedValue = value.replace(/\D/g, '');
 
@@ -142,3 +154,31 @@ addInputListener(cardExpiry, /\D/g, function (value) {
         return month; // Only show month if it's not fully entered yet
     }
 });
+
+// Function for validating form values and displaying error messages
+const checkValidation = (formData) => {
+    const keys = Object.keys(formData);
+    let isValid = true;
+
+    keys.forEach((key) => {
+        const value = formData[key];
+        const errorElement = formElements[key + '_error'];
+
+        if (!value) {
+            isValid = false; // Mark form as invalid
+            if (errorElement) {
+                errorElement.textContent = `This field is required.`;
+                errorElement.style.display = 'block';
+                formElements[key].style.borderColor = 'red';
+            }
+        } else {
+            if (errorElement) {
+                errorElement.textContent = '';
+                errorElement.style.display = 'none';
+                formElements[key].style.borderColor = 'green';
+            }
+        }
+    });
+
+    return isValid;
+};
