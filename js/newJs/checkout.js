@@ -191,6 +191,8 @@ updateTotal();
 // UpdateCartData
 const updateCart = (addProduct) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
+    console.log('oldCartData:', oldCartData);
+
     const existingProduct = oldCartData.find(product => product.id === addProduct.id);
     if (existingProduct) return;
     const updatedCartData = [...oldCartData, addProduct];

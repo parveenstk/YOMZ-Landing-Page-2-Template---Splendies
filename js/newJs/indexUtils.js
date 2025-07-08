@@ -1,29 +1,26 @@
-// // subscribe buttons
-// document.addEventListener("DOMContentLoaded", function () {
-//     const btn = document.querySelector(".sbu-button");
-//     const bagsSection = document.querySelector(".subscribe-bags");
-
-//     btn.addEventListener("click", function (e) {
-//         e.preventDefault(); // prevent link behavior
-//         bagsSection.style.display = "block";
-//         // Optional: scroll to section
-//         bagsSection.scrollIntoView({ behavior: "smooth" });
-//     });
-// });
-
 // onClick subscrribe button 
 const packs = document.getElementById('packs');
 const subsBtn = document.querySelectorAll('.subscribe-button');
 const readytoyomz = document.getElementById('ready-to-yomz');
+const desktopCart = document.getElementById('desktop-cart-button');
 
+// Function to toggle visibility and scroll to packs
+function handleSubscribeClick(e) {
+    e.preventDefault();
+    replaceCls('ready-to-yomz', 'show', 'hide');
+    replaceCls('packs', 'hide', 'show');
+    packs.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Attach to all subscribe buttons
 subsBtn.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        replaceCls('ready-to-yomz', 'show', 'hide');
-        replaceCls('packs', 'hide', 'show');
-        packs.scrollIntoView({ behavior: 'smooth' });
-    });
+    button.addEventListener('click', handleSubscribeClick);
 });
+
+// Attach to desktop cart button
+if (desktopCart) {
+    desktopCart.addEventListener('click', handleSubscribeClick);
+}
 
 // utility function for multi uses
 const replaceCls = (element, existedClass, swichtedClass) => {
