@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checkout - YOMZ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/view-cart.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Toaster Message -->
+    <div id="toaster" class="toaster hide"> <img id="toaster-icon" class="toaster-icon" src="" alt="toaster-icon"
+            width="40px">
+        <div class="toaster-content">
+            <p id="toaster-text" class="toaster-text"></p> <img id="toaster-cross" class="toaster-cross"
+                src="./images/checkout/cross.svg" alt="toaster-cross" width="40px" onclick="autoHide()">
+        </div>
+    </div>
+    <header class="d-none d-sm-none d-lg-block">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-2 col-3">
+                    <div class="header-logo"> <a href="index.html"><img src="images/logo.png" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-9 text-end text-right">
+                    <div class="login-chackout">
+                        <p class="d-flex align-items-center gap-2 mb-0"> <img src="images/checkout/shopping-cart.png"
+                                alt="" class="img-fluid"> <span>(2) Cart</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header pt-3 d-sm-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mx-auto"> <img src="images/logo.png" class="img-fluid"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="your-cart">
+        <div class="container">
+            <h3 class="cartheading">YOUR CART</h3>
+            <div class="pholder">
+                <div class="col-lg-10 mx-auto">
+
+                    <div class="row cart-thead cart-table hidden-xs">
+                        <div class="col-sm-7 cart-td">
+                            <h3 class="heading">Product</h3>
+                        </div>
+                        <div class="col-sm-4 cart-td text-center">
+                            <h3 class="heading">Price</h3>
+                        </div>
+
+                        <div class="col-sm-2 cart-td">
+                            <h3 class="heading"></h3>
+                        </div>
+                    </div>
+                    <div class="row cart-table">
+                        <div class="col-sm-7 cart-td">
+                            <div class="product-label">
+                                <figure class="thumb product-image-thumb">
+                                    <a href="#"> <img src="images/bag-1.png" class="product_image" width="285"
+                                            title="N/A" fgcolor="#aaaaaa" bgcolor="#654321"> </a>
+                                </figure>
+                                <div class="meta product-info-meta">
+                                    <h3 class="heading"> <a href="#"> 1 Person </a> </h3>
+                                    <p> (1 bag)</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 cart-td text-center">
+                            <div class="product-label text-center w-100"> <span
+                                    class="thumb d-sm-block d-lg-none">Price</span>
+                                <div class="meta price">
+                                    <p>$47.99 USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sm-1 cart-td text-center">
+                            <span class="product-rem-btn close"><i class="fas fa-times"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="row cart-table" id="cart-product-6717234452">
+                        <div class="col-sm-7 cart-td">
+                            <div class="product-label">
+                                <figure class="thumb product-image-thumb">
+                                    <a href="#"> <img src="images/bag-3.png" class="product_image" width="285"
+                                            title="N/A" fgcolor="#aaaaaa" bgcolor="#654321"> </a>
+                                </figure>
+                                <div class="meta product-info-meta">
+                                    <h3 class="heading"> <a href="#"> 3 People Set </a> </h3>
+                                    <p>(3 bags)</p>
+                                    <p>Get your first month for FREE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 cart-td text-center">
+                            <div class="product-label w-100"> <span class="thumb d-sm-block d-lg-none">Price</span>
+                                <div class="meta price">
+                                    <p>$129.58 per month</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-1 cart-td text-center">
+                            <span class="product-rem-btn close"><i class="fas fa-times"></i></span>
+                        </div>
+                    </div>
+                    <div class="row flat-well">
+                        <div class="col-sm-10 col-sm-offset-1 text-center mx-auto">
+                            <div class="cart-subtotal">
+                                <h2 class="title">Subtotal</h2>
+                                <h1 class="price" id="cart-subtotal-price">$187.91 USD</h1>
+                                <p>Subtotal excludes Shipping, Tax &amp; Discounts</p>
+                            </div>
+                            <div class="col-12 submit-btn">
+                                <button type="submit" class="btn btn-primary"
+                                    onclick="window.location.href='checkout.html'">TRY YOMZ NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="socil_icons_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="footer_logo text-left">
+                            <a href="" data-barley="footerlogo_link" data-barley-editor="link"><img
+                                    src="images/logo.png" style="width:190px;" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="social_icons text-right">
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="facebook_icon" data-barley-editor="link"><img
+                                        src="images/fb-icon.svg" style="width:41px;" alt="facebook"> </a>
+                            </div>
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="instagram_icon" data-barley-editor="link"><img
+                                        src="images/instgram.svg" style="width:41px;" alt="instagram"> </a>
+                            </div>
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="youtube_icon" data-barley-editor="link"><img
+                                        src="images/youtube.svg" style="width:41px;" alt="youtube"></a>
+                            </div>
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="twitter_icon" data-barley-editor="link"><img
+                                        src="images/twitter.svg" style="width:41px;" alt="twitter"></a>
+                            </div>
+                            <div class="social_icon_box">
+                                <a href="" target="_blank" data-barley="tiktok_icon" data-barley-editor="link"> <img
+                                        src="images/tiktok-icon.svg" style="width:41px;" alt="tiktok"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="seprator"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="explore_head" data-barley-editor="simple">EXPLORE</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">How It Works</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Reviews</a></li>
+                                    <li><a href="#">YOMZ Rewards</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="" data-barley-editor="">COMPANY</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">Ambassadors</a></li>
+                                    <li><a href="#">#YOMZ</a></li>
+                                    <li><a href="#">Founder</a></li>
+                                    <li><a href="#">Mission</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Accessibility</a></li>
+                                    <li><a href="#">Consent Preferences</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_column left">
+                            <div class="footer_nav_head">
+                                <p data-barley="customservice_head" data-barley-editor="simple">CUSTOMER SERVICE</p>
+                            </div>
+                            <div class="footer_nav_list">
+                                <ul>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="footer_column1 ">
+                            <div class="news_letter">
+                                <div class="footer_nav_head">
+                                    <p data-barley="newsletter_head" data-barley-editor="simple">BE THE FIRST TO KNOW
+                                    </p>
+                                </div>
+                                <div class="klaviyo-form-VmhrbQ"></div>
+                            </div>
+                            <div class="subscribe_btn text-center"> <a data-barley-editor="link"
+                                    data-barley="splendies_footer_subscribe_btn" href="subscribe">Subscribe</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p data-barley="copyright" data-barley-editor="simple">© 2024 YOMZ. All Rights Reserved. <a
+                                href="#">Terms and Conditions</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -288,14 +288,21 @@ p.bag-price {
 
 /****************************** Subscribe  *****************************/
 
+.logo-sec .login-chackout img {
+    height: 35px!important;
+    width: 35px !important;
+}
+.logo-sec .login-chackout a{color: #000;}
+
+.login-chackout{margin-right: 30px;}
+
 .new-subscribe .sbu-button:hover>.btn-txt {
     transform: translate(-5px, -4px);
 }
 
 .new-subscribe .announcement-bar {
-    padding: 15px 0;
+    padding: 10px 0;
     overflow: hidden;
-    min-height: 50px;
     background-color: #d92730;
 }
 
@@ -408,9 +415,9 @@ p.bag-price {
     text-decoration: underline;
 }
 
-.new-subscribe .logo-sec img {
-    width: auto;
-    height: 75px;
+.login-chackout img {
+    height: 30px;
+    width: 100%!important;
 }
 
 .new-subscribe .top-content-sec {
@@ -1084,6 +1091,8 @@ p.bag-price {
 
 @media screen and (max-width: 767px) {
 
+    .subscribe-section-sec-md{padding-left: 20px!important; padding-right: 20px !important;}
+
     .mobile-block-line {
         display: block;
     }
@@ -1313,7 +1322,7 @@ p.bag-price {
 
     .new-subscribe .logo-sec.mobile {
         background-color: #fff;
-        padding: 5px 20px;
+        padding: 5px 10px;
     }
 
     .new-subscribe .top-content-sec.mobile {
@@ -1437,9 +1446,20 @@ p.bag-price {
     }
 
     .new-subscribe .logo-sec {
-        justify-content: space-around;
+        justify-content: space-between;
         padding-top: 10px;
     }
+
+    .login-chackout {
+    margin-right: 0px;
+}
+
+.login-chackout p a{font-size: 14px;}
+.logo-sec .login-chackout img {
+    height: 25px !important;
+    width: 25px !important;
+}
+
 }
 
 @media screen and (max-width: 767px) {

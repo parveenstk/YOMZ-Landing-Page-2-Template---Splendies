@@ -1,0 +1,1109 @@
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanRg';
+    src: url('../font/centurygothicpaneuropeanregular-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanregular-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanregular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanLt';
+    src: url('../font/centurygothicpaneuropeanlight-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanlight-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url('../font/centurygothicpaneuropeanextrabold-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanextrabold-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanextrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropean_Rg';
+    src: url('../font/centurygothicpaneuropeansemibold-webfont.woff2') format('woff2'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.woff') format('woff'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.exblod {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+body {
+    background: #ffeef1;
+    font-family: 'Century Gothic';
+}
+
+.dsblockline {
+    display: block;
+}
+
+.thankyou-page .container {
+    max-width: 1120px;
+}
+
+.thankyou-page {
+    margin: 20px 0;
+}
+
+.thank-data {
+    background: #fff;
+    padding: 48px 120px;
+    /* box-shadow: 0px 2px 10px #ccc; */
+    border-radius: 10px;
+    border: 0px solid #ccc;
+}
+
+.top-data h1 {
+    font-size: 48px;
+    color: #bf9b41;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: normal;
+}
+
+.top-data p {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.ds-block {
+    display: block;
+}
+
+.top-data {
+    margin-bottom: 50px;
+}
+
+.top-data2 {
+    margin-bottom: 20px !important;
+}
+
+.share-icon {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.share-icon h3 {
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.share-icon ul {
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.share-icon li {
+    display: inline-block;
+}
+
+.share-icon li i {
+    background: #dbb661;
+    font-size: 23px;
+    padding: 15px;
+    border-radius: 130px;
+    width: 55px;
+    color: #fff;
+}
+
+.share-icon li i:hover {
+    background: #bf9b41;
+}
+
+.share-icon li a {
+    display: flex;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.enjoy h3 {
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.enjoy p {
+    text-align: center;
+    font-size: 18px;
+    color: #444444;
+    font-weight: 500;
+}
+
+.enjoy .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+    width: 30%;
+    margin: 0px auto;
+}
+
+.enjoy label {
+    background: #ffffff;
+    width: 100%;
+    display: block;
+    border: 1px solid #c6a24a;
+    min-height: 60px;
+    display: flex;
+    border-radius: 8px;
+    line-height: normal;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    /* text-transform: capitalize; */
+}
+
+.enjoy input[type="radio"],
+.enjoy input[type="checkbox"] {
+    display: none;
+}
+
+.enjoy input[type="radio"]:checked+label,
+.enjoy input[type="checkbox"]:checked+label {
+    background: #c6a24a !important;
+    color: #fff;
+}
+
+.enjoy .submit {
+    background: #ad8c39 !important;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 30px;
+    font-weight: 600;
+    display: block;
+}
+
+.enjoy .submit:hover {
+    background: #c6a24a !important;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer .ssl img {
+    width: 31%;
+    margin-bottom: 10px;
+}
+
+.manage-footersec p {
+    margin-bottom: 0px;
+    color: #444444;
+}
+
+.manage-footersec p {
+    font-size: 12px;
+    color: #444444;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #444444;
+    margin-bottom: 0px;
+}
+
+.headinfbg {
+    background: #FAFF04;
+    color: #F21010;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    width: 60%;
+    margin: 7px auto;
+}
+
+.realtop-headinf {
+    font-size: 30px !important;
+    color: #000 !important;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+}
+
+.offer-images img {
+    width: 80%;
+    margin: 0px auto;
+    display: block;
+}
+
+h4.thsnlh4 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a.tagroow {
+    text-align: center;
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.website-image {
+    display: block !important;
+}
+
+.mobile-image {
+    display: none !important;
+}
+
+.first-data .color-1 {
+    color: #FFBD03;
+}
+
+.first-data .color-2 {
+    color: #D85B35;
+}
+
+.first-data h1 {
+    margin-bottom: 0px;
+    font-size: 36px;
+}
+
+.first-data h3 {
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
+}
+
+.first-data2 h3 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thankyou-page .first-data2 p {
+    font-weight: 700 !important;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.thankyou-page .first-data2 p.normal-para {
+    font-weight: 400 !important;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.ds-bloc-eadin {
+    display: block;
+}
+
+.first-data {
+    margin-bottom: 40px;
+}
+
+.first-data2 {
+    margin-bottom: 40px;
+}
+
+.offerbtn-2 a {
+    background: #2BBFDF;
+    color: #fff;
+    padding: 20px 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+}
+
+.offerbtn-2 a:hover {
+    background: #2BBFCE !important;
+}
+
+.products-image img {
+    width: 60%;
+    margin: 0px auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.offerpop .modal-content {
+    width: 730px;
+    background: #fff;
+    border: 3px dashed #f06522;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.offerpop .modal-body {
+    padding: 40px 40px 45px;
+}
+
+.offerpop h4 {
+    height: auto;
+    text-align: center;
+    font-size: 26px;
+    color: #008;
+
+    font-weight: 700;
+}
+
+.offerpop p {
+    font-size: 16px;
+    text-align: center;
+    color: #222;
+    font-weight: 700;
+}
+
+.othanks {
+    text-decoration: underline;
+    color: #333;
+}
+
+.offerpop .managecheckoutbtn {
+    white-space: normal;
+    font-size: 18px;
+    background: #2C5DB8;
+    color: white;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    width: 55%;
+    margin: 0px auto;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.pulse {
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite
+}
+
+.font-weight-bold {
+    font-style: initial !important;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(.9)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes pulse {
+
+    0%,
+    100% {
+        -webkit-transform: scale(.95)
+    }
+
+    50% {
+        -webkit-transform: scale(1)
+    }
+}
+
+/*NewDownsell-style*/
+.yellow-text {
+    color: #f7f737;
+    background: #f7f737;
+    color: #000000;
+    font-weight: 700;
+    display: inline-block;
+    padding: 8px;
+    font-size: 49px;
+    margin-bottom: 10px !important;
+}
+
+.mideel-text {
+    font-size: 32px;
+}
+
+.linebrack {
+    display: block;
+}
+
+.min-text {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.color-red {
+    color: red;
+}
+
+/*NewDownsell-style*/
+
+@media screen and (max-width: 1024px) {
+
+    .thank-data {
+        background: #fff;
+        padding: 45px 20px;
+        box-shadow: 0px 2px 10px #ccc;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .offerpop .modal-content {
+        width: 1150px !important;
+        background: #fff;
+        border: 3px dashed #f06522;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .offerpop .managecheckoutbtn {
+        white-space: normal;
+        font-size: 18px;
+        background: #2C5DB8;
+        color: white;
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        padding: 16px;
+        width: 85%;
+        margin: 0px auto;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .products-image img {
+        padding-top: 0px;
+    }
+
+    .top-data {
+        margin-bottom: 10px;
+    }
+
+    .top-data2 {
+        margin-bottom: 5px !important;
+    }
+
+    .offerpop .modal-body {
+        padding: 31px 20px 30px;
+    }
+
+    .offerpop h4 {
+        height: auto;
+        text-align: center;
+        font-size: 18px;
+        color: #008;
+        font-weight: 700;
+    }
+
+    .offerpop p {
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        font-weight: 700;
+    }
+
+    .mideel-text {
+        font-size: 25px !important;
+    }
+
+    .min-text {
+        font-size: 16px !important;
+    }
+
+    .offerpop .managecheckoutbtn {
+        white-space: normal;
+        font-size: 20px;
+        background: #2C5DB8;
+        color: white;
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        margin: 0px auto;
+        margin-bottom: 5px;
+        font-weight: 600;
+        padding: 20px 10px;
+    }
+
+    .first-data h3 {
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .first-data {
+        margin-bottom: 5px;
+    }
+
+    .first-data h1 {
+        margin-bottom: 0px !important;
+    }
+
+    .first-data2 h3 {
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .thankyou-page .first-data2 p {
+        font-weight: 700 !important;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .first-data h3 {
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .first-data2 {
+        margin-bottom: 5px;
+    }
+
+    .offerbtn-2 a {
+
+        color: #fff;
+        padding: 12px 7px;
+        font-weight: 600;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+    }
+
+    .website-image {
+        display: none !important;
+    }
+
+    .mobile-image {
+        display: block !important;
+    }
+
+    .manage-footersec img {
+        width: 23%;
+    }
+
+    .realtop-headinf {
+        font-size: 20px !important;
+        color: #000 !important;
+        margin-top: 5px;
+        margin-bottom: 0px !important;
+    }
+
+    h4.thsnlh4 {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .offer-images img {
+        width: 100%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    a.tagroow {
+        text-align: center;
+        display: block;
+        color: #000;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .headinfbg {
+        background: #FAFF04;
+        color: #F21010;
+        font-size: 24px;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100%;
+        margin: 7px auto;
+    }
+
+    .thank-data {
+        background: #fff;
+        padding: 20px 20px;
+        box-shadow: 0px 2px 10px #ccc;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .logo.text-center.mb-4 {
+        margin-bottom: 5px !important;
+    }
+
+    .thankyou-page {
+        margin: 6px 0;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .top-data h1 {
+        font-size: 28px;
+        color: #bf9b41;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: normal;
+    }
+
+    .top-data p {
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+
+    .share-icon li i {
+        background: #dbb661;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 130px;
+        width: 46px;
+        color: #fff;
+    }
+
+    .enjoy h3 {
+        color: #000;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .enjoy p {
+        text-align: center;
+        font-size: 14px;
+        color: #444444;
+        font-weight: 500;
+    }
+
+    .enjoy .px-5 {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+
+    .enjoy .col-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .enjoy label {
+        background: #ffffff;
+        width: 100%;
+        display: block;
+        border: 1px solid #c6a24a;
+        min-height: 55px;
+        display: flex;
+        border-radius: 8px;
+        line-height: normal;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        /* text-transform: capitalize; */
+        font-size: 14px;
+    }
+
+    .enjoy .submit {
+        background: #ad8c39 !important;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 14px 30px;
+        font-weight: 600;
+        display: block;
+    }
+
+    footer .d-flex {
+        display: block !important;
+    }
+
+    footer .ssl img {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .manage-footersec .me-3 {
+        margin-right: 0rem !important;
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: #444444;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    footer {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .share-icon {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    h3 .normal-custom-text {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+    }
+
+    h4.text-wait {
+        font-size: 26px;
+    }
+
+    #repon-heading .repon-heading {
+        font-size: 20px !important;
+    }
+
+    .enjoy .flavore {
+        padding: 0px 15px !important;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-blue {
+    color: #008 !important;
+}
+
+.text-red {
+    color: #EE0A0A !important;
+}
+
+.text-skyblue {
+    color: #1eb9f0 !important;
+    line-height: 50px !important;
+    font-size: calc(2.5vw - 0px) !important;
+    line-height: calc(0.7em + 1vw) !important;
+    text-transform: uppercase;
+}
+
+.enjoy .submit {
+    background: #2BBFDF !important;
+}
+
+.enjoy .submit:hover {
+    background: #2BBFCE !important;
+}
+
+input[name="other_flavor"]::placeholder {
+    text-align: center;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+@media screen and (max-width: 544px) {
+    .headinfbg {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .headinfbg {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    .realtop-headinf {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    .realtop-headinf {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    .headinfbg {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 461px) {
+    .realtop-headinf {
+        font-size: 17px !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .headinfbg {
+        font-size: 16px;
+    }
+
+    .realtop-headinf {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .top-data h1 {
+        font-size: 26px !important;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .top-data h1 {
+        font-size: 26px !important;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .headinfbg {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .top-data h1.realtop-headinf {
+        font-size: 15px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .downsell1 h4 {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .top-data h1 {
+        font-size: 24px !important;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 14px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .headinfbg {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .downsell1 h4 {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .top-data h1 {
+        font-size: 22px !important;
+    }
+
+    h3 .normal-custom-text {
+        font-size: 18px !important;
+    }
+
+    .headinfbg {
+        font-size: 14px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 13px !important;
+    }
+
+    h4.thsnlh4 {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .downsell1 h4 {
+        font-size: 13px !important;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .headinfbg {
+        font-size: 13px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 348px) {
+    .top-data h1 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    h3 .normal-custom-text {
+        font-size: 17px !important;
+    }
+
+    .headinfbg {
+        font-size: 12px;
+    }
+
+    .top-data h1.realtop-headinf {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .top-data h1 {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .thank-data {
+        padding: 20px 5px;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    #repon-heading .repon-heading {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 401px) {
+
+    h4.mideel-text {
+        font-size: 23px !important;
+    }
+
+    .min-text {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    #repon-heading .repon-heading {
+        font-size: 16px !important;
+    }
+
+    .yellow-text {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    h4.mideel-text {
+        font-size: 22px !important;
+    }
+
+    .min-text {
+        font-size: 13px !important;
+    }
+
+    .offerpop .managecheckoutbtn {
+        padding: 14px 10px;
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 349px) {
+
+    h4.mideel-text {
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width: 348px) {
+    #repon-heading .repon-heading {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 337px) {
+    h4.mideel-text {
+        font-size: 20px !important;
+    }
+
+}
+
+@media screen and (max-width: 326px) {
+    #repon-heading .repon-heading {
+        font-size: 14px !important;
+    }
+}
+
+/*NewDownsell-style*/
+/*NewDownsell-style*/

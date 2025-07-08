@@ -1,0 +1,554 @@
+@font-face {
+    font-family: "Super Caramel";
+    src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanRg';
+    src: url('../font/centurygothicpaneuropeanregular-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanregular-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanregular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanLt';
+    src: url('../font/centurygothicpaneuropeanlight-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanlight-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url('../font/centurygothicpaneuropeanextrabold-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanextrabold-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanextrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropean_Rg';
+    src: url('../font/centurygothicpaneuropeansemibold-webfont.woff2') format('woff2'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.woff') format('woff'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'century_gothicregular';
+    src: url('../font/centurygothic-webfont.eot');
+    src: url('../font/centurygothic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/centurygothic-webfont.woff2') format('woff2'),
+        url('../font/centurygothic-webfont.woff') format('woff'),
+        url('../font/centurygothic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.error-message {
+    font-size: 14px;
+    padding-left: 5px;
+    padding-top: 4px;
+    color: red;
+}
+
+.hide {
+    display: none !important;
+}
+
+.toaster {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d24349;
+    background-color: #fde1e4;
+    width: 350px;
+    height: 65px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 5px;
+    padding: 5px 7px;
+    z-index: 10000;
+
+    animation: slideIn 0.8s ease-out;
+    /* Applying the animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at the normal position */
+    }
+}
+
+.toaster-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toaster-text {
+    padding-left: 6px;
+    margin-bottom: 0px !important;
+    color: #d24349;
+}
+
+.toaster-cross {
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer !important;
+}
+
+.exblod {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+body {
+    font-family: 'century_gothic_paneuropean_Rg' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1030px;
+}
+
+/* CART */
+
+header {
+    padding: 15px 0;
+    border-bottom: 1px solid #1EB9F0;
+}
+
+.login-chackout img {
+    height: 35px;
+}
+
+.your-cart{padding: 50px 0;}
+
+.cartheading {
+    text-align: center;
+    color: #d92730;
+    font-size: 40px;
+    font-family: 'century_gothic_paneuropeanXBd';
+    margin-bottom: 30px;
+}
+
+.cart-table {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.cart-table .product-image-thumb img {
+    height: auto;
+    width: 90px;
+}
+
+.cart-table .product-label {
+    display: table;
+}
+
+.cart-table p {
+    margin: 0 0;
+}
+
+.cart-table .cart-td {
+    display: table-cell;
+    float: none;
+    border-bottom: 1px solid #EEEEEE;
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.product-label .thumb, .product-label .meta {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.product-label .product-info-meta {
+    padding-left: 25px;
+}
+
+h3.heading{font-size: 18px;}
+h3.heading a{text-decoration: none; color: #000;     font-size: 22px;}
+.cart-table p {
+    margin: 0 0;
+    font-size: 14px;
+}
+
+.meta.price p{font-size: 16px;}
+
+.submit-btn [type=submit] {
+    text-transform: uppercase;
+    padding: 6px 30px;
+    color: #fff !important;
+    border-radius: 0px;
+    height: 50px;
+    border: none;
+    background-color: #1EB9F0;
+}
+
+.cart-subtotal{margin-top: 30px;}
+/* CART */
+
+/* Footer */
+
+.footer .container {
+    max-width: 1000px;
+}
+
+.footer {
+    background-color: #ffeef1;
+    padding: 24px 0 20px;
+    border-top: 1px solid #fff;
+}
+
+.footer_logo>a {
+    display: block;
+}
+
+.social_icons {
+    padding-top: 15px;
+}
+
+.social_icon_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social_icon_box+.social_icon_box {
+    margin-left: 25px;
+}
+
+.seprator {
+    border-bottom: 1px solid #f9d7dd;
+    padding-top: 8px;
+}
+
+.footer_navigation {
+    padding: 30px 10px 24px;
+}
+
+.footer_column {
+    text-align: left;
+    width: 33.333%;
+}
+
+.left {
+    float: left;
+}
+
+.footer_nav_head>p {
+    color: #E6193C;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer_nav_list ul li {
+    list-style: outside none none;
+}
+
+.footer_nav_list a {
+    color: #909090;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.copyright p {
+    color: #e6193c;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.copyright a {
+    color: #909090;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+/******************************************* all section media *********************************/
+@media screen and (max-width: 767px) {
+
+    .toaster {
+        top: 18px;
+        right: 12px;
+    }
+
+    .dollar-symb {
+        font-size: 17px;
+        vertical-align: 2px;
+        margin-right: -7px;
+        font-weight: 400;
+    }
+
+    .cart-estim-total-amount {
+        font-size: 37px;
+        font-family: 'century_gothic_paneuropeanXBd';
+    }
+
+    .usd-text {
+        font-size: 12px;
+        margin-left: -6px;
+        font-weight: 400;
+        vertical-align: 0px;
+    }
+
+    .cart-estim-total-label {
+        margin-bottom: -5px;
+        font-size: 14px;
+    }
+
+    .cart-side .btn {
+        background: none;
+        border: none;
+        padding: 12px 12px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.46);
+        border-radius: 4px;
+    }
+
+    .cart-side .btn .fas {
+        color: #000;
+    }
+
+    span.count-value {
+        background-color: #1EB9F0;
+        padding: 5px;
+        border-radius: 4px;
+        padding: 2px 6px 3px 6px;
+        margin-left: 4px;
+        font-family: 'century_gothic_paneuropeanXBd';
+    }
+
+    .coupan-code {
+        margin-bottom: 10px;
+        margin-top: 15px !important;
+    }
+
+    .coupan-code span {
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .coupan-code .form-control {
+        border-radius: 0px;
+        height: 45px;
+        font-family: 'century_gothic_paneuropeanLt';
+        font-size: 14px;
+    }
+
+    .coupan-code [type=submit] {
+        height: 45px;
+    }
+
+    .checkout {
+        padding: 10px 0;
+    }
+
+    .sidebaar-cart {
+        padding-top: 20px;
+    }
+
+    .right-sideinforamtion {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .team-condition .form-check {
+        padding-left: 30px;
+        margin-left: 0px;
+    }
+
+    .yomz-form .heading h3 {
+        font-size: 22px;
+    }
+
+    .yomz-form .heading p {
+        font-size: 14px;
+    }
+
+    .inner-form-filed h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .billing-infomarion p {
+        margin-bottom: 15px !important;
+        line-height: normal;
+        font-size: 14px;
+    }
+
+    span.products-cart-image {
+        width: 125px;
+    }
+
+    .products-image-title h3 {
+        font-size: 26px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .products-ds h4 {
+        font-family: 'Century Gothic';
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+
+    span.products-ds p {
+        font-size: 13px;
+    }
+
+    .pricemassage {
+        margin-bottom: 20px;
+    }
+
+    .pro-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 0px;
+    }
+
+    .offcanvas-header {
+        padding: 0px;
+    }
+
+    .pricemassage p {
+        margin-bottom: 0px;
+        text-align: left;
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    .offcanvas .btn-close {
+        position: relative;
+        right: 20px;
+        top: 20px;
+        border: 2px solid #858484;
+        border-radius: 20px;
+        padding: 9px;
+        font-size: 10px;
+        opacity: 1;
+    }
+
+    .pro-box-1 {
+        border-bottom: 0px solid #dcdada;
+    }
+
+    .offcanvas {
+        width: 93% !important;
+    }
+
+    .total-price {
+        font-size: 29px;
+    }
+
+    .subtotal {
+        font-size: 15px;
+    }
+
+    .team-condition {
+        padding-top: 20px;
+    }
+
+    .cart-box-bottom-1 {
+        border-bottom: 0px solid #e5e5e5 !important;
+    }
+
+    .items-btn .btn {
+        padding: 2px 14px;
+        height: 40px;
+    }
+
+    .team-condition p {
+        margin-bottom: 5px;
+    }
+
+    .footer_logo.text-left {
+        text-align: center;
+    }
+
+    .subscribe_btn>a {
+        background-color: #1EB9F0;
+        color: #000;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px 30px;
+        color: #fff;
+        font-family: 'century_gothic_paneuropeanXBd';
+        background-color: #ffffff;
+        color: #1EB9F0;
+        font-weight: 600;
+        font-size: 17px;
+        border: 1px solid #1EB9F0;
+        border-radius: 25px;
+        padding: 12px 40px;
+        display: block;
+        transform: translate(-2px, -2px);
+        transition: all linear .2s !important;
+        text-decoration: none !important;
+        text-transform: uppercase;
+    }
+
+    .footer_column1 .subscribe_btn.text-center {
+        display: block;
+        background-color: #1EB9F0;
+        border-radius: 25px;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .footer_column1 .news_letter {
+        display: none;
+    }
+
+    .footer_column1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/******************************************* all section media *********************************/

@@ -1,0 +1,766 @@
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'), url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanRg';
+    src: url('../font/centurygothicpaneuropeanregular-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanregular-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanregular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanLt';
+    src: url('../font/centurygothicpaneuropeanlight-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanlight-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropeanXBd';
+    src: url('../font/centurygothicpaneuropeanextrabold-webfont.woff2') format('woff2'), url('../font/centurygothicpaneuropeanextrabold-webfont.woff') format('woff'), url('../font/centurygothicpaneuropeanextrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'century_gothic_paneuropean_Rg';
+    src: url('../font/centurygothicpaneuropeansemibold-webfont.woff2') format('woff2'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.woff') format('woff'),
+        url('../font/centurygothicpaneuropeansemibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.exblod {
+    font-family: 'century_gothic_paneuropeanXBd';
+}
+
+body {
+	padding: 0;
+	margin: 0;
+    font-family: 'Century Gothic'!important;
+}
+
+.mobile-dsblock {
+	display: block;
+}
+
+.mainBg img {
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.first-heading {
+	text-align: center;
+	padding: 30px 0 0;
+}
+
+.first-heading h1 {
+	color: #1eb9f0;
+	font-weight: 700;
+	font-size: 48px;
+	margin-bottom: 0px;
+}
+
+.first-heading p {
+	color: #1eb9f0;
+	font-weight: 600;
+	margin-bottom: 0px;
+	font-size: 18px;
+}
+
+.secound-heading {
+    text-align: center;
+	padding-top: 10px;
+}
+
+.secound-heading h2 {
+	font-weight: 700;
+	font-size: 32px;
+	margin-bottom: 0px;
+}
+
+.secound-heading  p {
+	color: #000;
+	font-weight: 600;
+	margin-bottom: 0px;
+	font-size: 18px;
+}
+
+/* extracss */
+
+#exitLink:hover,
+.shiptake,
+a.textLink:hover {
+	text-decoration: underline
+}
+
+#leavePop2,
+.mainBox,
+.top-bar {
+	background: #fff
+}
+
+.headText,
+.popText,
+.popTitle {
+	width: 90%;
+	height: auto;
+	text-align: center;
+	font-weight: 600;
+}
+
+#innerBar,
+.mainBox,
+.popText,
+.popTitle {
+	margin: 0 auto
+}
+
+#exitLink,
+.inputButton,
+.mainBg {
+	margin: 25px auto 0;
+}
+
+.inputButton {
+	text-align: center;
+}
+
+.inputButton .btn {
+    border: thin outset black;
+    color: #FFEB00;
+    padding: .75em 0.8em;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: #E6193C;
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+}
+
+.inputButton .btn:hover {
+	background-color: #d61233;
+	color: #FFEB00;
+}
+
+#leaveFade,
+#leaveFade2 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 950;
+	background: rgba(0, 0, 0, .7);
+	display: none
+}
+
+#leavePop2 {
+	width: 650px;
+	height: auto;
+	position: fixed;
+	top: 25%;
+	left: calc(50% - 325px);
+	z-index: 1000;
+	border: 3px dashed #f06522;
+	display: none;
+	padding-top: 35px;
+	padding-bottom: 60px;
+	text-align: center
+}
+
+.popTitle {
+	font-size: 26px;
+	color: #1EB9F0;
+	line-height: normal;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+.popText {
+	font-size: 16px;
+	color: #222
+}
+
+#popButton {
+	width: 75%;
+	height: auto;
+	margin: 15px auto
+}
+
+a.textLink:link,
+a.textLink:visited {
+	text-decoration: underline;
+	color: #333
+}
+
+.shiptake {
+	text-align: center;
+	padding: 10px
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, sans-serif;
+	background: #ffeef1!important;
+}
+
+a:link,
+a:visited {
+	text-decoration: inherit;
+	color: inherit
+}
+
+.clear {
+	clear: both
+}
+
+.top-bar {
+	padding: 4px 0 3px;
+	border-bottom: 0px solid #e9e4dd
+}
+
+#innerBar {
+	width: 1140px
+}
+
+.logo {
+	max-width: 140px
+}
+
+.mainBox {
+	width: 1000px;
+	height: auto;
+	margin: 20px auto 0;
+	border: 0px solid #dcdcdc;
+	padding-bottom: 25px
+}
+
+.mainHeadbox {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	line-height: 35px
+}
+
+.leftHead,
+.rightHead {
+	width: 33%;
+	height: 35px;
+	background: #f5f5f5;
+	color: #b8b8b8;
+	float: left
+}
+
+.centerHead {
+	width: 34%;
+	height: 35px;
+	background: #1EB9F0;
+	color: #fff;
+	float: left
+}
+
+.headText {
+	margin: 30px auto 0;
+	font-size: 23px
+}
+
+#exitLink,
+#footerText {
+	font-size: 12px;
+	text-align: center;
+	height: auto
+}
+
+.mainBg {
+	width: 100%;
+	height: auto
+}
+
+#exitLink {
+	color: #333;
+	padding-top: 3px;
+	width: 350px
+}
+
+#secureImg {
+	width: 200px;
+	height: auto;
+	margin: 30px auto 0
+}
+
+#footerText {
+	width: 100%;
+	margin: 60px auto 0;
+	color: #222;
+	padding-bottom: 30px
+}
+
+.pricingText,
+#pricingText2 {
+	width: 100%;
+	height: auto;
+	margin: 20px auto 0;
+	font-size: 16px;
+	text-align: center;
+	font-family: Belgrano, Arial;
+	font-weight: 600;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.pricingText p {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.pricered {
+	color: #E6193C;
+}
+
+.managecirole label.form-check-label {
+	font-size: 20px
+}
+
+.managecirole .form-check-input {
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 10px
+}
+
+.selectBox,
+#subscribebox {
+	width: 400px;
+	height: auto;
+	margin: 0 auto
+}
+
+#antQuant {
+	border-radius: 0;
+	font-size: 19px
+}
+
+.offerpop .modal-content {
+	background: #fff;
+	border: 3px dashed #E6193C;
+	text-align: center;
+	width: 84%;
+	margin: 0px auto;
+}
+
+.buttonRight .btn {
+	color: #FFEB00;
+	padding: .6em 1.3em;
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: #E6193C;
+	display: inline-block;
+	border: none;
+	border-radius: 0px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.buttonRight .btn:hover {
+	background-color: #d61233;
+	color: #FFEB00;
+
+}
+
+.downsell1 {
+	padding: 30px 0 !important;
+}
+
+.products-left-side-details h3{font-size: 28px; font-weight: 700;     color: #1eb9f0;}
+.products-left-side-details ul{font-size: 16px;}
+
+.managecheckoutbtn{
+    background-color: #1EB9F0;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.managecheckoutbtn .btn-txt {
+    background-color: #ffffff;
+    color: #1EB9F0;
+    font-size: 24px;
+    border: 1px solid #1EB9F0;
+    border-radius: 50px;
+    padding: 12px 40px;
+	font-weight: 700;
+    display: block;
+    transform: translate(-4px, -4px);
+    transition: all linear .2s !important;
+    text-decoration: none !important;
+}
+
+.pop-btn {
+    margin-top: 30px;
+}
+
+/* .managecheckoutbtn:hover>.btn-txt {
+    transform: translate(-7px, -6px);
+} */
+
+@media screen and (max-width:1000px) {
+
+	.selectBox,
+	#subscribebox {
+		width: 100%;
+		height: auto;
+		margin: 0 auto
+	}
+
+	body {
+		overflow-x: hidden
+	}
+
+	#headInner {
+		width: 98%;
+		height: 46px
+	}
+
+	#headLogo {
+		height: 36px
+	}
+
+	.mainBox {
+		width: 97%
+	}
+
+	.mainBg {
+		width: 100%
+	}
+
+	.mainHeadbox {
+		font-size: 12px
+	}
+
+	.headText {
+		width: 95%;
+		font-size: 16px
+	}
+}
+
+@media only screen and (max-device-width:1200px) {
+
+	#exitLink,
+	#innerBar {
+		width: 100%
+	}
+
+	#innerBar {
+		margin: 0 auto
+	}
+}
+
+@media only screen and (max-device-width:800px) {
+	.mainBox {
+		width: 97%;
+		padding: 10px
+	}
+
+	#leavePop2 {
+		width: 94%;
+		top: 10%;
+		left: calc(3% - 3px)
+	}
+
+	#popButton {
+		width: 95%
+	}
+
+	.buttonRight input#productIdInput {
+		width: 100% !important
+	}
+}
+
+@media only screen and (max-device-width:767px) {
+
+.manage-free-yomz {
+        width: 100%;
+        text-align: center;
+        --bs-gutter-x: 0rem !important;
+    }
+
+	.managecheckoutbtn .btn-txt {
+        font-size: 20px !important;
+        padding: 12px 10px !important;
+    }
+
+	    .managecheckoutbtn {
+        display: block;
+        width: 100%;
+    }
+
+	.pd-lr{    --bs-gutter-x: 0rem Im !important;}
+
+	.mainHeadbox {
+		height: 100% !important;
+	}
+
+	.logo {
+		max-width: 90px;
+		padding: 5px !important;
+		margin-top: 0px !important;
+	}
+
+	.first-heading {
+    text-align: center;
+    padding: 0px 10px 0;
+}
+.secound-heading{padding-left: 10px; padding-right: 10px;}
+.first-heading h1 {font-size: 40px;}
+.secound-heading h2 {font-size: 30px;}
+
+.secound-heading p{font-size: 15px;}
+
+.secound-heading span {
+    margin-bottom: 13px !important;
+    display: inline-block;
+}
+
+.products-left-side-details {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+	.leftHead,
+	.rightHead,
+	.centerHead {
+		height: 100%;
+		line-height: normal;
+		padding: 5px 0;
+	}
+
+	.headText,
+	.mainBox {
+		margin-top: 0
+	}
+
+	div.mainHeadbox {
+		margin-bottom: 10px;
+	}
+
+	.mainHeadbox {
+		height: 100%;
+	}
+
+	.pricingText p {
+		font-size: 14px !important;
+	}
+
+	.buttonRight .btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 0px !important;
+	}
+
+	#popButton {
+		margin: 15px auto 0px;
+	}
+
+	.offerpop .modal-content {
+		width: 100%;
+	}
+
+	.first-head {
+		margin: 15px 0;
+	}
+
+	#footerText {
+		width: 100%;
+		margin: 30px auto 0;
+		color: #222;
+		padding-bottom: 20px;
+	}
+
+	#footerText img {
+		width: 30%;
+	}
+
+	#footerText p {
+		margin-bottom: 5px;
+	}
+
+	.mainHeadbox {
+		height: 100% !important;
+	}
+
+	div.headText h1 {
+		font-size: 16px;
+		line-height: calc(0.9em + 1vw) !important;
+	}
+
+	div.headText h2 {
+		font-size: 16px;
+		line-height: calc(0.9em + 1vw) !important;
+	}
+
+	.first-head h3 {
+		font-size: 14px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.sec-head h3 {
+		font-size: 14px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.pricingText {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+
+	.pricingText,
+	#pricingText2 {
+		width: 100%;
+		height: auto;
+		margin: 20px auto 0;
+		font-size: 14px;
+		text-align: center;
+		font-family: Belgrano, Arial;
+		font-weight: 600;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.inputButton .btn {
+		border: thin outset black;
+		color: #FFEB00;
+		padding: .7em 0.5em;
+		font-weight: bold;
+		font-size: calc(6vw - 0px) !important;
+		line-height: calc(0.9em + 1vw) !important;
+		background-color: #E6193C;
+		display: block;
+		border: none;
+		width: 100%;
+		line-height: normal !important;
+	}
+
+	.mainBox {
+		width: 97%;
+		padding: 0px 0px;
+		padding: 0px 0px 30px;
+	}
+
+	a.textLink {
+		font-size: 10px;
+	}
+
+	.selectBox {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media only screen and (max-device-width:567px) {
+
+	.centerHead,
+	#innerBar,
+	.leftHead,
+	.pricingText,
+	#pricingText2,
+	.rightHead {
+		width: 100%
+	}
+
+	img.logo {
+		margin: 0 auto;
+		display: block
+	}
+}
+
+.pulse {
+	animation-name: pulse;
+	-webkit-animation-name: pulse;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite
+}
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		transform: scale(.9)
+	}
+
+	50% {
+		transform: scale(1)
+	}
+}
+
+@-webkit-keyframes pulse {
+
+	0%,
+	100% {
+		-webkit-transform: scale(.95)
+	}
+
+	50% {
+		-webkit-transform: scale(1)
+	}
+}
+
+@media only screen and (max-device-width:380px) {
+
+	.managecheckoutbtn .btn-txt{font-size: 17px !important;}
+	    .first-heading h1 {
+        font-size: 36px;
+    }
+
+	.secound-heading h2{
+        font-size: 27px;
+    }
+	
+}
+
+@media only screen and (max-device-width:340px) {
+
+	.managecheckoutbtn .btn-txt{font-size: 17px !important;}
+	    .first-heading h1 {
+        font-size: 32px;
+    }
+
+	.secound-heading h2{
+        font-size: 24px;
+    }
+	
+}
+
+@media only screen and (max-device-width:301px) {
+.managecheckoutbtn .btn-txt{font-size: 15px !important;}
+}
+
+/* extracss */
