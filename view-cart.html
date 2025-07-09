@@ -34,7 +34,7 @@
                     <div class="login-chackout">
                         <p class="d-flex align-items-center gap-2 mb-0">
                             <img src="images/checkout/shopping-cart.png" alt="" class="img-fluid">
-                            <span>(1) Cart</span>
+                            <span id="cart-quantity">(1) Cart</span>
                         </p>
                     </div>
                 </div>
@@ -67,81 +67,56 @@
                         </div>
                     </div>
 
-                    <!-- Product - 1 -->
-                    <div class="row cart-table">
-                        <div class="col-sm-7 cart-td">
-                            <div class="product-label">
-                                <figure class="thumb product-image-thumb">
-                                    <a href="#">
-                                        <img src="images/bag-1.png" class="product_image" width="285" title="N/A"
-                                            fgcolor="#aaaaaa" bgcolor="#654321">
-                                    </a>
-                                </figure>
-                                <div class="meta product-info-meta">
-                                    <h3 class="heading"> <a href="#"> 1 Person </a> </h3>
-                                    <p> (1 bag)</p>
+                    <div id="additional-product-container">
+                        <!-- Product - 1 -->
+                        <!-- <div id="existed-product" class="row cart-table">
+                            <div class="col-sm-7 cart-td">
+                                <div class="product-label">
+                                    <figure class="thumb product-image-thumb">
+                                        <a>
+                                            <img id="dcart-pack-image" src="images/bag-1.png" class="product_image"
+                                                width="285" title="N/A" fgcolor="#aaaaaa">
+                                        </a>
+                                    </figure>
+                                    <div class="meta product-info-meta">
+                                        <p id="dcart-pack-title" class="cart-product-title">YOMZ Original</p>
+                                        <p id="dcart-pack-description">1 Person (1 bag)</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 pricetag-role cart-td text-center">
-                            <div class="product-label text-center w-100">
-                              
-                                <div class="meta price">
-                                    <p>$ 47.99 USD</p>
+                            <div class="col-sm-4 pricetag-role cart-td text-center">
+                                <div class="product-label text-center w-100">
+                                    <div class="meta price">
+                                        <p id="dcart-pack-price">$ 47.99</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-1  pd-0 cart-td text-center">
-                            <span class="product-rem-btn close cursor">
-                                <i class="fas fa-times">
-                                </i>
-                            </span>
-                        </div>
+                            <div class="col-sm-1  pd-0 cart-td text-center">
+                                <span class="product-rem-btn close cursor">
+                                    <i class="fas fa-times">
+                                    </i>
+                                </span>
+                            </div>
+                        </div> -->
                     </div>
+                </div>
 
-                    <!-- Product - 2 -->
-                    <div class="row cart-table" id="cart-product-6717234452">
-                        <div class="col-sm-7 cart-td">
-                            <div class="product-label">
-                                <figure class="thumb product-image-thumb">
-                                    <a href="#"> <img src="images/bag-3.png" class="product_image" width="285"
-                                            title="N/A" fgcolor="#aaaaaa" bgcolor="#654321"> </a>
-                                </figure>
-                                <div class="meta product-info-meta">
-                                    <h3 class="heading"> <a href="#"> 3 People Set </a> </h3>
-                                    <p>(3 bags)</p>
-                                    <p>Get your first month for FREE</p>
-                                </div>
-                            </div>
+                <!-- Subtotal Amount -->
+                <div class="row flat-well">
+                    <div class="col-sm-10 col-sm-offset-1 text-center mx-auto">
+                        <div class="cart-subtotal">
+                            <h2 class="title">Subtotal</h2>
+                            <h1 class="price" id="dcart-subtotal-price">$ 177.57 USD</h1>
+                            <p>Subtotal excludes Shipping, Tax &amp; Discounts</p>
                         </div>
-                        <div class="col-sm-4 pricetag-role cart-td text-center">
-                            <div class="product-label w-100">
-                               
-                                <div class="meta price">
-                                    <p>$129.58 per month</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-1 pd-0 cart-td text-center">
-                            <span class="product-rem-btn close"><i class="fas fa-times"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="row flat-well">
-                        <div class="col-sm-10 col-sm-offset-1 text-center mx-auto">
-                            <div class="cart-subtotal">
-                                <h2 class="title">Subtotal</h2>
-                                <h1 class="price" id="cart-subtotal-price">$ 177.57 USD</h1>
-                                <p>Subtotal excludes Shipping, Tax &amp; Discounts</p>
-                            </div>
-                            <div class="col-12 submit-btn">
-                                <button type="submit" class="btn btn-primary"
-                                    onclick="window.location.href='checkout.html'">TRY YOMZ NOW</button>
-                            </div>
+                        <div class="col-12 submit-btn">
+                            <button type="submit" class="btn btn-primary"
+                                onclick="window.location.href='checkout.html'">TRY YOMZ NOW</button>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -261,6 +236,8 @@
         </div>
     </div>
 
+    <!-- import Scripts -->
+    <script src="./js/newJs/cartView.js "></script>
 </body>
 
 </html>

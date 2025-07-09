@@ -26,7 +26,6 @@ const additionalProducts = [
 // Updated Additional product in hmtl
 const updateAdditionalHTML = () => {
     const cartProducts = JSON.parse(localStorage.getItem('cartData'));
-    // console.log("cartProducts:", cartProducts);
 
     // Additional Products
     const parent = document.getElementById('additionalProducts');
@@ -95,6 +94,7 @@ const selectedPack = cartData.find(product => product.id === selectedPackId);
 // Update Cart HTML
 const updateCartList = () => {
     const cartProducts = JSON.parse(localStorage.getItem('cartData'));
+
     let desktopFinalHTML = '';
     let mobileFinalHTML = '';
 
@@ -188,6 +188,15 @@ updateAdditionalHTML();
 // Update total of carts ( Desktop & Mobile )
 updateTotal();
 
+// Update Cart Quantity
+const cartQty = () => {
+    const cartQty = document.getElementById('cart-quantity');
+    const latestCart = JSON.parse(localStorage.getItem('cartData'));
+    cartQty.innerHTML = `(${latestCart.length}) Cart`
+};
+
+cartQty(); // function call to updated first time
+
 // UpdateCartData
 const updateCart = (addProduct) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
@@ -201,7 +210,7 @@ const updateCart = (addProduct) => {
 
 const removeProduct = (id) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
-    console.log("oldCartData:", oldCartData);
+    // console.log("oldCartData:", oldCartData);
     updatedToaster('removed');
 
     const updatedCartData = oldCartData.filter(p => p.id !== id);
@@ -212,7 +221,7 @@ const removeProduct = (id) => {
     updateAdditionalHTML();
     updateTotal();
     cartIcon();
-
+    cartQty();
 };
 
 // To add a new product in the cart
@@ -224,6 +233,7 @@ const addProduct = (id) => {
     updateAdditionalHTML();
     updateTotal();
     cartIcon();
+    cartQty();
 };
 
 // Event listener for closing the product box when clicking on the close icon
