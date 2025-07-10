@@ -1,15 +1,14 @@
 // Getting data from localStorage
 const cartProducts = JSON.parse(localStorage.getItem('cartData'));
 const seletedPackId = JSON.parse(localStorage.getItem('selectedPack'));
-const selectedPack = cartProducts.find(product => product.id === seletedPackId);
-
-console.log("cartProducts:", cartProducts);
+const selectedPack = cartProducts && cartProducts.find(product => product.id === seletedPackId);
 
 // Elements to update
 const cartQty = document.getElementById('cart-quantity');
 
 // Updating the cart
 const updateCart = () => {
+    const cartProducts = JSON.parse(localStorage.getItem('cartData'));
     let newProduct = '';
 
     cartProducts.forEach((product, index) => {
@@ -39,7 +38,7 @@ const updateCart = () => {
 
                 ${index !== 0 ?
                 `<div class="col-sm-1 pd-0 cart-td text-center">
-                         <span onClick="removeProduct(${product.id})" class="product-rem-btn close cursor"><i class="fas fa-times"></i></span></div>`
+                         <span onClick="removeProduct('${product.id}')" class="product-rem-btn close cursor"><i class="fas fa-times"></i></span></div>`
                 : ''}
             </div>
     `
@@ -57,27 +56,35 @@ const cartTotal = () => {
     const cartData = JSON.parse(localStorage.getItem('cartData'));
     const dcartPotalPrice = document.getElementById('dcart-subtotal-price');
     const totalPrice = cartData.reduce((total, product) => total += Number(product.price), 0);
-    dcartPotalPrice.innerText = `$${(+totalPrice).toFixed(2)}`;
+    dcartPotalPrice.innerText = `$ ${(+totalPrice).toFixed(2)} USD`
 };
 
 // Remove Product 
 const removeProduct = (id) => {
     const oldCartData = JSON.parse(localStorage.getItem('cartData'));
     const updatedCartData = oldCartData.filter(p => p.id !== id);
+    console.log('oldCartData', oldCartData);
+
     console.log('updatedCartData', updatedCartData);
-    
     localStorage.setItem('cartData', JSON.stringify(updatedCartData));
+
+    updateCart();
+    cartTotal();
+    udpateCartQty();
 };
 
-removeProduct()
+// Cart quantity updation
+const udpateCartQty = () => {
+    const cartData = JSON.parse(localStorage.getItem('cartData'));
+    cartQty.innerHTML = `(${cartData.length}) Cart`
+}
+
 // dynamically changes 
 if (selectedPack) {
 
-    // updating elements
-    cartQty.innerHTML = `(${cartProducts.length}) Cart`
-
     updateCart()
     cartTotal()
+    udpateCartQty()
 } else {
     console.log("Nothing is selected.")
 };
