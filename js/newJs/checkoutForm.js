@@ -192,28 +192,17 @@ const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
 
-const allFields = [...inputFields, ...inputSelectors];
-
 console.log('inputFields:', inputFields);
 console.log('inputSelectors:', inputSelectors);
-console.log('allFields:', allFields);
 
 // Loop through each input field
 inputFields.forEach((inputField, index) => {
+    const errorMessageEl = inputErrors[index];
+
+    // Input event: validate as user types
     inputField.addEventListener('input', function () {
         const inputValue = inputField.value;
 
-        // Get the associated error message (based on index)
-        const errorMessageEl = inputErrors[index];
-        const errorMessageElId = errorMessageEl.id;
-        // console.log('inputFie.ld:', inputField);
-        // console.log('inputFieldid:', inputField.id);
-
-        // console.log("errorMessageElId:", errorMessageElId);
-        // console.log("errorMessageEl:", errorMessageEl);
-        // const errorMessageElName = errorMessageEl.getAttribute('name');
-
-        // Check if the input field has value
         if (inputValue.length > 0) {
             inputField.style.borderColor = 'green';
             inputField.classList.add('is-valid');
@@ -222,6 +211,19 @@ inputFields.forEach((inputField, index) => {
         } else {
             inputField.style.borderColor = 'red';
             inputField.classList.replace('is-valid', 'is-invalid');
+            errorMessageEl.classList.remove('hide');
+            errorMessageEl.innerText = 'This field is required';
+        }
+    });
+
+    // Blur event: check when user leaves the field
+    inputField.addEventListener('blur', function () {
+        const inputValue = inputField.value.trim();
+
+        if (inputValue === '') {
+            inputField.style.borderColor = 'red';
+            inputField.classList.remove('is-valid');
+            inputField.classList.add('is-invalid');
             errorMessageEl.classList.remove('hide');
             errorMessageEl.innerText = 'This field is required';
         }
