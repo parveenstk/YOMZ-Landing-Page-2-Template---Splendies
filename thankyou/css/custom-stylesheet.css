@@ -91,6 +91,7 @@ body {
 }
 
 .top-data p {
+    font-family: 'century_gothic_paneuropean_Rg';
     text-align: center;
     font-size: 18px;
     color: #000000;
@@ -837,7 +838,6 @@ a.tagroow {
     line-height: 50px !important;
     font-size: calc(2.5vw - 0px) !important;
     line-height: calc(0.7em + 1vw) !important;
-    text-transform: uppercase;
 }
 
 .enjoy .submit {
