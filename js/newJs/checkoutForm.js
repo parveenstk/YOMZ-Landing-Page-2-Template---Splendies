@@ -68,7 +68,7 @@ form.addEventListener('submit', function (e) {
     // Proceed if form is valid
     console.log("Form Submitted:", formData);
     localStorage.setItem('Form Data', JSON.stringify(formData));
-    clearFormInputs();
+    clearFormInputs(); // clear all the values of input
     console.log("Form submitted and data saved in localStorage.");
 });
 
@@ -158,23 +158,27 @@ addInputListener(formElements.cardExpiry, /\D/g, function (value) {
 // Function for validating form values and displaying error messages
 const checkValidation = (formData) => {
     const keys = Object.keys(formData);
-    let isValid = true;
 
+    let isValid = true;
     keys.forEach((key) => {
         const value = formData[key];
+
+        // console.log("value:", value);
+
         const errorElement = formElements[key + '_error'];
+        // console.log('errorElement:', errorElement);
 
         if (!value) {
             isValid = false; // Mark form as invalid
             if (errorElement) {
                 errorElement.textContent = `This field is required.`;
-                errorElement.style.display = 'block';
+                errorElement.classList.remove('hide');
                 formElements[key].style.borderColor = 'red';
             }
         } else {
             if (errorElement) {
                 errorElement.textContent = '';
-                errorElement.style.display = 'none';
+                errorElement.classList.add('hide');
                 formElements[key].style.borderColor = 'green';
             }
         }
@@ -182,3 +186,44 @@ const checkValidation = (formData) => {
 
     return isValid;
 };
+
+// Get all input fields and error messages
+const inputFields = document.querySelectorAll('.input-field');
+const inputSelectors = document.querySelectorAll('.input-selector');
+const inputErrors = document.querySelectorAll('.error-message');
+
+const allFields = [...inputFields, ...inputSelectors];
+
+console.log('inputFields:', inputFields);
+console.log('inputSelectors:', inputSelectors);
+console.log('allFields:', allFields);
+
+// Loop through each input field
+inputFields.forEach((inputField, index) => {
+    inputField.addEventListener('input', function () {
+        const inputValue = inputField.value;
+
+        // Get the associated error message (based on index)
+        const errorMessageEl = inputErrors[index];
+        const errorMessageElId = errorMessageEl.id;
+        // console.log('inputFie.ld:', inputField);
+        // console.log('inputFieldid:', inputField.id);
+
+        // console.log("errorMessageElId:", errorMessageElId);
+        // console.log("errorMessageEl:", errorMessageEl);
+        // const errorMessageElName = errorMessageEl.getAttribute('name');
+
+        // Check if the input field has value
+        if (inputValue.length > 0) {
+            inputField.style.borderColor = 'green';
+            inputField.classList.add('is-valid');
+            inputField.classList.replace('is-invalid', 'is-valid');
+            errorMessageEl.classList.add('hide');
+        } else {
+            inputField.style.borderColor = 'red';
+            inputField.classList.replace('is-valid', 'is-invalid');
+            errorMessageEl.classList.remove('hide');
+            errorMessageEl.innerText = 'This field is required';
+        }
+    });
+});

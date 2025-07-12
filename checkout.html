@@ -253,22 +253,24 @@
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
                                                 <!-- Email Address Input -->
-                                                <input type="email" class="form-control" id="email-address"
+                                                <input type="email" class="form-control input-field" id="email-address"
                                                     placeholder="Email address" maxlength="50" autocomplete="email"
                                                     title="Please provide a email address.">
                                                 <label for="email-address">Email Address</label>
-                                                <span class="error-message" id="email-address_error"></span>
+                                                <span class="error-message hide" name="Email Address"
+                                                    id="email-address_error"></span>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
                                                 <!-- Password -->
-                                                <input type="password" class="form-control" id="password"
+                                                <input type="password" class="form-control input-field" id="password"
                                                     placeholder="name@example.com" title="Enter Your Secure Password"
                                                     maxlength="30">
                                                 <label for="password">Password</label>
-                                                <span class="error-message" id="password_error"></span>
+                                                <span class="error-message hide" name="Password"
+                                                    id="password_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -279,21 +281,21 @@
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3">
                                                 <!-- First Name -->
-                                                <input type="text" class="form-control" id="first-name"
-                                                    autocomplete="first-name" placeholder="First Name" maxlength="30"
-                                                    title="Please enter your first name.">
+                                                <input type="text" data-id="01" class="form-control input-field"
+                                                    id="first-name" autocomplete="first-name" placeholder="First Name"
+                                                    maxlength="30" title="Please enter your first name.">
                                                 <label for="first-name">First Name</label>
-                                                <span class="error-message" id="first-name_error"></span>
+                                                <span class="error-message hide" id="first-name_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3">
                                                 <!-- Last Name -->
-                                                <input type="text" class="form-control" id="last-name"
+                                                <input type="text" class="form-control input-field" id="last-name"
                                                     placeholder="Last Name" maxlength="30"
                                                     title="Please enter your last name.">
                                                 <label for="last-name">Last Name</label>
-                                                <span class="error-message" id="last-name_error"></span>
+                                                <span class="error-message hide" id="last-name_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -302,22 +304,22 @@
                                         <div class="col-md-9">
                                             <div class="form-floating mb-3">
                                                 <!-- Street Address -->
-                                                <input type="text" class="form-control" id="street-address"
+                                                <input type="text" class="form-control input-field" id="street-address"
                                                     autocomplete="street-address" placeholder="Street Address"
                                                     title="Please enter your street address." maxlength="50">
                                                 <label for="street-address">Street Address</label>
-                                                <span class="error-message" id="street-address_error"></span>
+                                                <span class="error-message hide" id="street-address_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-floating mb-3">
                                                 <!-- Apt / Unit -->
-                                                <input type="text" class="form-control" id="apt-unit"
+                                                <input type="text" class="form-control input-field" id="apt-unit"
                                                     placeholder="Apt/Unit"
                                                     title="Enter your apartment or unit number (if applicable)."
                                                     maxlength="50">
                                                 <label for="apt-unit">Apt/Unit</label>
-                                                <span class="error-message" id="apt-unit_error"></span>
+                                                <span class="error-message hide" id="apt-unit_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -326,19 +328,19 @@
                                         <div class="col-md-3">
                                             <div class="form-floating mb-3">
                                                 <!-- City -->
-                                                <input type="text" class="form-control" id="city" placeholder="City"
-                                                    maxlength="50"
+                                                <input type="text" class="form-control input-field" id="city"
+                                                    placeholder="City" maxlength="50"
                                                     title="Please enter the city where you want to ship.">
                                                 <label for="city">City</label>
-                                                <span class="error-message" id="city_error"></span>
+                                                <span class="error-message hide" id="city_error"></span>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-md-5 mb-3">
                                             <div class="form-floating">
                                                 <!-- Shipping States -->
-                                                <select class="form-select" id="shipping-states"
+                                                <select class="form-select input-selector" id="shipping-states"
                                                     aria-label="Floating label select example">
-                                                    <option selected value="">Select a state</option>
+                                                    <option disabled selected value="">Select a state</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
                                                     <option value="AZ">Arizona</option>
@@ -392,17 +394,17 @@
                                                     <option value="WY">Wyoming</option>
                                                 </select>
                                                 <label for="shipping-states">Select a state/province</label>
-                                                <span class="error-message" id="shipping-states_error"></span>
+                                                <!-- <span class="error-message hide" id="shipping-states_error"></span> -->
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-floating mb-3">
                                                 <!-- Postal Code -->
-                                                <input type="text" class="form-control" id="postal-code"
+                                                <input type="text" class="form-control input-field" id="postal-code"
                                                     autocomplete="postal-code" placeholder="Postal Code" maxlength="8"
                                                     title="Please enter your postal code.">
                                                 <label for="postal-code">Postal Code</label>
-                                                <span class="error-message" id="postal-code_error"></span>
+                                                <span class="error-message hide" id="postal-code_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -411,11 +413,11 @@
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
                                                 <!-- Phone Number -->
-                                                <input type="text" class="form-control" id="phone-number"
+                                                <input type="text" class="form-control input-field" id="phone-number"
                                                     placeholder="Phone Number" maxlength="16" autocomplete="tel"
                                                     title="Please enter your phone number (e.g., +1 234-567-8900).">
                                                 <label for="phone-number">Phone Number</label>
-                                                <span class="error-message" id="phone-number_error"></span>
+                                                <span class="error-message hide" id="phone-number_error"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -434,48 +436,48 @@
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
                                             <!-- Credit Card Number -->
-                                            <input class="form-control form-control-lg" id="credit-card-number"
-                                                autocomplete="credit-card-number" type="text"
+                                            <input class="form-control form-control-lg input-field"
+                                                id="credit-card-number" autocomplete="credit-card-number" type="text"
                                                 placeholder="1234 1234 1234 1234" aria-label=".form-control-lg example"
                                                 title="Enter your 16-digit credit card number (e.g., 1234 1234 1234 1234)."
                                                 maxlength="19">
-                                            <span class="error-message" id="credit-card-number_error"></span>
+                                            <span class="error-message hide" id="credit-card-number_error"></span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <!-- Card CVC -->
-                                            <input class="form-control form-control-lg" id="card-cvc"
+                                            <input class="form-control form-control-lg input-field" id="card-cvc"
                                                 autocomplete="card-cvc" type="text" placeholder="CVC"
                                                 aria-label=".form-control-lg example" maxlength="4"
                                                 title="Enter the 3-4 digit CVC code from the back of your card.">
-                                            <span class="error-message" id="card-cvc_error"></span>
+                                            <span class="error-message hide" id="card-cvc_error"></span>
                                         </div>
                                         <div class="col-md-8 mb-3">
                                             <!-- Card Expiry -->
-                                            <input class="form-control form-control-lg" id="card-expiry"
+                                            <input class="form-control form-control-lg input-field" id="card-expiry"
                                                 autocomplete="card-expiry" type="text" placeholder="MM / YY"
                                                 aria-label=".form-control-lg example"
                                                 title="Enter the expiration date of your card (MM / YY).">
-                                            <span class="error-message" id="card-expiry_error"></span>
+                                            <span class="error-message hide" id="card-expiry_error"></span>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <!-- Postal Code -->
-                                            <input class="form-control form-control-lg" id="billing-postal-code"
-                                                type="text" placeholder="Postal Code"
+                                            <input class="form-control form-control-lg input-field"
+                                                id="billing-postal-code" type="text" placeholder="Postal Code"
                                                 aria-label=".form-control-lg example"
                                                 title="Enter your billing postal code." maxlength="8">
-                                            <span class="error-message" id="billing-postal-code_error"></span>
+                                            <span class="error-message hide" id="billing-postal-code_error"></span>
                                         </div>
                                         <div class="col-md-8 mb-3">
                                             <!-- Billing States -->
-                                            <select class="form-select form-select-lg"
+                                            <select class="form-select form-select-lg input-selector"
                                                 aria-label="Default select example" id="billing-states"
                                                 name="billing-states">
-                                                <option selected value="">Select a state</option>
+                                                <option disabled selected value="">Select a state</option>
                                                 <option value="AL">Alabama</option>
                                                 <option value="AK">Alaska</option>
                                                 <option value="AZ">Arizona</option>
@@ -528,7 +530,7 @@
                                                 <option value="WI">Wisconsin</option>
                                                 <option value="WY">Wyoming</option>
                                             </select>
-                                            <span class="error-message" id="billing-states_error"></span>
+                                            <!-- <span class="error-message hide" id="billing-states_error"></span> -->
                                         </div>
                                     </div>
 

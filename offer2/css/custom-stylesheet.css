@@ -270,10 +270,11 @@ a:visited {
 }
 
 .mainHeadbox {
-	width: 100%;
-	text-align: center;
-	font-size: 18px;
-	line-height: 35px
+    text-align: center;
+    font-size: 18px;
+    line-height: 35px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 .leftHead,
@@ -431,7 +432,9 @@ a:visited {
 	padding: 30px 0 !important;
 }
 
-@media screen and (max-width:1000px) {
+
+
+	@media screen and (max-width: 1000px) {
 
 	.selectBox,
 	#subscribebox {
@@ -471,7 +474,10 @@ a:visited {
 	}
 }
 
-@media only screen and (max-device-width:1200px) {
+
+
+
+	@media screen and (max-width: 1200px) {
 
 	#exitLink,
 	#innerBar {
@@ -483,7 +489,10 @@ a:visited {
 	}
 }
 
-@media only screen and (max-device-width:800px) {
+
+
+	@media screen and (max-width: 800px) {
+
 	.mainBox {
 		width: 97%;
 		padding: 10px
@@ -503,7 +512,12 @@ a:visited {
 		width: 100% !important
 	}
 }
-@media screen and (max-width: 767px){
+
+	@media screen and (max-width: 767px) {
+
+	    div.mainHeadbox {
+        margin-bottom: 10px;
+    }
 
 	.mobile-dsblock {
     display: inline;
@@ -648,9 +662,15 @@ a:visited {
 }
 
 .selectBox{padding-left: 10px; padding-right: 10px;}
+
+    .bl-block {
+        display: block !important;
+    }
 }
 
-@media only screen and (max-device-width:567px) {
+
+
+	@media screen and (max-width: 567px) {
 
 	.centerHead,
 	#innerBar,
@@ -698,6 +718,16 @@ a:visited {
 	50% {
 		-webkit-transform: scale(1)
 	}
+
+}
+
+@media screen and (max-width: 567px) {
+    .mainHeadbox .col-4 {
+        font-size: 10px !important;
+        line-height: normal !important;
+        padding: 4px 2px;
+    }
+
 }
 
 /* extracss */

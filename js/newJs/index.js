@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem('selectedPack', JSON.stringify(productId));
                 console.log("Selected Pack saved:", selectedPack);
 
-                window.location.href = `http://127.0.0.1:5500/checkout.html`;
-                // window.location.href = `https://suretekinfosoft.com/demo106/funnel1/lp2/justpayshipping/checkout.html`;
+                // window.location.href = `http://127.0.0.1:5500/checkout.html`;
+                window.location.href = `https://suretekinfosoft.com/demo106/funnel1/lp2/justpayshipping/checkout.html`;
             }
         });
     });
