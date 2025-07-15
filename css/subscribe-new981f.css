@@ -90,6 +90,12 @@
     max-width: 1000px;
 }
 
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("//s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-8/fonts/glyphicons-halflings-regular.eot?ts=1698987073&host=");
+    src: url("//s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-8/fonts/glyphicons-halflings-regular.eot?ts=1698987073&host=?#iefix") format('embedded-opentype'), url("//s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-8/fonts/glyphicons-halflings-regular.woff?ts=1698987073&host=") format('woff'), url("//s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-8/fonts/glyphicons-halflings-regular.ttf?ts=1698987073&host=") format('truetype'), url("//s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-8/fonts/glyphicons-halflings-regular.svg?ts=1698987073&host=#glyphicons_halflingsregular") format('svg');
+}
+
 .glyphicon-menu-left:before {
     content: "\e257";
 }

@@ -229,3 +229,21 @@ inputFields.forEach((inputField, index) => {
         }
     });
 });
+
+// Get elements of footer ( subscribe input )
+const subsForm = document.getElementById('form-subscribe');
+const subsInput = document.getElementById('subscribe-input');
+
+// Handle input typing
+subsInput.addEventListener('input', function () {
+    const subsValue = subsInput.value;
+    console.log('subsValue:', subsValue);
+});
+
+// Handle form submission
+subsForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const submittedValue = subsInput.value;
+    console.log('Form submitted with:', submittedValue);
+});
