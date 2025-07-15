@@ -5,8 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-control" content="public">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 
   <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
   <title> YOMZ</title>
@@ -222,24 +223,7 @@
       font-weight: 400
     }
 
-    .login_cart .cart {
-      padding: 8px 20px 8px 25px;
-      background-image: url("../../d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-2/images/cart-icon8af6.png?ts=1543656589&amp;host=");
-      background-repeat: no-repeat;
-      background-position: left center
-    }
 
-    .mobile_nave .login_cart a.login {
-      background-image: url("http://d3a1v57rabk2hm.cloudfront.net/splendies/parcel-copy-2/images/user.svg?ts=1543656593&amp;host=");
-      background-repeat: no-repeat;
-      background-position: right 5px;
-      background-size: 20px;
-      padding-right: 28px;
-      padding-top: 4px;
-      font-family: FuturaStdMedium;
-      color: #3a4046;
-      white-space: nowrap
-    }
 
     .number_of_items {
       color: #f9d7dd
@@ -680,24 +664,7 @@
       }
     }
 
-    @font-face {
-      font-family: "Gotham";
-      src: url(http://s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-2/fonts/gotham-light-webfont.woff?ts=1543656524&amp;host=) format('truetype');
-      font-weight: normal;
-      font-style: normal
-    }
 
-    @font-face {
-      font-family: "sharpsansno";
-      src: url(http://s3.amazonaws.com/cratejoy_vendor_images/splendies/parcel-copy-2/fonts/sharpsansno1-bold.woff?ts=1543656530&amp;host=) format('truetype');
-      font-weight: 500;
-      font-style: normal
-    }
-
-    .banner h1,
-    .mobile_banner .mob_banner_cnt h1 {
-      font-family: "sharpsansno"
-    }
 
     .banner h1 {
       font-size: 40px;
@@ -709,7 +676,6 @@
 
     .banner .banner_text_content,
     .mobile_banner .mob_banner_cnt {
-      font-family: Cabin-Regular;
       font-size: 20px
     }
 
@@ -719,7 +685,6 @@
 
     .banner_links .subscribe_btn,
     .banner_links .gift_btn {
-      font-family: Gotham;
       font-size: 18px
     }
 
@@ -950,15 +915,15 @@
               Just pay shipping</p>
 
           </div>
-       
-        
-          <div class="try-btn subscribe-button">
+
+
+          <!-- <div class="try-btn subscribe-button">
             <a class="amt exblod">TRY IT NOW</a>
             <div class="price-info mb20">The 1st month</div>
-          </div>
+          </div> -->
 
 
-          <!-- <div class="price-sec">
+          <div class="price-sec">
             <div class="price-amt mb15">
               <div class="ofr-amt subscribe-prdt exblod">
                 <span class="amt-head">3 BAGS FOR</span>
@@ -968,13 +933,15 @@
                 <span class="amt-head">3 BAGS FOR</span>
                 <span class="amt">$239.97</span>
               </div>
+              
             </div>
-            <div class="price-info mb20">The 1st month</div>
-          </div> -->
+            <p class="newprice-info mb20">The 1st month</p>
+            
+          </div>
 
           <div class="button-sec mb15">
             <a class="sbu-button subscribe-prdt subscribe-button">
-              <span class="btn-txt">SUBSCRIBE</span>
+              <span class="btn-txt">TRY IT NOW</span>
             </a>
 
           </div>
@@ -987,7 +954,7 @@
 
           <div class="button-sec mb30">
             <a class="sbu-button subscribe-prdt subscribe-button">
-              <span class="btn-txt">SUBSCRIBE</span>
+              <span class="btn-txt">TRY IT NOW</span>
             </a>
 
           </div>
@@ -1274,7 +1241,7 @@
               <p>Ready to try YOMZ?</p>
               <div class="btn-sec">
                 <a class="sbu-button subscribe-prdt subscribe-button">
-                  <span class="btn-txt rose-btn">SUBSCRIBE</span>
+                  <span class="btn-txt rose-btn">TRY IT NOW</span>
                 </a>
               </div>
             </div>
@@ -1391,7 +1358,7 @@
               <div class="footer_nav_list">
                 <ul>
                   <li><a href="#">Ambassadors</a></li>
-                  <li><a href="#">#YOMZ</a></li>
+                  <li><a href="#">YOMZ</a></li>
                   <li><a href="#">Founder</a></li>
                   <li><a href="#">Mission</a></li>
                   <li><a href="#">Privacy Policy</a></li>
@@ -1415,18 +1382,35 @@
             <div class="clear"></div>
           </div>
           <div class="col-md-4 col-sm-4">
-            <div class="footer_column1 ">
+            <div class="footer_column1">
               <div class="news_letter">
                 <div class="footer_nav_head">
                   <p data-barley="newsletter_head" data-barley-editor="simple">BE THE FIRST TO KNOW</p>
                 </div>
 
-                <div class="klaviyo-form-VmhrbQ"></div>
+                <div class="subscribe-form">
+                  <p>Get the latest deals, offers & contests delivered straight to your inbox.</p>
+                  <form>
+                    <div class="mb-3">                      
+                      <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                    </div>
+
+                     <div class="mb-3"> 
+                                           
+                      <button type="submit" class="btn btn-primary">
+                        <span>SUBSCRIBE</span>
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
 
               </div>
-              <div class="subscribe_btn text-center sbu-button subscribe-prdt subscribe-button">
-                <a data-barley-editor="link" data-barley="splendies_footer_subscribe_btn" href="subscribe">Subscribe</a>
-              </div>
+              <!-- <div class="subscribe_btn text-center sbu-button subscribe-prdt subscribe-button">
+                <a data-barley-editor="link" data-barley="splendies_footer_subscribe_btn" href="subscribe">TRY IT
+                  NOW</a>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1436,7 +1420,7 @@
       <div class="container">
         <div class="row mx-0">
           <div class="col-md-12">
-            <p data-barley="copyright" data-barley-editor="simple">© 2024 YOMZ. All Rights Reserved. <a href="#">Terms
+            <p data-barley="copyright" data-barley-editor="simple">© 2025 YOMZ. All Rights Reserved. <a href="#">Terms
                 and Conditions</a></p>
           </div>
         </div>
