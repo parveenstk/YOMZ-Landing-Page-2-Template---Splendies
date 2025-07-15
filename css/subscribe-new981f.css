@@ -53,6 +53,11 @@
 
 }
 
+#subscribe-input:focus {
+    border-color: rgba(255, 199, 212, 1) !important;
+    box-shadow: 0 0 15px 2px rgba(255, 199, 212, 1) !important;
+}
+
 .cursor {
     cursor: pointer !important;
 }
@@ -185,7 +190,10 @@ body {
 
 /****************************** Offering YOMZ  *****************************/
 
-.newprice-info{font-size: 20px; margin-top: 30px;}
+.newprice-info {
+    font-size: 20px;
+    margin-top: 30px;
+}
 
 .offeringyomz {
     padding: 50px 0;
@@ -1122,41 +1130,45 @@ p.bag-price {
 
 @media screen and (max-width: 767px) {
 
-    .newprice-info{font-size: 18px; text-align: center; margin-top: 30px; margin-bottom: 10px;}
+    .newprice-info {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
 
     .footer_nav_list a {
-    color: #909090;
-    font-size: 13px;
-    text-decoration: none;
-    line-height: normal !important;
-}
+        color: #909090;
+        font-size: 13px;
+        text-decoration: none;
+        line-height: normal !important;
+    }
 
-.footer_nav_list ul li {
-    list-style: outside none none;
-    line-height: normal;
-}
+    .footer_nav_list ul li {
+        list-style: outside none none;
+        line-height: normal;
+    }
 
-.subscribe-form p {
-    font-size: 13px !important;
+    .subscribe-form p {
+        font-size: 13px !important;
 
-}
+    }
 
-.copyright p
- {
-    color: #e6193c;
-    font-size: 13px!important;
-    text-align: center;
-}
+    .copyright p {
+        color: #e6193c;
+        font-size: 13px !important;
+        text-align: center;
+    }
 
     .footer_nav_head>p {
 
-    font-size: 13px !important;
+        font-size: 13px !important;
 
-}
+    }
 
-.footer_navigation {
-    padding: 30px 0px 24px;
-}
+    .footer_navigation {
+        padding: 30px 0px 24px;
+    }
 
     #ready-to-yomz .sbu-button {
         width: 100%;
