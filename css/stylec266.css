@@ -53,7 +53,6 @@
 
 }
 
-
 .exblod {
 	font-family: 'century_gothic_paneuropeanXBd';
 }
@@ -71,7 +70,6 @@ body {
 	font-style: normal;
 	font-size: 18px;
 }
-
 
 /*
  * css/style.css
@@ -387,7 +385,6 @@ footer .nav>li>a {
 
 .showcase .prod-name {
 	margin-bottom: 25px;
-	font-family: Cabin-Medium;
 	color: #FFFFFF;
 	font-size: 25px;
 }
@@ -494,7 +491,6 @@ section.account {
 }
 
 .subscribe_page .banner .content {
-	background-color: ;
 	text-align: center;
 }
 
@@ -606,8 +602,7 @@ section.account {
 }
 
 .item .description-container.line-limited {
-	color: ;
-	font-family: ;
+
 	font-size: 14px;
 	height: 4.2em;
 	margin-bottom: 15px;
@@ -619,10 +614,9 @@ section.account {
 }
 
 .terms .item .description-container.line-limited {
-	color: ;
-	font-family: ;
+
 	font-size: 13px;
-	
+
 	height: 2.8em;
 	margin-bottom: 15px;
 }
@@ -715,7 +709,6 @@ button.close {
 	cursor: pointer;
 	background: transparent;
 	border: 0;
-	-webkit-appearance: none;
 }
 
 .close {
@@ -1160,7 +1153,6 @@ body>div.container {
 	color: #333333;
 	font-size: 15px;
 }
-
 
 h1,
 h2,
@@ -1675,8 +1667,6 @@ ul {
 .social_icon_box+.social_icon_box {
 	margin-left: 25px;
 }
-
-
 
 .seprator {
 	border-bottom: 1px solid #f9d7dd;
@@ -2923,8 +2913,6 @@ input[type="radio"]+label.cj-btn {
 	display: block;
 }
 
-.subscription_cancel #note {}
-
 .remodal.cancel_popup table {
 	width: 100%;
 }
@@ -3436,7 +3424,6 @@ label {
 #chseUndies .each-undies .pakage_name.minhgt {
 	min-height: 115px;
 }
-
 
 .tetsimonial_slider .owl-controls .owl-dots {
 	left: 50%;

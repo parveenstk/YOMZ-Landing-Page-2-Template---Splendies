@@ -289,12 +289,17 @@ p.bag-price {
 /****************************** Subscribe  *****************************/
 
 .logo-sec .login-chackout img {
-    height: 35px!important;
+    height: 35px !important;
     width: 35px !important;
 }
-.logo-sec .login-chackout a{color: #000;}
 
-.login-chackout{margin-right: 30px;}
+.logo-sec .login-chackout a {
+    color: #000;
+}
+
+.login-chackout {
+    margin-right: 30px;
+}
 
 .new-subscribe .sbu-button:hover>.btn-txt {
     transform: translate(-5px, -4px);
@@ -417,7 +422,7 @@ p.bag-price {
 
 .login-chackout img {
     height: 30px;
-    width: 100%!important;
+    width: 100% !important;
 }
 
 .new-subscribe .top-content-sec {
@@ -593,7 +598,8 @@ p.bag-price {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 440px;
+    /* max-width: 440px; */
+    width: 80%;
 }
 
 .new-subscribe .top-content-sec .price-sec .ofr-amt {
@@ -603,8 +609,22 @@ p.bag-price {
     text-align: center;
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
-    width: 50%;
+    width: 100%;
+    /* width: 50%; */
     cursor: pointer;
+}
+
+.try-btn a {
+    text-decoration: none;
+    background-color: #1EB9F0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: block;
+    font-size: 46px;
+    text-align: center;
+    width: 60%;
+        margin-bottom: 30px;
 }
 
 .new-subscribe .top-content-sec .price-sec .ofr-amt .amt-head {
@@ -1091,7 +1111,25 @@ p.bag-price {
 
 @media screen and (max-width: 767px) {
 
-    .subscribe-section-sec-md{padding-left: 20px!important; padding-right: 20px !important;}
+     .new-subscribe .logo-sec .cols3.logo {
+        text-align: left;
+    }
+
+       .try-btn a {
+        width: 100%;
+        font-size: calc(7.5vw - 0px) !important;
+        line-height: calc(1.6em + 1vw) !important;
+        margin-bottom: 20px;
+    }
+
+    .try-btn {
+    text-align: center;
+}
+
+    .subscribe-section-sec-md {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 
     .mobile-block-line {
         display: block;
@@ -1451,14 +1489,17 @@ p.bag-price {
     }
 
     .login-chackout {
-    margin-right: 0px;
-}
+        margin-right: 0px;
+    }
 
-.login-chackout p a{font-size: 14px;}
-.logo-sec .login-chackout img {
-    height: 25px !important;
-    width: 25px !important;
-}
+    .login-chackout p a {
+        font-size: 14px;
+    }
+
+    .logo-sec .login-chackout img {
+        height: 25px !important;
+        width: 25px !important;
+    }
 
 }
 
