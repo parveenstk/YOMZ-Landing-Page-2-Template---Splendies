@@ -192,8 +192,8 @@ const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
 
-console.log('inputFields:', inputFields);
-console.log('inputSelectors:', inputSelectors);
+// console.log('inputFields:', inputFields);
+// console.log('inputSelectors:', inputSelectors);
 
 // Loop through each input field
 inputFields.forEach((inputField, index) => {
