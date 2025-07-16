@@ -185,7 +185,7 @@ const checkValidation = (formData) => {
     return isValid;
 };
 
-// Get all input fields and error messages
+// Get all input fields and error messages elements
 const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
