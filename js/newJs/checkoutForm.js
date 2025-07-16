@@ -164,9 +164,7 @@ const checkValidation = (formData) => {
     let isValid = true;
     keys.forEach((key) => {
         const value = formData[key];
-
         const errorElement = formElements[key + '_error'];
-        // console.log('errorElement:', errorElement);
 
         if (!value) {
             isValid = false; // Mark form as invalid
@@ -191,9 +189,6 @@ const checkValidation = (formData) => {
 const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
-
-// console.log('inputFields:', inputFields);
-// console.log('inputSelectors:', inputSelectors);
 
 // Loop through each input field
 inputFields.forEach((inputField, index) => {
