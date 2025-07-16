@@ -119,7 +119,7 @@ addInputListener(formElements.cardExpiry, /\D/g, function (value) {
     // Step 1: Remove all non-digit characters
     const cleanedValue = value.replace(/\D/g, '');
 
-    // Step 2: Limit input to 4 digits (MMYY format) without including the separator
+    // Step 2: Limit input to 4 digits (MM/YY format) without including the separator
     let input = cleanedValue.slice(0, 4);
 
     // Step 3: Separate into month and year (MM/YY)
@@ -185,20 +185,50 @@ const checkValidation = (formData) => {
     return isValid;
 };
 
-// Get all input fields and error messages elements
+// // Get all input fields and error messages elements
 const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
 
-// Loop through each input field
+// Regex patterns for specific fields
+const patterns = {
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    phone: /^\d{10}$/, // 10 digit number
+    postal: /^\d{5,8}$/, // US ZIP or ZIP+4
+    creditCard: /^\d{15,19}$/, // Most credit cards
+    cvc: /^\d{3,4}$/, // CVV (3 or 4 digits)
+    expiry: /^(0[1-9]|1[0-2])\/?([0-9]{2})$/, // MM/YY
+    name: /^[a-zA-Z\s\-']{2,}$/, // Basic name validation
+};
+
+function getValidationPattern(id) {
+    if (id.includes('email')) return patterns.email;
+    if (id.includes('phone')) return patterns.phone;
+    if (id.includes('postal')) return patterns.postal;
+    if (id.includes('credit-card-number')) return patterns.creditCard;
+    if (id.includes('card-cvc')) return patterns.cvc;
+    if (id.includes('card-expiry')) return patterns.expiry;
+    if (id.includes('first-name') || id.includes('last-name')) return patterns.name;
+
+    // For fields like address or city, just check non-empty
+    return null;
+}
+
 inputFields.forEach((inputField, index) => {
+    let isNumber = false;
     const errorMessageEl = inputErrors[index];
+    const id = inputField.id;
+    if (id === "credit-card-number") isNumber = true;
 
-    // Input event: validate as user types
     inputField.addEventListener('input', function () {
-        const inputValue = inputField.value;
+        // Remove all spaces before processing
+        let cleanedValue = inputField.value.replace(/\s+/g, '').trim();
+        const inputValue = isNumber ? Number(cleanedValue) : cleanedValue;
+        const pattern = getValidationPattern(id);
 
-        if (inputValue.length > 0) {
+        const isValid = pattern ? pattern.test(inputValue) : inputValue.length > 0;
+        console.log(isValid, inputValue)
+        if (isValid) {
             inputField.style.borderColor = 'green';
             inputField.classList.add('is-valid');
             inputField.classList.replace('is-invalid', 'is-valid');
@@ -207,20 +237,24 @@ inputFields.forEach((inputField, index) => {
             inputField.style.borderColor = 'red';
             inputField.classList.replace('is-valid', 'is-invalid');
             errorMessageEl.classList.remove('hide');
-            errorMessageEl.innerText = 'This field is required';
+            errorMessageEl.innerText = pattern ? 'This field is required' : 'This field is required';
         }
     });
 
-    // Blur event: check when user leaves the field
     inputField.addEventListener('blur', function () {
-        const inputValue = inputField.value.trim();
+        // Remove all spaces before processing
+        let cleanedValue = inputField.value.replace(/\s+/g, '').trim();
+        const inputValue = isNumber ? Number(cleanedValue) : cleanedValue;
+        const pattern = getValidationPattern(id);
 
-        if (inputValue === '') {
+        const isValid = pattern ? pattern.test(inputValue) : inputValue.length > 2;
+
+        if (!isValid) {
             inputField.style.borderColor = 'red';
             inputField.classList.remove('is-valid');
             inputField.classList.add('is-invalid');
             errorMessageEl.classList.remove('hide');
-            errorMessageEl.innerText = 'This field is required';
+            errorMessageEl.innerText = pattern ? 'Invalid format' : 'This field is required';
         }
     });
 });
