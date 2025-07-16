@@ -192,8 +192,8 @@ const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
 
-// console.log('inputFields:', inputFields);
-// console.log('inputSelectors:', inputSelectors);
+console.log('inputFields:', inputFields);
+console.log('inputSelectors:', inputSelectors);
 
 // Loop through each input field
 inputFields.forEach((inputField, index) => {
@@ -228,22 +228,4 @@ inputFields.forEach((inputField, index) => {
             errorMessageEl.innerText = 'This field is required';
         }
     });
-});
-
-// Get elements of footer ( subscribe input )
-const subsForm = document.getElementById('form-subscribe');
-const subsInput = document.getElementById('subscribe-input');
-
-// Handle input typing
-subsInput.addEventListener('input', function () {
-    const subsValue = subsInput.value;
-    console.log('subsValue:', subsValue);
-});
-
-// Handle form submission
-subsForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const submittedValue = subsInput.value;
-    console.log('Form submitted with:', submittedValue);
 });
