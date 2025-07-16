@@ -37,7 +37,7 @@ const formElements = {
 // Handle form submission
 const form = document.getElementById('checkout-form');
 form.addEventListener('submit', function (e) {
-    e.preventDefault();
+    e.preventDefault(); // prevent the page reload on submission
 
     const formData = {
         email: formElements.email.value.trim(),
@@ -58,6 +58,8 @@ form.addEventListener('submit', function (e) {
     };
 
     const isValid = checkValidation(formData);
+    console.log('isValid:', isValid);
+
     if (!isValid) {
         console.log("Form not submitted. Validation failed.");
         return; // Stop further processing
@@ -98,13 +100,13 @@ const addInputListener = (element, regex, sanitizeFn = null) => {
 };
 
 // Shipping Address Sanitization Rules
-addInputListener(formElements.firstName, /[0-9]/g);  // No numbers in first name
-addInputListener(formElements.lastName, /[0-9]/g);   // No numbers in last name
-addInputListener(formElements.streetAddress, /[^a-zA-Z0-9\s,.\-\/]/g); // Alphanumeric, spaces, commas, periods, hyphens, slashes
-addInputListener(formElements.aptUnit, /[^a-zA-Z0-9\s#\-\/]/g); // Alphanumeric, space, #, -, /
-addInputListener(formElements.city, /[0-9]/g);  // No numbers in city
-addInputListener(formElements.postalCode, /\D/g);  // Only numbers for postal code
-addInputListener(formElements.phoneNumber, /[^0-9+()\-\s]/g);  // Valid phone characters
+addInputListener(formElements.firstName, /[0-9]/g);
+addInputListener(formElements.lastName, /[0-9]/g);
+addInputListener(formElements.streetAddress, /[^a-zA-Z0-9\s,.\-\/]/g);
+addInputListener(formElements.aptUnit, /[^a-zA-Z0-9\s#\-\/]/g);
+addInputListener(formElements.city, /[0-9]/g);
+addInputListener(formElements.postalCode, /\D/g);
+addInputListener(formElements.phoneNumber, /[^0-9+()\-\s]/g);
 
 // Billing Information
 addInputListener(formElements.cardNumber, /\D/g, function (value) {
@@ -163,8 +165,6 @@ const checkValidation = (formData) => {
     keys.forEach((key) => {
         const value = formData[key];
 
-        // console.log("value:", value);
-
         const errorElement = formElements[key + '_error'];
         // console.log('errorElement:', errorElement);
 
@@ -192,8 +192,8 @@ const inputFields = document.querySelectorAll('.input-field');
 const inputSelectors = document.querySelectorAll('.input-selector');
 const inputErrors = document.querySelectorAll('.error-message');
 
-console.log('inputFields:', inputFields);
-console.log('inputSelectors:', inputSelectors);
+// console.log('inputFields:', inputFields);
+// console.log('inputSelectors:', inputSelectors);
 
 // Loop through each input field
 inputFields.forEach((inputField, index) => {
