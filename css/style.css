@@ -1,10 +1,10 @@
-/* @font-face {
+@font-face {
     font-family: "Super Caramel";
     src: url("../font/SuperCaramel.woff2") format("woff2"), url("../font/SuperCaramel.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-} */
+}
 
 @font-face {
     font-family: 'Century Gothic';
@@ -53,10 +53,34 @@
 
 }
 
-#subscribe-input:focus {
+.message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 3px;
+    color: white;
+
+    .inner-message {
+        margin-bottom: 0px !important;
+        padding: 3px 0px;
+    }
+}
+
+.success {
+    color: white;
+    background-color: #4c9922;
+}
+
+.error {
+    color: white;
+    background-color: #e55a5a;
+}
+
+/* #subscribe-input:focus {
     border-color: rgba(255, 199, 212, 1) !important;
     box-shadow: 0 0 15px 2px rgba(255, 199, 212, 1) !important;
-}
+} */
 
 .cursor {
     cursor: pointer !important;
@@ -597,7 +621,9 @@ p.bag-price {
     margin-right: 30px;
 }
 
-.sbu-button{cursor: pointer;}
+.sbu-button {
+    cursor: pointer;
+}
 
 .new-subscribe .sbu-button:hover>.btn-txt {
     transform: translate(-5px, -4px);
@@ -1363,6 +1389,10 @@ p.bag-price {
 }
 
 @media screen and (max-width: 767px) {
+
+    .message-box {
+        margin-bottom: 20px;
+    }
 
     .footer_logo.text-left {
         text-align: center;

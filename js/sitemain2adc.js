@@ -32,7 +32,7 @@ $(document).ready(function(e) {
 var spl = {
 	checkJobQueue:function(){
 		if(new Date().getMinutes()%5==0){
-			$.get('https://app.splendies.com/ajax/check-queue.php');
+			// $.get('https://app.splendies.com/ajax/check-queue.php');
 		}
 	}
 };

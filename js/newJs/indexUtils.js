@@ -48,3 +48,9 @@ const textHTML =
         .join('');
 
 tickPoints.innerHTML = textHTML;
+
+// onPress '/' key will show Email input
+document.addEventListener('keydown', function (event) {
+    const subsInput = document.getElementById('subscribe-input');
+    event.key === '/' && (event.preventDefault(), subsInput.focus())
+});
