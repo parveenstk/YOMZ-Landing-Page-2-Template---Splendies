@@ -62,7 +62,6 @@ subsInput.addEventListener('input', function () {
         messageBox.classList.add('hide');
         subsInput.classList.remove('is-invalid');
         subsInput.classList.add('subs-input')
-
     } else {
         subsInput.classList.remove('subs-input');
         subsInput.classList.add('is-valid');
