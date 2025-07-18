@@ -41,7 +41,6 @@ form.addEventListener('submit', (e) => {
         subsInput.classList.remove('is-valid');
 
         updateBox('error');  // udpadating box
-        hideBox();
     }
 });
 
@@ -49,19 +48,31 @@ form.addEventListener('submit', (e) => {
 subsInput.addEventListener('input', function () {
     const value = subsInput.value.trim();
 
+    // condition for regax match
     if (value.length > 0 && isValidEmail(value)) {
-        subsInput.classList.remove('is-invalid');
-        subsInput.classList.add('is-valid');
+        subsInput.classList.remove('is-invalid')
+        subsInput.classList.add('is-valid')
     } else {
-        subsInput.classList.remove('is-valid');
-        subsInput.classList.add('is-invalid');
+        subsInput.classList.remove('is-valid')
+        subsInput.classList.add('is-invalid')
+    }
+
+    // condition while filling 
+    if (value.length > 0 && !isValidEmail(value)) {
+        messageBox.classList.add('hide');
+        subsInput.classList.remove('is-invalid');
+        subsInput.classList.add('subs-input')
+
+    } else {
+        subsInput.classList.remove('subs-input');
+        subsInput.classList.add('is-valid');
     }
 });
 
 const messageStatus = {
     'error': {
         backgroundColor: '#e55a5a',
-        text: 'Please, fill the email input',
+        text: 'Please, fill the email to subscribe YOMZ',
         img: './images/error.svg'
     },
 

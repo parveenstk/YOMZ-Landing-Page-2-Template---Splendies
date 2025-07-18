@@ -82,6 +82,11 @@
     box-shadow: 0 0 15px 2px rgba(255, 199, 212, 1) !important;
 } */
 
+.subs-input:focus {
+    border: 1px solid #e3e521;
+    box-shadow: 0 0 2px 4px rgb(221 221 132) !important;
+}
+
 .cursor {
     cursor: pointer !important;
 }
