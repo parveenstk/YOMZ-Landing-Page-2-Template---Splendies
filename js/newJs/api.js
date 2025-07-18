@@ -71,7 +71,7 @@ subsInput.addEventListener('input', function () {
 const messageStatus = {
     'error': {
         backgroundColor: '#e55a5a',
-        text: 'Please, fill the email to subscribe YOMZ',
+        text: 'Enter your email to subscribe',
         img: './images/error.svg'
     },
 
@@ -85,12 +85,10 @@ const messageStatus = {
 // udpate message box according to the status
 const updateBox = (stts) => {
     const data = messageStatus[stts]
-
     messageBox.style.backgroundColor = data.backgroundColor;
     boxImg.src = data.img;
     innerMessage.innerText = data.text;
-
-}
+};
 
 // hide the box
 const hideBox = () => {
