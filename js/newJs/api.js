@@ -1,6 +1,7 @@
 // Elements - Input, button etc.
 const form = document.getElementById('subs-form');
 const subsInput = document.getElementById('subscribe-input');
+const sheetName = document.getElementById('subscribe-input').getAttribute('name');
 const submitBtn = document.getElementById('subscribe-submit');
 
 // message box
@@ -30,6 +31,7 @@ form.addEventListener('submit', (e) => {
         const mail = localStorage.getItem('subscribedEmail');
         mail ? (console.log('subscribedEmail:', mail)) : console.log("email not saved in localStorage.");
 
+        saveEmail(email);
         updateBox('success'); // udpadating box
         hideBox();
 
@@ -95,4 +97,14 @@ const hideBox = () => {
     setTimeout(() => {
         messageBox.classList.add('hide')
     }, 2000)
+};
+
+// API call to update the email addres in "excel sheet"
+const url = 'https://yomz-pages-data.vercel.app/api/data';
+const saveEmail = async (email) => {
+    const response = await fetch(`${url}?email=${email}&sheetName=${sheetName}&column=!B4:C4`, {
+        method: 'GET'
+    }).then(res => res.json());
+
+    console.log("response:", response)
 };
