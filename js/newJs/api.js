@@ -1,5 +1,5 @@
 // Elements - Input, button etc.
-const form = document.getElementById('subs-form');
+// const form = document.getElementById('subs-form');
 const subsInput = document.getElementById('subscribe-input');
 const sheetName = document.getElementById('subscribe-input').getAttribute('name');
 const submitBtn = document.getElementById('subscribe-submit');
@@ -16,7 +16,7 @@ const isValidEmail = (email) => {
 };
 
 // Handle email submission
-form.addEventListener('submit', (e) => {
+submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
     const email = subsInput.value.trim();

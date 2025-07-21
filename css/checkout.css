@@ -65,6 +65,55 @@
 
 }
 
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+.message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 3px;
+    color: white;
+    animation: slideDown 0.5s ease-out;
+
+    .inner-message {
+        margin-bottom: 0px !important;
+        padding: 3px 0px;
+    }
+}
+
+.success {
+    color: white;
+    background-color: #4c9922;
+}
+
+.error {
+    color: white;
+    background-color: #e55a5a;
+}
+
 #subscribe-input:focus {
     border-color: rgba(255, 199, 212, 1) !important;
     box-shadow: 0 0 15px 2px rgba(255, 199, 212, 1) !important;

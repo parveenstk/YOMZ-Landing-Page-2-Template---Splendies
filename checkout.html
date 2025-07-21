@@ -694,9 +694,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <div class="footer_logo text-left"> <a href="index.html" data-barley="footerlogo_link"
-                                data-barley-editor="link"><img src="images/logo.png" style="width:190px;"
-                                    alt="logo"></a> </div>
+                        <div class="footer_logo text-left">
+                            <a href="index.html" style="width: fit-content;" data-barley="footerlogo_link"
+                                data-barley-editor="link">
+                                <img src="images/logo.png" style="width:190px;" alt="logo">
+                            </a>
+                        </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <div class="social_icons text-right">
@@ -733,7 +736,7 @@
                 </div>
             </div>
         </div>
-         <div class="footer_navigation">
+        <div class="footer_navigation">
             <div class="container">
                 <div class="row mx-0">
                     <div class="col-md-8 col-sm-8">
@@ -791,22 +794,21 @@
 
                                 <div class="subscribe-form">
                                     <p>Get the latest deals, offers & contests delivered straight to your inbox.</p>
+
                                     <!-- Subscribe Email -->
-                                    <form id="subs-form">
-                                        <div class="mb-3">
-                                            <input id="subscribe-input" name="Funnel Page - 2" type="email"
-                                                class="form-control" placeholder="name@example.com">
-                                        </div>
-                                        <div class="mb-3">
-                                            <button id="subscribe-submit" type="submit" class="btn btn-primary">
-                                                <span>SUBSCRIBE</span>
-                                            </button>
-                                        </div>
-                                        <div id="message-box" class="message-box hide">
-                                            <img id="message-img" src="" alt="message-status" width="30px">
-                                            <p id="inner-message" class="inner-message"></p>
-                                        </div>
-                                    </form>
+                                    <div class="mb-3">
+                                        <input id="subscribe-input" name="Funnel Page - 2" type="email"
+                                            class="form-control" placeholder="name@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <button id="subscribe-submit" type="submit" class="btn btn-primary">
+                                            <span>SUBSCRIBE</span>
+                                        </button>
+                                    </div>
+                                    <div id="message-box" class="message-box hide">
+                                        <img id="message-img" src="" alt="message-status" width="30px">
+                                        <p id="inner-message" class="inner-message"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -917,6 +919,7 @@
     <!-- import scripts -->
     <script src="./js/newJs/checkout.js"></script>
     <script src="./js/newJs/checkoutForm.js"></script>
+    <script src="./js/newJs/api.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
