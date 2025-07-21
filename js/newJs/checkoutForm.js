@@ -39,6 +39,9 @@ const form = document.getElementById('checkout-form');
 form.addEventListener('submit', function (e) {
     e.preventDefault(); // prevent the page reload on submission
 
+    const submitError = document.getElementById('error-on-submit');
+    console.log('formElements.shippingStates', formElements.shippingStates.value);
+
     const formData = {
         email: formElements.email.value.trim(),
         password: formElements.password.value.trim(),
@@ -62,6 +65,7 @@ form.addEventListener('submit', function (e) {
 
     if (!isValid) {
         console.log("Form not submitted. Validation failed.");
+        submitError.innerText = "Please, fill the above fields !"
         return; // Stop further processing
     } else {
         window.location.href = './offer1.html'
@@ -216,8 +220,8 @@ function getValidationPattern(id) {
 
 inputFields.forEach((inputField, index) => {
     let isNumber = false;
-    const errorMessageEl = inputErrors[index];
     const id = inputField.id;
+    const errorMessageEl = document.getElementById(`${id}_error`);
     if (id === "credit-card-number") isNumber = true;
 
     inputField.addEventListener('input', function () {
@@ -249,12 +253,62 @@ inputFields.forEach((inputField, index) => {
 
         const isValid = pattern ? pattern.test(inputValue) : inputValue.length > 2;
 
-        if (!isValid) {
+        if (isValid) {
+            inputField.style.borderColor = 'green';
+            inputField.classList.add('is-valid');
+            inputField.classList.replace('is-invalid', 'is-valid');
+            errorMessageEl.classList.add('hide');
+        } else {
             inputField.style.borderColor = 'red';
-            inputField.classList.remove('is-valid');
-            inputField.classList.add('is-invalid');
+            inputField.classList.replace('is-valid', 'is-invalid');
             errorMessageEl.classList.remove('hide');
-            errorMessageEl.innerText = pattern ? 'Invalid format' : 'This field is required';
+            errorMessageEl.innerText = pattern ? 'This field is required' : 'This field is required';
         }
     });
+});
+
+inputSelectors.forEach((selector, index) => {
+    const id = selector.id;
+    const errorMessageEl = document.getElementById(`${id}_error`)
+
+    selector.addEventListener('change', (e) => {
+        const value = selector.value.trim();
+
+        if (value === '' || value === 'default' || value === 'Select') {
+            selector.style.borderColor = 'red';
+            selector.classList.remove('is-valid');
+            selector.classList.add('is-invalid');
+
+            errorMessageEl.classList.remove('hide');
+            errorMessageEl.innerText = 'This field is required';
+        } else {
+            selector.style.borderColor = 'green';
+            selector.classList.remove('is-invalid');
+            selector.classList.add('is-valid');
+
+            errorMessageEl.classList.add('hide');
+            errorMessageEl.innerText = '';
+        }
+    });
+
+    // Optional: Trigger validation on blur as well
+    // selector.addEventListener('blur', () => {
+    //     const value = selector.value.trim();
+
+    //     if (value === '' || value === 'default' || value === 'Select') {
+    //         selector.style.borderColor = 'red';
+    //         selector.classList.remove('is-valid');
+    //         selector.classList.add('is-invalid');
+
+    //         errorMessageEl.classList.remove('hide');
+    //         errorMessageEl.innerText = 'This field is required';
+    //     } else {
+    //         selector.style.borderColor = 'green';
+    //         selector.classList.remove('is-invalid');
+    //         selector.classList.add('is-valid');
+
+    //         errorMessageEl.classList.add('hide');
+    //         errorMessageEl.innerText = '';
+    //     }
+    // });
 });
