@@ -636,6 +636,37 @@ p.bag-price {
     padding-top: 50px;
 }
 
+/******************************* privacy-policy *******************************/
+
+.privacy-policy{padding: 50px 0;}
+
+.privacy-policy h1{font-size: 57px; text-align: center; margin-bottom: 30px;}
+.privacy-policy p{text-align: justify;}
+
+/******************************* privacy-policy *******************************/
+
+/****************************** faqs *****************************/
+.faqs h3 {
+  font-family: 'century_gothic_paneuropeanXBd' !important;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.faqs .accordion-item h3 .accordion-button {
+    font-size: 24px !important;
+    padding: 15px 20px;
+    color: #000 !important;
+}
+.faqs .accordion-item h3 .accordion-button {
+  font-size: 24px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #ffeb00;}
+
+/****************************** faqs *****************************/
+
 /****************************** Subscribe  *****************************/
 
 .login-chackout img {
@@ -1419,6 +1450,15 @@ p.bag-price {
 }
 
 @media screen and (max-width: 767px) {
+
+    .privacy-policy h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.privacy-policy {
+    padding: 30px 0;}
 
     .message-box {
         margin-bottom: 20px;
