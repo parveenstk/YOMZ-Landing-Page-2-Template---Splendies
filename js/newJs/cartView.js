@@ -6,6 +6,10 @@ const selectedPack = cartProducts && cartProducts.find(product => product.id ===
 // Elements to update
 const cartQty = document.getElementById('cart-quantity');
 
+// toaster elements
+const toaster = document.getElementById('toaster');
+const crossIcon = document.getElementById('toaster-cross');
+
 // Updating the cart
 const updateCart = () => {
     const cartProducts = JSON.parse(localStorage.getItem('cartData'));
@@ -68,9 +72,12 @@ const removeProduct = (id) => {
     console.log('updatedCartData', updatedCartData);
     localStorage.setItem('cartData', JSON.stringify(updatedCartData));
 
+    toaster.classList.remove('hide');
+
     updateCart();
     cartTotal();
     udpateCartQty();
+    autoHide();
 };
 
 // Cart quantity updation
@@ -87,4 +94,11 @@ if (selectedPack) {
     udpateCartQty()
 } else {
     console.log("Nothing is selected.")
+};
+
+// Hide toaster
+const autoHide = () => {
+    setTimeout(() => {
+        toaster.classList.add('hide');
+    }, 1500)
 };

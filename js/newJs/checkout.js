@@ -286,7 +286,8 @@ const toasterContent = {
     },
 
     removed: {
-        iconPath: './images/checkout/cross-circle.svg',
+        // iconPath: './images/checkout/cross-circle.svg',
+        iconPath: './images/checkout/new-cross-circle.svg',
         textContent: 'Item removed form cart.',
         textColor: '#d24349',
         backGround: '#fde1e4',
