@@ -263,16 +263,29 @@
                                         </div>
 
                                         <div class="col-md-12">
-                                            <div class="form-floating mb-3">
-                                                <!-- Password -->
-                                                <input type="password" class="form-control input-field" id="password"
-                                                    placeholder="name@example.com" title="Enter Your Secure Password"
-                                                    maxlength="30">
-                                                <label for="password">Password</label>
-                                                <span class="error-message hide" name="Password"
-                                                    id="password_error"></span>
+                                            <div class="mb-3">
+                                                <div class="form-floating position-relative">
+                                                    <!-- Password Input -->
+                                                    <input style="height: 26px;" type="password"
+                                                        class="form-control input-field pe-5" id="password"
+                                                        placeholder="Enter your password"
+                                                        title="Password must be at least 8 characters including (a-z, A-Z, @$!%*?#&)"
+                                                        maxlength="30">
+                                                    <label for="password">Password</label>
+
+                                                    <!-- Eye Icon -->
+                                                    <img src="./images/checkout/eye-open.svg" alt="Toggle visibility"
+                                                        width="24" height="24" id="togglePassword"
+                                                        style="position:absolute; top:50%; right:10px; transform:translateY(-50%); cursor:pointer;">
+                                                </div>
+
+                                                <!-- Error Message -->
+                                                <div class="error-message hide" id="password_error"
+                                                    name="Password"></div>
                                             </div>
+
                                         </div>
+
                                     </div>
 
                                     <h3>Shipping Address</h3>

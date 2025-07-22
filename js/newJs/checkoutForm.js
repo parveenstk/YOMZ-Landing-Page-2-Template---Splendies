@@ -197,12 +197,14 @@ const inputErrors = document.querySelectorAll('.error-message');
 // Regex patterns for specific fields
 const patterns = {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^\d{10}$/, // 10 digit number
+    // phone: /^\d{10}$/, // 10 digit number
+    phone: /^(\+1\s?)?(\()?(\d{3})(\))?[\s.-]?(\d{3})[\s.-]?(\d{4})$/,
     postal: /^\d{5,8}$/, // US ZIP or ZIP+4
     creditCard: /^\d{15,19}$/, // Most credit cards
     cvc: /^\d{3,4}$/, // CVV (3 or 4 digits)
     expiry: /^(0[1-9]|1[0-2])\/?([0-9]{2})$/, // MM/YY
     name: /^[a-zA-Z\s\-']{2,}$/, // Basic name validation
+    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/,
 };
 
 function getValidationPattern(id) {
@@ -213,6 +215,7 @@ function getValidationPattern(id) {
     if (id.includes('card-cvc')) return patterns.cvc;
     if (id.includes('card-expiry')) return patterns.expiry;
     if (id.includes('first-name') || id.includes('last-name')) return patterns.name;
+    if (id.includes('password')) return patterns.password;
 
     // For fields like address or city, just check non-empty
     return null;
@@ -225,23 +228,63 @@ inputFields.forEach((inputField, index) => {
     if (id === "credit-card-number") isNumber = true;
 
     inputField.addEventListener('input', function () {
-        // Remove all spaces before processing
         let cleanedValue = inputField.value.replace(/\s+/g, '').trim();
         const inputValue = isNumber ? Number(cleanedValue) : cleanedValue;
         const pattern = getValidationPattern(id);
 
+        // Special check for password
+        if (id === 'password') {
+            const password = inputValue;
+            const errors = [];
+
+            if (password.length < 8) {
+                errors.push('at least 8 characters');
+            }
+            if (!/[A-Z]/.test(password)) {
+                errors.push('one uppercase letter');
+            }
+            if (!/[a-z]/.test(password)) {
+                errors.push('one lowercase letter');
+            }
+            if (!/\d/.test(password)) {
+                errors.push('one number');
+            }
+            if (!/[@$!%*?#&]/.test(password)) {
+                errors.push('one special character (@$!%*?#&)');
+            }
+
+            if (errors.length > 0) {
+                inputField.style.borderColor = 'red';
+                inputField.classList.add('is-invalid');
+                inputField.classList.remove('is-valid');
+                errorMessageEl.classList.remove('hide');
+
+                // Dynamically build the <ul><li>...</li></ul>
+                let errorListHTML = '<ul>';
+                errors.forEach(error => {
+                    errorListHTML += `<li>Password must contain ${error}</li>`;
+                });
+                errorListHTML += '</ul>';
+
+                errorMessageEl.innerHTML = errorListHTML;
+                return; // Stop further validation
+            }
+        };
+
+        // General validation
         const isValid = pattern ? pattern.test(inputValue) : inputValue.length > 0;
-        console.log(isValid, inputValue)
+
         if (isValid) {
             inputField.style.borderColor = 'green';
             inputField.classList.add('is-valid');
-            inputField.classList.replace('is-invalid', 'is-valid');
+            inputField.classList.remove('is-invalid');
             errorMessageEl.classList.add('hide');
         } else {
             inputField.style.borderColor = 'red';
-            inputField.classList.replace('is-valid', 'is-invalid');
+            inputField.classList.add('is-invalid');
+            inputField.classList.remove('is-valid');
             errorMessageEl.classList.remove('hide');
-            errorMessageEl.innerText = pattern ? 'This field is required' : 'This field is required';
+            errorMessageEl.innerText = 'This field is required';
         }
     });
 
@@ -250,6 +293,17 @@ inputFields.forEach((inputField, index) => {
         let cleanedValue = inputField.value.replace(/\s+/g, '').trim();
         const inputValue = isNumber ? Number(cleanedValue) : cleanedValue;
         const pattern = getValidationPattern(id);
+
+        if (id === 'password') {
+            if (inputValue.length < 8) {
+                inputField.style.borderColor = 'red';
+                inputField.classList.add('is-invalid');
+                inputField.classList.remove('is-valid');
+                errorMessageEl.classList.remove('hide');
+                errorMessageEl.innerHTML = '<ul><li>Password must contain at least 8 characters</li><li>one uppercase letter</li><li>one lowercase letter</li><li>one number</li><li>one special character (@$!%*?#&)</li></ul>';
+                return; // Skip the rest of validation
+            }
+        }
 
         const isValid = pattern ? pattern.test(inputValue) : inputValue.length > 2;
 

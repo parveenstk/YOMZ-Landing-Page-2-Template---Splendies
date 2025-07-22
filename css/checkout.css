@@ -65,13 +65,6 @@
 
 }
 
-#error-on-submit {
-    margin-bottom: 0px;
-    margin-top: 12px;
-    color: red;
-    font-size: 16px;
-}
-
 @keyframes slideDown {
     from {
         transform: translateY(-30px);
@@ -94,6 +87,13 @@
         transform: translateY(-30px);
         opacity: 0;
     }
+}
+
+#error-on-submit {
+    margin-bottom: 0px;
+    margin-top: 12px;
+    color: red;
+    font-size: 16px;
 }
 
 .message-box {
@@ -131,6 +131,7 @@
     padding-left: 1px;
     padding-top: 4px;
     color: red;
+    font-family: 'century_gothicregular';
 }
 
 .hide {
