@@ -1,5 +1,4 @@
 // Elements - Input, button etc.
-// const form = document.getElementById('subs-form');
 const subsInput = document.getElementById('subscribe-input');
 const sheetName = document.getElementById('subscribe-input').getAttribute('name');
 const submitBtn = document.getElementById('subscribe-submit');
@@ -41,7 +40,8 @@ submitBtn.addEventListener('click', (e) => {
         messageBox.classList.remove('hide');
         subsInput.classList.add('is-invalid');
         subsInput.classList.remove('is-valid');
-
+        console.log("Footer: Subscription Email input is Empty.");
+        
         updateBox('error');  // udpadating box
     }
 });
