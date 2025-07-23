@@ -2,7 +2,6 @@
 const packs = document.getElementById('packs');
 const subsBtn = document.querySelectorAll('.subscribe-button');
 const readytoyomz = document.getElementById('ready-to-yomz');
-const desktopCart = document.getElementById('desktop-cart-button');
 
 // Function to toggle visibility and scroll to packs
 function handleSubscribeClick(e) {
@@ -16,11 +15,6 @@ function handleSubscribeClick(e) {
 subsBtn.forEach((button) => {
     button.addEventListener('click', handleSubscribeClick);
 });
-
-// Attach to desktop cart button
-if (desktopCart) {
-    desktopCart.addEventListener('click', handleSubscribeClick);
-}
 
 // utility function for multi uses
 const replaceCls = (element, existedClass, swichtedClass) => {

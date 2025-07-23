@@ -300,7 +300,7 @@ inputFields.forEach((inputField, index) => {
                 inputField.classList.add('is-invalid');
                 inputField.classList.remove('is-valid');
                 errorMessageEl.classList.remove('hide');
-                errorMessageEl.innerHTML = '<ul><li>Password must contain at least 8 characters</li><li>one uppercase letter</li><li>one lowercase letter</li><li>one number</li><li>one special character (@$!%*?#&)</li></ul>';
+                errorMessageEl.innerHTML = '<ul><li>Password must contain at least 8 characters</li><li>Password must contain one uppercase letter</li><li>Password must contain one lowercase letter</li><li>Password must contain one number</li><li>Password must contain one special character (@$!%*?#&)</li></ul>';
                 return; // Skip the rest of validation
             }
         }
