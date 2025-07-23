@@ -36,7 +36,7 @@ const formElements = {
 
 // Handle form submission
 const form = document.getElementById('checkout-form');
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', async function (e) {
     e.preventDefault(); // prevent the page reload on submission
 
     const submitError = document.getElementById('error-on-submit');
@@ -67,15 +67,16 @@ form.addEventListener('submit', function (e) {
         console.log("Form not submitted. Validation failed.");
         submitError.innerText = "Please, fill the above fields !"
         return; // Stop further processing
-    } else {
-        window.location.href = './offer1.html'
-    }
+    };
 
     // Proceed if form is valid
     console.log("Form Submitted:", formData);
     localStorage.setItem('Form Data', JSON.stringify(formData));
     clearFormInputs(); // clear all the values of input
+    await updateSheet(formData);
     console.log("Form submitted and data saved in localStorage.");
+
+    window.location.href = './offer1.html'
 });
 
 // Clear form inputs after submission
@@ -366,3 +367,31 @@ inputSelectors.forEach((selector, index) => {
     //     }
     // });
 });
+
+const updateSheet = async (formData) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        formData: { ...formData },
+        sheetName: "F.P - 2 checkout",
+        column: "!B4:Q4"
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    try {
+        await fetch("https://yomz-pages-data.vercel.app/api/checkout2", requestOptions)
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.error(error));
+    } catch (error) {
+        console.warn(error)
+    }
+
+};
