@@ -72,49 +72,62 @@
 
           <div class="contact-form">
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control text-height" placeholder="Your First Name">
-                  <label for="floatingInput">Full Name</label>
+            <form id="cancel-subscription-form">
+              <div class="row">
+                <!-- First Name -->
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control text-height" id="full-name" name="full-name"
+                      placeholder="Your First Name" maxlength="20">
+                    <label for="full-name">Full Name</label>
+                    <span>This field is required</span>
+                  </div>
+                </div>
+
+                <!-- Email Addresss -->
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control text-height" id="email-address" name="email-address"
+                      placeholder="Email address" maxlength="25">
+                    <label for="email-address">Email address</label>
+                  </div>
                 </div>
               </div>
 
-              <div class="col-md-12">
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control text-height" id="floatingInput" placeholder="Email address">
-                  <label for="floatingInput">Email address</label>
+              <!-- Phone -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control text-height" id="phone-number" name="phone-number"
+                      placeholder="Phone" maxlength="15">
+                    <label for="phone-number">Phone</label>
+                  </div>
+                </div>
+
+                <!-- Order I.D. -->
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control text-height" id="order-id" name="order-id"
+                      placeholder="Order ID" maxlength="25">
+                    <label for="order-id">Order ID</label>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control text-height" id="floatingInput" placeholder="Phone">
-                  <label for="floatingInput">Phone</label>
-                </div>
+              <!-- Comments -->
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="comments-box" name="comments-box"
+                  style="height: 150px" maxlength="500"></textarea>
+                <label for="comments-box">Comments</label>
               </div>
-              <div class="col-md-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control text-height" id="floatingInput" placeholder="Order ID">
-                  <label for="floatingInput">Order ID</label>
-                </div>
+
+              <!-- Submit Button -->
+              <div class="form-floating text-center">
+                <button class="btn btn-primary" type="submit">Submit</button>
               </div>
-            </div>
-
-            <div class="form-floating mb-3">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 150px"></textarea>
-              <label for="floatingTextarea2">Comments</label>
-            </div>
-
-            <div class="form-floating text-center">
-              <button class="btn btn-primary" type="submit">Submit</button>
-            </div>
+            </form>
 
           </div>
-
         </div>
       </div>
     </div>
@@ -259,6 +272,7 @@
 
   <!-- import function scripts -->
   <script src="./js/owl.carousel1b13.js" defer></script>
+  <script src="./js/newJs/cancelSubscription.js"></script>
 </body>
 
 </html>
