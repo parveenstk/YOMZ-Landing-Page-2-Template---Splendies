@@ -569,7 +569,7 @@ p.divider span.divider {
 }
 
 .social_icon_box+.social_icon_box {
-    margin-left: 25px;
+    margin-left: 0px;
 }
 
 .seprator {
@@ -627,10 +627,108 @@ p.divider span.divider {
     text-decoration: none;
 }
 
+.footer {
+    background-color: #ffeef1;
+    padding: 24px 0 20px;
+    border-top: 1px solid #fff;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer_nav_list ul li {
+    list-style: outside none none;
+    line-height: normal;
+}
+
+.footer_logo>a {
+    display: block;
+}
+
+.social_icons {
+    padding-top: 15px;
+}
+
+.social_icon_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.disclimer {
+    margin-top: 40px;
+}
+
+.seprator {
+    border-bottom: 1px solid #f9d7dd;
+    padding-top: 8px;
+}
+
+.footer_navigation {
+    padding: 30px 10px 24px;
+}
+
+.footer_column {
+    text-align: left;
+    width: 33.333%;
+}
+
+.left {
+    float: left;
+}
+
+.footer_nav_head>p {
+    color: #E6193C;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer_nav_list ul li {
+    list-style: outside none none;
+}
+
+.social_icon_box a {
+    cursor: pointer;
+}
+
+.social_icons.text-right {
+    text-align: right;
+}
+
+.footer_nav_list a {
+    color: #909090;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.copyright p {
+    color: #e6193c;
+    font-size: 13px;
+    text-align: center;
+}
+
+.copyright a {
+    color: #909090;
+    font-size: 13px;
+}
+
 /* Footer */
 
 /******************************************* all section media *********************************/
 @media screen and (max-width: 767px) {
+
+    .footer .container {
+    max-width: 1000px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+        .social_icons.text-right {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
 
     .toaster {
         top: 18px;
@@ -873,6 +971,10 @@ p.divider span.divider {
 
     .footer_navigation {
         padding: 30px 0px 24px;
+    }
+
+        .footer_navigation {
+        padding: 30px 0px 0px!important;
     }
 }
 

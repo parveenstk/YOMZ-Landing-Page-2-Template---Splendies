@@ -53,6 +53,14 @@
 
 }
 
+html {
+    font-size: 10px
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
 @keyframes slideDown {
     from {
         transform: translateY(-30px);
@@ -638,19 +646,28 @@ p.bag-price {
 
 /******************************* privacy-policy *******************************/
 
-.privacy-policy{padding: 50px 0;}
+.privacy-policy {
+    padding: 50px 0;
+}
 
-.privacy-policy h1{font-size: 57px; text-align: center; margin-bottom: 30px;}
-.privacy-policy p{text-align: justify;}
+.privacy-policy h1 {
+    font-size: 57px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.privacy-policy p {
+    text-align: justify;
+}
 
 /******************************* privacy-policy *******************************/
 
 /****************************** faqs *****************************/
 .faqs h3 {
-  font-family: 'century_gothic_paneuropeanXBd' !important;
-  font-size: 3rem;
-  text-align: center;
-  color: #fff;
+    font-family: 'century_gothic_paneuropeanXBd' !important;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
 }
 
 .faqs .accordion-item h3 .accordion-button {
@@ -658,14 +675,267 @@ p.bag-price {
     padding: 15px 20px;
     color: #000 !important;
 }
+
 .faqs .accordion-item h3 .accordion-button {
-  font-size: 24px !important;
+    font-size: 24px !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background: #ffeb00;}
+    background: #ffeb00;
+}
 
 /****************************** faqs *****************************/
+
+/****************************** Contact Us *****************************/
+
+.contactus {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.contactus h1 {
+    font-size: 52px;
+}
+
+.contactus p {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.contact-form .btn {
+    background: #e6193c;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 10px 35px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.contact-form .text-height {
+    height: 60px;
+    font-size: 16px;
+    padding-left: 15px;
+    
+}
+
+.contact-form label{padding-left: 15px;}
+
+.contact-form textarea.form-control {
+    padding-top: 30px !important;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+/****************************** Contact Us *****************************/
+
+/****************************** Reviews *****************************/
+
+.show-mob, .show-tab {
+    display: none;
+}
+
+.section6 {
+    background: #fafafa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.comn-hding {
+    color: #000000;
+    font-size: 45px;
+    line-height: 54px;
+}
+
+.star-review-col-1, .star-review-row {
+    display: inline-block;
+    vertical-align: middle;
+}
+.star-review-row {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.star-review-col-1 span {
+    display: block;
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 3px;
+}
+
+.star-review-col-1 img {
+    display: block;
+    margin: 8px auto;
+}
+
+ul.rev-bars, ul.rev-bars li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.rev-bars {
+    width: 635px;
+}
+
+ul.rev-bars li {
+    margin: 7px 0;
+    width: 100%;
+}
+
+.section6 {
+    background: #fafafa;
+    padding: 60px 0;
+    text-align: center
+}
+
+.star-review-row {
+    margin-top: 50px;
+    width: 100%
+}
+
+.star-review-col-1,.star-review-row {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.star-review-col-1 {
+    color: #131a2a;
+    font-size: 17px;
+    
+    line-height: 22px;
+    padding: 0 25px;
+    text-align: center
+}
+
+.star-review-col-1 span {
+    display: block;
+    font-size: 64px;
+    
+    line-height: 64px;
+    margin-bottom: 3px
+}
+
+.star-review-col-1 img {
+    display: block;
+    margin: 8px auto
+}
+
+ul.rev-bars {
+    width: 635px
+}
+
+ul.rev-bars,ul.rev-bars li {
+    display: inline-block;
+    vertical-align: middle
+}
+
+ul.rev-bars li {
+    margin: 7px 0;
+    width: 100%
+}
+
+ul.rev-bars li img {
+    display: inline-block;
+    margin: -13px 0 0;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+ul.rev-bars li>div {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: inset 1px 1px 3px #0003;
+    float: left;
+    height: 12px;
+    overflow: hidden;
+    width: calc(100% - 175px)
+}
+
+ul.rev-bars li>div span {
+    background-color: #fab73c;
+    float: left;
+    height: 100%
+}
+
+ul.rev-bars li p {
+    color: #000;
+    float: right;
+    font-size: 18px;
+    line-height: 12px;
+    text-align: left;
+    width: 22px
+}
+
+.s6-reviw {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%
+}
+
+.s6-reviw-bx {
+    width: 23.3%
+}
+
+.tsti-bx {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 1px #0000001a;
+    -webkit-box-shadow: 0 0 20px 1px rgba(0,0,0,.1);
+    margin-top: 35px;
+    padding: 0 0 25px;
+    text-align: left
+}
+
+.t-img1 {
+    border-radius: 12px 12px 0 0;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%
+}
+
+.tsti-bx-mid {
+    margin-top: 15px;
+    padding: 0 15px
+}
+
+.vrfy-p {
+    color: #000;
+    font-size: 18px;
+    
+    line-height: 22px
+}
+
+.vrfy-p span {
+    color: #6fb620;
+    font-size: 14px
+}
+
+.vrfy-tk {
+    display: inline-block;
+    margin: -2px 5px 0;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+.tsti-star {
+    display: block;
+    margin: 15px 0 0;
+    max-width: 100%
+}
+
+.tsti-txt {
+    color: #1a1a1a;
+    font-size: 16px;
+    
+    letter-spacing: .5px;
+    line-height: 23px;
+    margin-top: 15px
+}
+/****************************** Reviews *****************************/
 
 /****************************** Subscribe  *****************************/
 
@@ -1451,14 +1721,169 @@ p.bag-price {
 
 @media screen and (max-width: 767px) {
 
-    .privacy-policy h1 {
-    font-size: 28px;
+    .comn-hding{font-size: 35px;
+    line-height: normal;}
+
+    .section6 {
+    background: #fafafa;
+    padding: 20px 15px;
     text-align: center;
-    margin-bottom: 10px;
 }
 
-.privacy-policy {
-    padding: 30px 0;}
+     .star-review-row {
+        margin-top: 20px
+    }
+
+    .star-review-col-1 {
+        margin-bottom: 15px;
+        width: 100%
+    }
+
+    ul.rev-bars {
+        width: 100%;
+        padding-left:0rem;
+    }
+
+    ul.rev-bars li img {
+        width: 84px
+    }
+
+    ul.rev-bars li>div {
+        width: calc(100% - 131px)
+    }
+
+    ul.rev-bars li p {
+        font-size: 15px;
+        line-height: 10px
+    }
+
+    .testi-sec {
+        margin: 0
+    }
+
+    .testi-row {
+        margin: 35px 0 0;
+        padding-bottom: 15px
+    }
+
+    .testi-row-lft {
+        padding-right: 0;
+        width: 100%
+    }
+
+    .testi-lft-abt {
+        padding: 0 0 0 75px
+    }
+
+    .s6-reviw {
+        margin: 20px auto 0;
+        width: 310px
+    }
+
+    .t-img1 {
+        width: 100%
+    }
+
+    .s6-reviw-bx {
+        margin-top: 0;
+        width: 100%
+    }
+
+    .vrfy-p {
+        font-size: 18px;
+        line-height: 18px
+    }
+
+    .vrfy-p span {
+        font-size: 13px
+    }
+
+    .vrfy-tk {
+        margin: -1px 4px 0 2px;
+        width: 15px
+    }
+
+    .tsti-star {
+        margin: 10px 0 0;
+        width: 86px
+    }
+
+    .tsti-bx {
+        box-shadow: none;
+        -webkit-box-shadow: none
+    }
+
+    .star-review-col-1 span {
+        font-size: 50px;
+        line-height: 53px
+    }
+
+    .star-review-col-1 img {
+        margin: 4px auto
+    }
+
+    .mnybkBox {
+        margin: 40px 0 0
+    }
+
+    .mnybk-top {
+        padding: 20px 10px
+    }
+
+    .mnybk-btm {
+        padding: 20px 15px;
+        width: 100%
+    }
+
+    .mnybk-cont {
+        padding: 0 10px 20px;
+        text-align: center;
+        width: 100%
+    }
+
+    .seal30day {
+        float: none;
+        margin: 20px auto 0;
+        width: 236px
+    }
+
+    .mnybk-cont-p1 {
+        font-size: 28px;
+        line-height: 35px
+    }
+
+    .mnybk-cont-p2 {
+        font-size: 17px;
+        line-height: 24px;
+        margin-top: 5px
+    }
+
+    .mnybk-btm-p1 {
+        font-size: 19px;
+        letter-spacing: .5px;
+        line-height: 28px;
+        margin-top: 0
+    }
+
+    .contactus h1 {
+    font-size: 42px;
+}
+
+.contactus p{font-size: 12px !important;}
+
+.contactus {
+    padding: 30px 0;
+}
+
+    .privacy-policy h1 {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .privacy-policy {
+        padding: 30px 0;
+    }
 
     .message-box {
         margin-bottom: 20px;
