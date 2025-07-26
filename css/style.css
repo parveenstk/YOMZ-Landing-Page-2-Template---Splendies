@@ -85,6 +85,17 @@ html {
     }
 }
 
+.error-message-box {
+    text-align: left;
+        margin-bottom: 10px;
+
+    span {
+        color: #dc3545;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+}
+
 .message-box {
     display: flex;
     align-items: center;
@@ -718,10 +729,12 @@ p.bag-price {
     height: 60px;
     font-size: 16px;
     padding-left: 15px;
-    
+
 }
 
-.contact-form label{padding-left: 15px;}
+.contact-form label {
+    padding-left: 15px;
+}
 
 .contact-form textarea.form-control {
     padding-top: 30px !important;
@@ -733,7 +746,8 @@ p.bag-price {
 
 /****************************** Reviews *****************************/
 
-.show-mob, .show-tab {
+.show-mob,
+.show-tab {
     display: none;
 }
 
@@ -749,10 +763,12 @@ p.bag-price {
     line-height: 54px;
 }
 
-.star-review-col-1, .star-review-row {
+.star-review-col-1,
+.star-review-row {
     display: inline-block;
     vertical-align: middle;
 }
+
 .star-review-row {
     margin-top: 50px;
     width: 100%;
@@ -770,7 +786,8 @@ p.bag-price {
     margin: 8px auto;
 }
 
-ul.rev-bars, ul.rev-bars li {
+ul.rev-bars,
+ul.rev-bars li {
     display: inline-block;
     vertical-align: middle;
 }
@@ -795,7 +812,8 @@ ul.rev-bars li {
     width: 100%
 }
 
-.star-review-col-1,.star-review-row {
+.star-review-col-1,
+.star-review-row {
     display: inline-block;
     vertical-align: middle
 }
@@ -803,7 +821,7 @@ ul.rev-bars li {
 .star-review-col-1 {
     color: #131a2a;
     font-size: 17px;
-    
+
     line-height: 22px;
     padding: 0 25px;
     text-align: center
@@ -812,7 +830,7 @@ ul.rev-bars li {
 .star-review-col-1 span {
     display: block;
     font-size: 64px;
-    
+
     line-height: 64px;
     margin-bottom: 3px
 }
@@ -826,7 +844,8 @@ ul.rev-bars {
     width: 635px
 }
 
-ul.rev-bars,ul.rev-bars li {
+ul.rev-bars,
+ul.rev-bars li {
     display: inline-block;
     vertical-align: middle
 }
@@ -884,7 +903,7 @@ ul.rev-bars li p {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 0 20px 1px #0000001a;
-    -webkit-box-shadow: 0 0 20px 1px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, .1);
     margin-top: 35px;
     padding: 0 0 25px;
     text-align: left
@@ -905,7 +924,7 @@ ul.rev-bars li p {
 .vrfy-p {
     color: #000;
     font-size: 18px;
-    
+
     line-height: 22px
 }
 
@@ -930,11 +949,12 @@ ul.rev-bars li p {
 .tsti-txt {
     color: #1a1a1a;
     font-size: 16px;
-    
+
     letter-spacing: .5px;
     line-height: 23px;
     margin-top: 15px
 }
+
 /****************************** Reviews *****************************/
 
 /****************************** Subscribe  *****************************/
@@ -1721,16 +1741,18 @@ ul.rev-bars li p {
 
 @media screen and (max-width: 767px) {
 
-    .comn-hding{font-size: 35px;
-    line-height: normal;}
+    .comn-hding {
+        font-size: 35px;
+        line-height: normal;
+    }
 
     .section6 {
-    background: #fafafa;
-    padding: 20px 15px;
-    text-align: center;
-}
+        background: #fafafa;
+        padding: 20px 15px;
+        text-align: center;
+    }
 
-     .star-review-row {
+    .star-review-row {
         margin-top: 20px
     }
 
@@ -1741,7 +1763,7 @@ ul.rev-bars li p {
 
     ul.rev-bars {
         width: 100%;
-        padding-left:0rem;
+        padding-left: 0rem;
     }
 
     ul.rev-bars li img {
@@ -1866,14 +1888,16 @@ ul.rev-bars li p {
     }
 
     .contactus h1 {
-    font-size: 42px;
-}
+        font-size: 42px;
+    }
 
-.contactus p{font-size: 12px !important;}
+    .contactus p {
+        font-size: 12px !important;
+    }
 
-.contactus {
-    padding: 30px 0;
-}
+    .contactus {
+        padding: 30px 0;
+    }
 
     .privacy-policy h1 {
         font-size: 28px;
