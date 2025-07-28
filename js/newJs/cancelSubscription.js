@@ -1,85 +1,47 @@
+// form elements
+const form = document.getElementById('cancel-subscription-form');
+const fullName = document.getElementById('full-name');
+const email = document.getElementById('email-address');
+const phoneNumber = document.getElementById('phone-number');
+const orderId = document.getElementById('order-id');
+const commentBox = document.getElementById('comments-box');
+const successMessage = document.getElementById('successfull-message');
+
+// Regax patterns
+const regexPatterns = {
+    'full-name': {
+        regex: /^[a-zA-ZÀ-ÿ' -]{2,50}$/,
+        clean: /[^a-zA-ZÀ-ÿ' -]/g,
+        error: "Full name should be 2–20 letters only.",
+    },
+
+    'email-address': {
+        regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        clean: /[^a-zA-Z0-9@._%+-]/g,
+        error: "Please enter a valid email address."
+    },
+
+    'phone-number': {
+        regex: /^\d{10,15}$/,
+        clean: /[^\d]/g,
+        error: "Please enter a valid phone number (10–15 digits)."
+    },
+
+    'order-id': {
+        regex: /^[a-zA-Z0-9#$\[\]]+$/,
+        clean: /[^a-zA-Z0-9#$\[\]]/g,
+        error: "Please see on the invoice."
+    },
+};
+
+const fields = [fullName, email, phoneNumber, orderId];
+
 // Run after all the elements loaded on the page
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('cancel-subscription-form');
-    const fullName = document.getElementById('full-name');
-    const email = document.getElementById('email-address');
-    const phoneNumber = document.getElementById('phone-number');
-    const orderId = document.getElementById('order-id');
-    const commentBox = document.getElementById('comments-box');
-    const successMessage = document.getElementById('successfull-message');
 
-    const fields = [fullName, email, phoneNumber, orderId];
-
-    // Regex patterns
-    const patterns = {
-        'full-name': /^[a-zA-Z\s]{2,20}$/,
-        'email-address': /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        'phone-number': /^[0-9]{10}$/,
-        'order-id': /^[A-Za-z0-9#$\-]{5,20}$/
-    };
-
-    // Custom error messages
-    const errorMessages = {
-        'full-name': {
-            empty: 'Full name is required.',
-            invalid: 'Full name should be 2–20 letters only.'
-        },
-        'email-address': {
-            empty: 'Email address is required.',
-            invalid: 'Please enter a valid email address.'
-        },
-        'phone-number': {
-            empty: 'Phone number is required.',
-            invalid: 'Phone number must be exactly 10 digits.'
-        },
-        'order-id': {
-            empty: 'Order ID is required.',
-            invalid: 'Order ID should be 14-18 characters (mention on your bill).'
-        }
-    };
-
-    // Validation function
-    const validateField = (field) => {
-        const value = field.value.trim();
-        const fieldId = field.id;
-        const errorSpan = document.getElementById(`${fieldId}-error`);
-        const messages = errorMessages[fieldId];
-        const pattern = patterns[fieldId];
-
-        // Checking Empty input
-        if (value === '') {
-            field.classList.add('is-invalid');
-            field.classList.remove('is-valid');
-            errorSpan.classList.remove('hide');
-            errorSpan.innerText = messages.empty;
-            return false;
-        }
-
-        // Checking regax
-        if (pattern && !pattern.test(value)) {
-            field.classList.add('is-invalid');
-            field.classList.remove('is-valid');
-            errorSpan.classList.remove('hide');
-            errorSpan.innerText = messages.invalid;
-            return false;
-        }
-
-        field.classList.remove('is-invalid');
-        field.classList.add('is-valid');
-        errorSpan.classList.add('hide');
-        errorSpan.innerText = '';
-        return true;
-    }
-
-    // Real-time validation listeners
-    fields.forEach(field => {
-        field.addEventListener('input', () => validateField(field));
-        field.addEventListener('blur', () => validateField(field));
-    });
-
-    // Handle form submit
     form.addEventListener('submit', function (event) {
         event.preventDefault();
+        // console.log('Form submit triggered');
 
         let hasError = false;
         fields.forEach(field => {
@@ -106,26 +68,99 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('finalValues:', finalValues);
 
         resetform();
-
-        successMessage.classList.remove('hide');
         hideMessage();
     });
 
-    const resetform = () => {
-        fields.concat(commentBox).forEach(field => {
-            field.value = '';
-            field.classList.remove('is-valid', 'is-invalid');
-            const errorSpan = document.getElementById(`${field.id}-error`);
-            if (errorSpan) {
-                errorSpan.classList.add('hide');
-                errorSpan.innerText = '';
-            }
-        });
-    };
+    // Handle Input Change
+    fields.forEach((field) => {
+        field.addEventListener('input', handleChange)
+    })
 
-    const hideMessage = () => {
-        setTimeout(() => {
-            successMessage.classList.add('hide');
-        }, 4000)
-    };
 });
+
+// Validation function
+const validateField = (field) => {
+    let value = field.value.trim();
+    const fieldId = field.id;
+    const errorSpan = document.getElementById(`${fieldId}-error`);
+    // const pattern = Patterns[fieldId];
+
+    // Checking Empty input
+    if (value === '') {
+        field.classList.add('is-invalid');
+        field.classList.remove('is-valid');
+        errorSpan.classList.remove('hide');
+        errorSpan.innerText = 'This field is required.'
+        return false;
+    }
+
+    // If validation is successful
+    console.log(`${fieldId} passed validation.`);
+    field.classList.remove('is-invalid');
+    field.classList.add('is-valid');
+    errorSpan.classList.add('hide');
+    errorSpan.innerText = '';
+    return true;
+}
+
+// Clean all the inputs
+const resetform = () => {
+    const fields = [fullName, email, phoneNumber, orderId, commentBox];
+    fields.forEach((field) => {
+        field.value = '';
+        field.classList.remove('is-valid', 'is-invalid');
+        successMessage.classList.remove('hide');
+    })
+};
+
+// Hide message function
+const hideMessage = () => {
+    setTimeout(() => {
+        successMessage.classList.add('hide');
+    }, 4000)
+};
+
+// checking value while input
+const handleChange = (e) => {
+    const { name } = e.target;
+    console.log("name:", name);
+
+    let { value } = e.target;
+    const pattern = regexPatterns[name];
+    console.log('pattern:', pattern);
+
+    if (pattern) {
+        // Clean unwanted characters (e.g., letters in phone)
+        const cleanedValue = value.replace(pattern.clean, '');
+
+        // Update input field to show cleaned value
+        e.target.value = cleanedValue;
+
+        const errorElement = document.getElementById(`${name}-error`);
+        const outputElement = document.getElementById(name);
+
+        // Validate final cleaned value
+        const isValid = pattern.regex.test(cleanedValue);
+
+        if (!isValid) {
+            if (errorElement) {
+                errorElement.textContent = pattern.error ? pattern.error : pattern.invalid;
+                errorElement.classList.remove('hide');
+                outputElement.classList.remove('is-valid');
+                outputElement.classList.add('is-invalid');
+            }
+        } else {
+            if (errorElement) {
+                errorElement.textContent = '';
+                errorElement.classList.add('hide');
+                outputElement.classList.add('is-valid');
+                outputElement.classList.remove('is-invalid');
+            }
+        }
+
+        // Always update the display value
+        if (outputElement) {
+            outputElement.innerText = cleanedValue;
+        }
+    }
+};
