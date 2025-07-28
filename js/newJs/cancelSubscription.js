@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const phoneNumber = document.getElementById('phone-number');
     const orderId = document.getElementById('order-id');
     const commentBox = document.getElementById('comments-box');
+    const successMessage = document.getElementById('successfull-message');
 
     const fields = [fullName, email, phoneNumber, orderId];
 
@@ -105,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('finalValues:', finalValues);
 
         resetform();
+
+        successMessage.classList.remove('hide');
+        hideMessage();
     });
 
     const resetform = () => {
@@ -117,5 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorSpan.innerText = '';
             }
         });
+    };
+
+    const hideMessage = () => {
+        setTimeout(() => {
+            successMessage.classList.add('hide');
+        }, 4000)
     };
 });
