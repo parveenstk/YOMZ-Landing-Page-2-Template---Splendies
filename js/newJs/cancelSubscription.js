@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.localStorage.setItem('cancelledEmails', JSON.stringify(cancelSubsData));
         const finalValues = JSON.parse(localStorage.getItem('cancelledEmails'));
         console.log('finalValues:', finalValues);
+        updateSheet(finalValues);
 
         resetform();
         hideMessage();
@@ -127,7 +128,7 @@ const handleChange = (e) => {
 
     let { value } = e.target;
     const pattern = regexPatterns[name];
-    console.log('pattern:', pattern);
+    // console.log('pattern:', pattern);
 
     if (pattern) {
         // Clean unwanted characters (e.g., letters in phone)
@@ -162,5 +163,35 @@ const handleChange = (e) => {
         if (outputElement) {
             outputElement.innerText = cleanedValue;
         }
+    }
+};
+
+// Call API to save data in excel sheet
+const updateSheet = async (formData) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        formData: formData,
+        sheetName: "Funnel Page - 2",
+        column: "!E4:J4"
+    });
+
+    const requestOptions = {
+        method: "POST",
+        // method: "OPTIONS",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    try {
+        await fetch("https://yomz-pages-data.vercel.app/api/cancelSubscription", requestOptions)
+            // await fetch("http://localhost:3000/api/cancelSubscription", requestOptions)
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.error(error));
+    } catch (error) {
+        console.warn(error)
     }
 };
