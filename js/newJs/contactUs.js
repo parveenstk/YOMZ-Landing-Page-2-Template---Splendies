@@ -6,6 +6,7 @@ const phoneNumber = document.getElementById('phone-number');
 const email = document.getElementById('email-address');
 const subjects = document.getElementById('subjects');
 const commentBox = document.getElementById('comments-box');
+const successMess = document.getElementById('contactUs-success');
 
 const requiredFields = [firstName, email, subjects, commentBox];
 
@@ -68,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const submittedData = JSON.parse(localStorage.getItem('contactUsDetails'));
         console.log('submittedData:', submittedData);
 
+        successMess.classList.remove('hide');
+        hideMessage();
         resetForm();
     });
 
@@ -85,6 +88,13 @@ const resetForm = () => {
         field.classList.remove('is-valid', 'is-invalid')
         console.log("All the values cleaned.");
     })
+};
+
+// Hide success message
+const hideMessage = () => {
+    setTimeout(() => {
+        successMess.classList.add('hide');
+    }, 4000);
 };
 
 // Check values 
