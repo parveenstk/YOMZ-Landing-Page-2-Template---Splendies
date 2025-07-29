@@ -9,13 +9,26 @@ const commentBox = document.getElementById('comments-box');
 const successMess = document.getElementById('contactUs-success');
 
 const requiredFields = [firstName, email, subjects, commentBox];
+const regaxFields = [firstName, lastName, phoneNumber, email, subjects, commentBox];
 
 // Regax patterns
 const regexPatterns = {
     'first-name': {
         regex: /^[a-zA-ZÀ-ÿ' -]{2,50}$/,
         clean: /[^a-zA-ZÀ-ÿ' -]/g,
-        error: "First name should be 2 to 50 letters only"
+        error: "First name should be 2 to 14 letters only"
+    },
+
+    'last-name': {
+        regex: /^[a-zA-ZÀ-ÿ' -]{2,50}$/,
+        clean: /[^a-zA-ZÀ-ÿ' -]/g,
+        error: "Last name should be 2 to 14 letters only"
+    },
+
+    'phone-number': {
+        regex: /^\d{10,15}$/,
+        clean: /[^\d]/g,
+        error: "phone number between (10–15 digits)."
     },
 
     'email-address': {
@@ -75,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle Input Change
-    requiredFields.forEach((field) => {
+    regaxFields.forEach((field) => {
         field.addEventListener('input', handleChange)
     })
 });
@@ -139,7 +152,7 @@ const handleChange = (e) => {
 
         if (!isValid) {
             if (errorElement) {
-                errorElement.textContent = pattern.error ? pattern.error : pattern.invalid;
+                errorElement.textContent = pattern.error;
                 errorElement.classList.remove('hide');
                 outputElement.classList.remove('is-valid');
                 outputElement.classList.add('is-invalid');
