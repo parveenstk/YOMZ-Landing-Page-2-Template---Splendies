@@ -61,6 +61,11 @@ html {
     width: device-width
 }
 
+.spinner {
+    margin: 20px 0px 15px 0px;
+    width: 80px;
+}
+
 .successfull-message {
     margin: 15px 0px 0px 0px !important;
     font-size: 22px !important;
@@ -70,7 +75,7 @@ html {
 
 .contactUs-success {
     margin: 15px 0px 0px 0px !important;
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
     color: green;
 }
@@ -2485,6 +2490,11 @@ ul.rev-bars li p {
 }
 
 @media screen and (max-width: 767px) {
+
+    .spinner {
+        margin: 10px 0px 0px 0px;
+        width: 60px;
+    }
 
     #contactUs-success {
         font-size: 16px !important;

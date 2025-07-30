@@ -90,7 +90,7 @@
                   <!-- Last Name -->
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control text-height" id="last-name" placeholder="Your Last Name"
-                      maxlength="10"name="last-name">
+                      maxlength="10" name="last-name">
                     <label for="last-name">Your Last Name</label>
                     <div class="error-message-box">
                       <span id="last-name-error" class="hide"></span>
@@ -147,8 +147,10 @@
 
               <!-- Submit Button -->
               <div class="form-floating text-center">
-                <button class="btn btn-primary" type="submit">Submit</button>
-                <p id="contactUs-success" class="contactUs-success hide">Thank you for contacting us. We’ll respond within 1–2 business days.</p>
+                <button id="submit-button" class="btn btn-primary" type="submit">Submit</button>
+                <img id="spinner-loader" class="spinner hide" src="./images/tube-spinner.svg" alt="spinner">
+                <p id="contactUs-success" class="contactUs-success hide">Thank you for contacting us. We’ll respond
+                  within 1–2 business days.</p>
               </div>
             </form>
           </div>

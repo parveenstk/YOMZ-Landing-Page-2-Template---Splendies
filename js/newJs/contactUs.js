@@ -7,6 +7,8 @@ const email = document.getElementById('email-address');
 const subjects = document.getElementById('subjects');
 const commentBox = document.getElementById('comments-box');
 const successMess = document.getElementById('contactUs-success');
+const spinner = document.getElementById('spinner-loader');
+const submitButton = document.getElementById('submit-button');
 
 const requiredFields = [firstName, email, subjects, commentBox];
 const regaxFields = [firstName, lastName, phoneNumber, email, subjects, commentBox];
@@ -82,10 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const submittedData = JSON.parse(localStorage.getItem('contactUsDetails'));
         console.log('submittedData:', submittedData);
         updateSheet(submittedData);
-
-        successMess.classList.remove('hide');
-        hideMessage();
-        resetForm();
+        hideBtn();
     });
 
     // Handle Input Change
@@ -94,13 +93,20 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 });
 
+// Hide button
+const hideBtn = () => {
+    submitButton.classList.add('hide');
+    spinner.classList.remove('hide');
+};
+
 // Reset all the values
 const resetForm = () => {
     const fields = [firstName, lastName, phoneNumber, email, subjects, commentBox];
     fields.forEach(field => {
         field.value = '';
         field.classList.remove('is-valid', 'is-invalid')
-        console.log("All the values cleaned.");
+        spinner.classList.add('hide');
+        submitButton.classList.remove('hide');
     })
 };
 
@@ -187,19 +193,23 @@ const updateSheet = async (formData) => {
 
     const requestOptions = {
         method: "POST",
-        // method: "OPTIONS",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
     };
 
     try {
-        await fetch("https://yomz-pages-data.vercel.app/api/contactUs", requestOptions)
-        // await fetch("http://localhost:3000/api/contactUs", requestOptions)
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.error(error));
+        const response = await fetch("https://yomz-pages-data.vercel.app/api/contactUs", requestOptions);
+        const result = await response.json(); // Now this works properly
+
+        if (result.status === 'SUCCESS') {
+            successMess.classList.remove('hide');
+            hideMessage();
+            resetForm();
+        } else {
+            console.error("Server returned error:", result.message);
+        }
     } catch (error) {
-        console.warn(error)
+        console.warn("Fetch failed:", error);
     }
 };
