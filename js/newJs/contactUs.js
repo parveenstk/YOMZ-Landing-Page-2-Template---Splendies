@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.localStorage.setItem('contactUsDetails', JSON.stringify(contactUsData));
         const submittedData = JSON.parse(localStorage.getItem('contactUsDetails'));
         console.log('submittedData:', submittedData);
+        updateSheet(submittedData);
 
         successMess.classList.remove('hide');
         hideMessage();
@@ -170,5 +171,35 @@ const handleChange = (e) => {
         if (outputElement) {
             outputElement.innerText = cleanedValue;
         }
+    }
+};
+
+// Call API to save data in excel sheet
+const updateSheet = async (formData) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        formData: formData,
+        sheetName: "Funnel Page - 2",
+        column: "!L4:R4"
+    });
+
+    const requestOptions = {
+        method: "POST",
+        // method: "OPTIONS",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    try {
+        await fetch("https://yomz-pages-data.vercel.app/api/contactUs", requestOptions)
+        // await fetch("http://localhost:3000/api/contactUs", requestOptions)
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.error(error));
+    } catch (error) {
+        console.warn(error)
     }
 };
