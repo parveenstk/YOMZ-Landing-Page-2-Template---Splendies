@@ -398,7 +398,7 @@ a.tagroow {
 }
 
 .offerpop p {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: #222;
     font-weight: 700;
@@ -804,7 +804,7 @@ a.tagroow {
 }
 
 @media screen and (max-width: 620px) {
- .managecheckoutbtn .btn-txt{font-size: calc(6vw - 0px) !important;     padding: 12px 10px;}
+ .managecheckoutbtn .btn-txt{font-size: calc(5.7vw - 0px) !important;     padding: 12px 10px;}
 
 }
 
@@ -1027,7 +1027,7 @@ input[name="other_flavor"]::placeholder {
     }
 
     .min-text {
-        font-size: 17px !important;
+        font-size: 14px !important;
     }
 }
 

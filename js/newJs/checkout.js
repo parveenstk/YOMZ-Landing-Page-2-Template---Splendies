@@ -308,5 +308,5 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     passwordInput.setAttribute('type', type);
 
     // Optionally switch icons (e.g., to eye-close)
-    this.src = type === 'password' ? './images/checkout/eye-open.svg' : './images/checkout/eye-closed.svg';
+    this.src = type === 'password' ? './images/checkout/eye-closed.svg' : './images/checkout/eye-open.svg';
 });

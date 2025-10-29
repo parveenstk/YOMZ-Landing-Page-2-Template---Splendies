@@ -126,7 +126,7 @@ a.textLink:hover {
 #exitLink,
 .inputButton,
 .mainBg {
-	margin: 15px auto 0
+	margin: 25px auto 0
 }
 
 /* .inputButton {
@@ -507,7 +507,7 @@ a:visited {
 	}
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
 
 	.offer2-pop-titles {
 		font-size: calc(5.8vw - 0px);
@@ -531,7 +531,7 @@ a:visited {
 	}
 
 	.managecheckoutbtn .btn-txt {
-		font-size: 27px !important;
+		font-size: 20px !important;
 		padding: 12px 20px !important;
 	}
 
@@ -541,8 +541,7 @@ a:visited {
 
 	.managecheckoutbtn {
 		display: block;
-		width: 95%;
-		margin: auto;
+		width: 100%;
 	}
 
 	.logo {
@@ -614,26 +613,25 @@ a:visited {
 	}
 
 	div.headText h1 {
-		font-size: 20px;
+		font-size: 16px;
 		line-height: calc(0.9em + 1vw) !important;
 	}
 
 	div.headText h2 {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: calc(0.9em + 1vw) !important;
 	}
 
 	.first-head h3 {
-		font-size: 20px;
+		font-size: 14px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 
 	.sec-head h3 {
-		font-size: 20px;
+		font-size: 14px;
 		padding-left: 10px;
 		padding-right: 10px;
-		margin-bottom: 1rem;
 	}
 
 	.pricingText {
