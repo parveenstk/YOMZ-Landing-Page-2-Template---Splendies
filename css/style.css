@@ -61,6 +61,14 @@ html {
     width: device-width
 }
 
+.tin-button {
+    background-color: #1EB9F0;
+    border-radius: 150px;
+    display: inline-block;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 .spinner {
     margin: 20px 0px 15px 0px;
     width: 80px;
@@ -2480,6 +2488,11 @@ ul.rev-bars li p {
 }
 
 @media screen and (max-width: 767px) {
+
+    .tin-button {
+        width: -webkit-fill-available;
+    }
+
     .new-subscribe p.subscription_price.pink_clr.mob {
         min-height: unset;
     }
@@ -2487,9 +2500,6 @@ ul.rev-bars li p {
     .new-subscribe .price_box.more-space {
         min-height: unset;
     }
-}
-
-@media screen and (max-width: 767px) {
 
     .spinner {
         margin: 10px 0px 0px 0px;
